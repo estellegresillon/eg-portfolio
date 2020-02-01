@@ -7,9 +7,43 @@ section.contact {
   align-items: center;
   justify-content: center;
   background-color: #ef3d3d;
+  font-family: "Montserrat", sans-serif;
 
   .contact-infos {
     opacity: 0;
+    width: 70vw;
+
+    .text-wrapper {
+      display: flex;
+      height: 5vh;
+      font-size: 24px;
+      margin-bottom: 10vh;
+    }
+
+    .mail-wrapper {
+      display: flex;
+      align-items: center;
+
+      img {
+        border-radius: 50%;
+        margin-right: 40px;
+      }
+    }
+
+    .send-email {
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .disponibility {
+      font-weight: 900;
+      margin-top: 10vh;
+    }
+
+    a {
+      color: #fff;
+      font-size: 48px;
+    }
   }
 }
 

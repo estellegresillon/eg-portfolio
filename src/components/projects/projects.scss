@@ -1,10 +1,21 @@
 section.projects {
-  height: 100vh;
+  position: relative;
+  height: 100%;
   width: 100vw;
+  padding-top: 10vh;
   margin-bottom: 100vh;
   z-index: 1;
   background: #0e0e0e;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  flex-direction: column;
+
+  h2 {
+    position: absolute;
+    top: 0;
+    left: 20vw;
+    font-size: 81px;
+    transform: rotate(-90deg);
+  }
 }

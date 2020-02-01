@@ -35,7 +35,7 @@ section.hero-scene {
   .skillset {
     position: absolute;
     bottom: 2vh;
-    left: 1vw;
+    left: 0;
     list-style: none;
     text-transform: uppercase;
 
@@ -44,8 +44,14 @@ section.hero-scene {
 
   .availability {
     position: absolute;
-    right: 0;
-    bottom: 15vh;
+    height: 100vw;
+    width: 100vh;
+    padding-left: 5%;
+    padding-bottom: 4%;
+    display: flex;
+    align-items: flex-end;
+    font-size: 16px;
+    letter-spacing: 5px;
     text-transform: uppercase;
     transform: rotate(-90deg);
   }
