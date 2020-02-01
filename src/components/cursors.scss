@@ -1,0 +1,18 @@
+$red: #fe1000b8;
+
+.cursor-small {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: $red;
+  border-radius: 80%;
+  backface-visibility: hidden;
+  pointer-events: none;
+  z-index: 999;
+}
+
+@media screen and (max-width: 728px) {
+  .hero-cursor, .cursor-small { display: none; }
+}

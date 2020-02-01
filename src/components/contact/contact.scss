@@ -1,0 +1,29 @@
+section.contact {
+  height: 100vh;
+  width: 100vw;
+  z-index: -2;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ef3d3d;
+
+  .contact-infos {
+    opacity: 0;
+  }
+}
+
+.transition-on {
+  animation: 2s fadeIn;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

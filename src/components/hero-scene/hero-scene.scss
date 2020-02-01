@@ -1,0 +1,52 @@
+$pink: #ffe8e8;
+$red: #fe1000b8;
+
+.hero-cursor {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  top: 0;
+  left: 0;
+  background: $pink;
+  border-radius: 80%;
+  border: 160px solid $red;
+  backface-visibility: hidden;
+  pointer-events: none;
+  opacity: 1;
+  mix-blend-mode: darken;
+  transition: 0.5s all linear;
+}
+
+section.hero-scene {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  background: #0e0e0e;
+
+  h1 {
+    font-size: 130px;
+    margin-right: -25vw;
+  }
+
+  .skillset {
+    position: absolute;
+    bottom: 2vh;
+    left: 1vw;
+    list-style: none;
+    text-transform: uppercase;
+
+    .tools { font-size: 12px; }
+  }
+
+  .availability {
+    position: absolute;
+    right: 0;
+    bottom: 15vh;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+  }
+}
