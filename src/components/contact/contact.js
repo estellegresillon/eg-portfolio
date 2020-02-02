@@ -5,17 +5,20 @@ import { printLetterByLetter } from "./helpers";
 import { FUNNY_MESSAGES_ARRAY } from "./constants";
 
 const Contact = () => {
-  const contact = useRef(null);
+  const contactInfos = useRef(null);
+  const contactWrapper = useRef(null);
   const textContainer = useRef(null);
 
   const toggleContactSection = () => {
     const innerHeight = window.innerHeight;
     const distanceFromTop = window.pageYOffset;
 
-    if (distanceFromTop > innerHeight) {
-      contact.current.classList.add("transition-on");
+    if (distanceFromTop > innerHeight * 4) {
+      contactInfos.current.style.opacity = 1;
+      contactWrapper.current.style.backgroundColor = "#ef3d3d";
     } else {
-      contact.current.classList.remove("transition-on");
+      contactInfos.current.style.opacity = 0;
+      contactWrapper.current.style.backgroundColor = "black";
     }
   };
 
@@ -30,8 +33,8 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className="contact">
-      <div className="contact-infos" ref={contact}>
+    <section className="contact" ref={contactWrapper}>
+      <div className="contact-infos" ref={contactInfos}>
         <div className="text-wrapper">
           <div id="text-container" ref={textContainer} />
         </div>
@@ -43,7 +46,7 @@ const Contact = () => {
             <a href="mailto:estelle.gresillon@gmail.com">estelle.gresillon@gmail.com</a>
           </div>
         </div>
-        <p className="disponibility">👩‍💼 Available in April 2020 for freelance missions</p>
+        <p className="disponibility"><span aria-label="emoji-worker" role="img">👩‍💼</span> Available in April 2020 for freelance missions</p>
       </div>
     </section>
   );

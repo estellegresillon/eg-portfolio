@@ -22,6 +22,7 @@ section.hero-scene {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
   z-index: 1;
@@ -29,7 +30,9 @@ section.hero-scene {
 
   h1 {
     font-size: 130px;
-    margin-right: -25vw;
+    margin: 0;
+
+    &.first { margin-bottom: -70px; }
   }
 
   .skillset {

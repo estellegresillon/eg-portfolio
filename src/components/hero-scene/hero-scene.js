@@ -6,6 +6,7 @@ const HeroScene = () => {
   const heroCursor = useRef(null);
   const heroScene = useRef(null);
   const heroTitle = useRef(null);
+  const heroTitleTop = useRef(null);
 
   const onCursorMove = (e, container, cursor, offset) => {
     const relX = e.pageX - container.offsetLeft - offset;
@@ -17,7 +18,8 @@ const HeroScene = () => {
   const slideTitleToLeft = e => {
     const containerTop = heroScene.current.offsetTop
     const distanceFromTop = window.pageYOffset;
-    heroTitle.current.style.marginLeft = `${(distanceFromTop - containerTop) * -0.5}vw`;
+    heroTitle.current.style.marginLeft = `${(distanceFromTop - containerTop) * -0.1}vw`;
+    heroTitleTop.current.style.marginLeft = `${(distanceFromTop - containerTop) * 0.1}vw`;
   }
 
   useEffect(() => {
@@ -35,6 +37,12 @@ const HeroScene = () => {
   return (
     <section className="hero-scene" ref={heroScene}>
       <div className="hero-cursor" ref={heroCursor} />
+      <h1 className="first" ref={heroTitleTop}>
+        <span className="title-plain">DEVELOPER</span>
+        <span className="title-stroke">Creative</span>
+        <span className="title-plain">DEVELOPER</span>
+        <span className="title-stroke">Creative</span>
+      </h1>
       <h1 ref={heroTitle}>
         <span className="title-stroke">Creative</span>
         <span className="title-plain">DEVELOPER</span>
