@@ -3,9 +3,7 @@ section.projects {
   height: 100%;
   width: 100vw;
   padding-top: 30vh;
-  margin-bottom: 100vh;
   z-index: 1;
-  background: #0e0e0e;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -17,5 +15,11 @@ section.projects {
     left: 20vw;
     font-size: 81px;
     transform: rotate(-90deg);
+  }
+}
+
+@media screen and (max-width: 728px) {
+  section.projects  {
+    padding-top: 20vh;
   }
 }

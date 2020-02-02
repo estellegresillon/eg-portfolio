@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-import "./cursors.scss";
+import "./app.scss";
 import Header from "./common/header";
 import HeroScene from "./hero-scene";
 import Projects from "./projects";

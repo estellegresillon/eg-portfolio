@@ -37,7 +37,10 @@ const ProjectItem = ({ project }) => {
         onMouseLeave={() => setClassName("title-stroke")}
         onClick={() => window.open(project.url, '_blank')}
       >{project.name}</h3>
-      <h4 className="title-stroke">{project.year}</h4>
+      <h4 className="title-stroke">
+        {project.year}
+        <span><i className="fas fa-external-link-alt" /></span>
+      </h4>
       {isVisible && 
         <img ref={imgContainer} src={`${project.img}.jpg`} alt={project.img} />}
     </div>

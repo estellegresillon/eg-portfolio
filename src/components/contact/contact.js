@@ -1,31 +1,22 @@
 import React, { useEffect, useRef } from "react";
+import { connect } from "react-redux";
+import { Waypoint } from "react-waypoint";
 
 import "./contact.scss";
 import { printLetterByLetter } from "./helpers";
 import { FUNNY_MESSAGES_ARRAY } from "./constants";
 
-const Contact = () => {
-  const contactInfos = useRef(null);
-  const contactWrapper = useRef(null);
+const Contact = ({ showLightTheme }) => {
+  const contactContainer = useRef(null);
   const textContainer = useRef(null);
 
-  const toggleContactSection = () => {
-    const innerHeight = window.innerHeight;
-    const distanceFromTop = window.pageYOffset;
-
-    if (distanceFromTop > innerHeight * 4) {
-      contactInfos.current.style.opacity = 1;
-      contactWrapper.current.style.backgroundColor = "#ef3d3d";
-    } else {
-      contactInfos.current.style.opacity = 0;
-      contactWrapper.current.style.backgroundColor = "black";
-    }
+  const handleWaypointEnter = ref => {
+    ref.classList.add("transition-on");
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", toggleContactSection, false);
-    return () => window.removeEventListener("scroll", toggleContactSection, false);
-  }, []);
+  const handleWaypointLeave = ref => {
+    ref.classList.remove("transition-on");
+  };
 
   useEffect(() => {
     printLetterByLetter(textContainer.current, FUNNY_MESSAGES_ARRAY[0]);
@@ -33,38 +24,75 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className="contact" ref={contactWrapper}>
-      <div className="contact-infos" ref={contactInfos}>
-        <div className="text-wrapper">
-          <div id="text-container" ref={textContainer} />
-        </div>
+    <section 
+      className="contact"
+      style={{ 
+        color: showLightTheme ? "#0e0e0e" : "#fff",
+        background: showLightTheme ? "#ffe6e6" : "#ef3d3d"
+      }}
+    >
+      <Waypoint
+        onEnter={() => handleWaypointEnter(contactContainer.current)}
+        onLeave={() => handleWaypointLeave(contactContainer.current)}
+      >
+        <div className="contact-container" ref={contactContainer}>
+          <div className="contact-infos">
+            <div className="text-wrapper">
+              <div id="text-container" ref={textContainer} />
+            </div>
 
-        <div className="mail-wrapper">
-          <img src="profile-pic.jpg" height="100px" width="auto" alt="shiny-uniorn" />
-          <div className="column-right">
-            <p className="send-email">Send me an e-mail :</p>
-            <a href="mailto:estelle.gresillon@gmail.com">estelle.gresillon@gmail.com</a>
+            <div className="mail-wrapper">
+              <img src="profile-pic.jpg" height="100px" width="auto" alt="shiny-uniorn" />
+              <div className="column-right">
+                <p className="send-email">Send me an e-mail :</p>
+                <a 
+                  href="mailto:estelle.gresillon@gmail.com"
+                  alt="mail"
+                  style={{ color: showLightTheme ? "#0e0e0e" : "#fff" }}
+                >estelle.gresillon@gmail.com</a>
+              </div>
+            </div>
+            <p className="disponibility"><span aria-label="emoji-worker" role="img">👩‍💼</span> Available in April 2020 for freelance missions</p>
+          </div>
+
+          <div className="social-icons">
+            <a 
+              style={{ color: showLightTheme ? "#0e0e0e" : "#fff" }}
+              href="https://www.linkedin.com/in/estellegresillon/"
+              alt="linkedin"
+            >
+              <i className="fab fa-linkedin" />
+            </a>
+            <a 
+              href="https://dribbble.com/estellegresillon"
+              style={{ color: showLightTheme ? "#0e0e0e" : "#fff" }}
+              alt="dribbble"
+            >
+              <i className="fab fa-dribbble" />
+            </a>
+            <a 
+              href="https://github.com/estellegresillon"
+              style={{ color: showLightTheme ? "#0e0e0e" : "#fff" }}
+              alt="github"
+            >
+              <i className="fab fa-github-alt" />
+            </a>
+            <a 
+              href="mailto:estelle.gresillon@gmail.com"
+              style={{ color: showLightTheme ? "#0e0e0e" : "#fff" }}
+              alt="mail"
+            >
+              <i className="far fa-paper-plane" />
+            </a>
           </div>
         </div>
-        <p className="disponibility"><span aria-label="emoji-worker" role="img">👩‍💼</span> Available in April 2020 for freelance missions</p>
-      </div>
-
-      <div className="social-icons">
-        <a href="https://www.linkedin.com/in/estellegresillon/" alt="linkedin">
-          <i className="fab fa-linkedin" />
-        </a>
-        <a href="https://dribbble.com/estellegresillon">
-          <i className="fab fa-dribbble" />
-        </a>
-        <a href="https://github.com/estellegresillon">
-          <i className="fab fa-github-alt" />
-        </a>
-        <a href="mailto:estelle.gresillon@gmail.com">
-          <i className="far fa-paper-plane" />
-        </a>
-      </div>
+      </Waypoint>
     </section>
   );
 }
 
-export default Contact;
+const mapStateToProps = state => {
+  return { showLightTheme: state.showLightTheme };
+};
+
+export default connect(mapStateToProps)(Contact);

@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from 'react';
+import { connect } from "react-redux";
 
 import "./hero-scene.scss";
 
-const HeroScene = () => {
+const HeroScene = ({ showLightTheme }) => {
   const heroCursor = useRef(null);
   const heroScene = useRef(null);
   const heroTitle = useRef(null);
@@ -38,8 +39,19 @@ const HeroScene = () => {
   }, []);
 
   return (
-    <section className="hero-scene" ref={heroScene}>
-      <div className="hero-cursor" ref={heroCursor} />
+    <section 
+      className="hero-scene" 
+      ref={heroScene}
+      style={{ 
+        color: showLightTheme ? "#0e0e0e" : "#fff",
+        background: showLightTheme ? "#fff" : "#0e0e0e"
+      }}
+    >
+      <div
+        className="hero-cursor"
+        ref={heroCursor}
+        style={{ mixBlendMode: showLightTheme ? "screen" : "darken" }}
+      />
       <h1 className="first" ref={heroTitleTop}>
         <span className="title-stroke">DESIGNER</span>
         <span className="title-plain">UX</span>
@@ -65,4 +77,8 @@ const HeroScene = () => {
   );
 }
 
-export default HeroScene;
+const mapStateToProps = state => {
+  return { showLightTheme: state.showLightTheme };
+};
+
+export default connect(mapStateToProps)(HeroScene);

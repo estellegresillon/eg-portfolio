@@ -1,13 +1,15 @@
 section.contact {
   height: 100vh;
   width: 100vw;
-  z-index: 0;
-  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
+
+  .contact-container {
+    opacity: 0;
+  }
   
   .social-icons {
     display: flex;
@@ -67,9 +69,50 @@ section.contact {
 
 @keyframes fadeIn {
   from {
+    margin-top: 20vh;
     opacity: 0;
   }
   to {
+    margin-top: 0;
     opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 728px) {
+  section.contact {
+    height: 100%;
+    padding: 20% 0;
+    text-align: center;
+
+    .social-icons {
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
+
+      a:last-child {
+        i { margin-right: 0; }
+      }
+    }
+
+    .contact-infos {
+      width: 100%;
+
+      .text-wrapper {
+        margin-left: 5vw;
+        margin-right: 5vw;
+      }
+
+      .mail-wrapper {
+        flex-direction: column;
+
+        img {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+      }
+
+      a { font-size: 18px; }
+    }
   }
 }

@@ -1,21 +1,37 @@
 import React, { useState } from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 
+import { toggleTheme } from "../../../redux/actions";
 import "./header.scss";
 
-const Header = () => {
+const Header = ({ showLightTheme, toggleTheme }) => {
   const [profession, setProfession] = useState("CREATIVE DEVELOPER");
 
   return (
-    <header className="App-header">
-      <div className="logo">ESTELLE GRESILLON</div>
+    <header 
+      className="App-header"
+      style={{ color: showLightTheme ? "#0e0e0e" : "#fff" }}
+    >
+      <div className="logo" onClick={() => window.scrollTo(0, 0)}>ESTELLE GRESILLON</div>
       <div
         className="profession"
         onMouseEnter={() => setProfession("💙💙💙")}
         onMouseLeave={() => setProfession("CREATIVE DEVELOPER")}
       >{profession}</div>
-      <div className="menu">CHANGE THEME</div>
+      <div className="menu" onClick={() => toggleTheme(showLightTheme)}>
+        {showLightTheme ? "DARK THEME" : "LIGHT THEME"}
+      </div>
     </header>
   );
 }
 
-export default Header;
+const mapStateToProps = state => {
+  return { showLightTheme: state.showLightTheme };
+};
+
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ toggleTheme }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
