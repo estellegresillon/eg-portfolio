@@ -51,7 +51,7 @@ section.contact {
 
     .disponibility {
       font-weight: 900;
-      margin-top: 10vh;
+      margin: 10vh 0;
     }
 
     a {
@@ -97,6 +97,10 @@ section.contact {
 
     .contact-infos {
       width: 100%;
+
+      .disponibility {
+        margin: 10vh;
+      }
 
       .text-wrapper {
         margin-left: 5vw;

@@ -20,7 +20,7 @@ const About = ({ showLightTheme }) => {
       className="about"
       style={{ 
         color: showLightTheme ? "#0e0e0e" : "#fff",
-        background: showLightTheme ? "#ffe6e6" : "#ef3d3d"
+        background: showLightTheme ? "#fff6f6" : "#ef3d3d"
       }}
     >
       <Waypoint
@@ -32,7 +32,7 @@ const About = ({ showLightTheme }) => {
             <p><span className="intro">Hello</span>, je suis développeur front-end et designer.</p>
             <p>
               Passionnée de design et d'interaction, mon objectif est de créer des produits à l'expérience utilisateur unique et au design hautement qualitatif.
-              Je me suis spécialisée dans le développement Front-end sur React.js durant diverses expériences sur Paris (magazine, opérateur télécom, site e-commerce) pendant 2 ans, et également via des projets personnels.
+              Je me suis spécialisée dans le développement front-end sur React.js durant diverses expériences sur Paris (magazine, opérateur télécom, site e-commerce) pendant 2 ans, et également via des projets personnels.
             </p>
             <p>Je recherche actuellement à participer à la conception et à la direction artistique de sites vitrines ou d'application desktop (développement from scratch, maintenance évolutive, ou intégration).</p>
           </div>

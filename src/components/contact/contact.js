@@ -28,7 +28,7 @@ const Contact = ({ showLightTheme }) => {
       className="contact"
       style={{ 
         color: showLightTheme ? "#0e0e0e" : "#fff",
-        background: showLightTheme ? "#ffe6e6" : "#ef3d3d"
+        background: showLightTheme ? "#fff6f6" : "#ef3d3d"
       }}
     >
       <Waypoint

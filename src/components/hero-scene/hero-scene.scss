@@ -26,6 +26,10 @@ section.hero-scene {
   width: 100vw;
   z-index: 1;
 
+  .mobile-only {
+    display: none;
+  }
+
   h1 {
     font-size: 130px;
     margin-top: 0;
@@ -61,10 +65,18 @@ section.hero-scene {
 
 @media screen and (max-width: 728px) {
   section.hero-scene {
-    h1 { font-size: 72px; }
+    .mobile-only {
+      display: unset;
+    }
+
+    h1 { font-size: 48px; }
 
     h1.first {
-      margin-bottom: -35px;
+      margin-bottom: -23px;
+    }
+
+    .skillset {
+      left: -15px;
     }
     
     .availability { display: none; }
