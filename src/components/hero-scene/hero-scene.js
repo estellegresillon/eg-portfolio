@@ -38,15 +38,16 @@ const HeroScene = () => {
     <section className="hero-scene" ref={heroScene}>
       <div className="hero-cursor" ref={heroCursor} />
       <h1 className="first" ref={heroTitleTop}>
-        <span className="title-plain">DEVELOPER</span>
-        <span className="title-stroke">Creative</span>
-        <span className="title-plain">DEVELOPER</span>
-        <span className="title-stroke">Creative</span>
+        <span className="title-stroke">DESIGNER</span>
+        <span className="title-plain">UX</span>
+        <span className="title-stroke">DESIGNER</span>
+        <span className="title-plain">UI</span>
+        <span className="title-stroke">DESIGNER</span>
       </h1>
       <h1 ref={heroTitle}>
-        <span className="title-stroke">Creative</span>
+        <span className="title-stroke">FRONTEND</span>
         <span className="title-plain">DEVELOPER</span>
-        <span className="title-stroke">Creative</span>
+        <span className="title-stroke">FRONTEND</span>
         <span className="title-plain">DEVELOPER</span>
       </h1>
       <ul className="skillset">

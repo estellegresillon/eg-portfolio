@@ -48,6 +48,21 @@ const Contact = () => {
         </div>
         <p className="disponibility"><span aria-label="emoji-worker" role="img">👩‍💼</span> Available in April 2020 for freelance missions</p>
       </div>
+
+      <div className="social-icons">
+        <a href="https://www.linkedin.com/in/estellegresillon/" alt="linkedin">
+          <i className="fab fa-linkedin" />
+        </a>
+        <a href="https://dribbble.com/estellegresillon">
+          <i className="fab fa-dribbble" />
+        </a>
+        <a href="https://github.com/estellegresillon">
+          <i className="fab fa-github-alt" />
+        </a>
+        <a href="mailto:estelle.gresillon@gmail.com">
+          <i className="far fa-paper-plane" />
+        </a>
+      </div>
     </section>
   );
 }

@@ -7,10 +7,7 @@ import ProjectItem from "./project-item";
 const Projects = () => {
   return (
     <section className="projects">
-      {PROJECTS.map(prj => {
-        return (
-        <ProjectItem key={prj.name} project={prj} />
-      )})}
+      {PROJECTS.map(prj => <ProjectItem key={prj.name} project={prj} />)}
     </section>
   );
 }

@@ -13,7 +13,7 @@ const Header = () => {
         onMouseEnter={() => setProfession("💙💙💙")}
         onMouseLeave={() => setProfession("CREATIVE DEVELOPER")}
       >{profession}</div>
-      <div className="menu">MENU</div>
+      <div className="menu">CHANGE THEME</div>
     </header>
   );
 }

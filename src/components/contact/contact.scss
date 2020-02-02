@@ -1,12 +1,26 @@
 section.contact {
   height: 100vh;
   width: 100vw;
-  z-index: -2;
+  z-index: 0;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   font-family: "Montserrat", sans-serif;
+  
+  .social-icons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 70vw;
+    margin-top: 50px;
+    font-size: 24px;
+
+    a { color: white; }
+
+    i { margin-right: 20px; }
+  }
 
   .contact-infos {
     width: 70vw;
