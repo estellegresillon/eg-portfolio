@@ -8,6 +8,12 @@
   display: flex;
   flex-direction: column;
 
+  .title-stroke {
+    &:hover {
+      -webkit-text-fill-color: #fff;
+    }
+  }
+
   .fa-external-link-alt {
     display: none;
   }

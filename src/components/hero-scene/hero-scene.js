@@ -66,13 +66,13 @@ const HeroScene = ({ showLightTheme }) => {
         <span className="title-plain">DEVELOPER</span>
       </h1>
       <ul className="skillset">
-        <li>FRONT-END DEVELOPMENT</li>
+        <li>DéVELOPPEMENT FRONT-END</li>
         <li className="tools">REACT.JS - NEXTJS - REDUX - CONTEXT REACT API</li>
         <br />
         <li>UI/UX DESIGN</li>
         <li className="tools">SKETCH - ADOBE - INVISION - ZEPLIN</li>
       </ul>
-      <p className="availability">Available in april 2020</p>
+      <p className="availability">Disponible en Avril 2020</p>
     </section>
   );
 }

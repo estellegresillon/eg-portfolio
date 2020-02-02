@@ -19,7 +19,7 @@ const Header = ({ showLightTheme, toggleTheme }) => {
         onMouseEnter={() => setProfession("💙💙💙")}
         onMouseLeave={() => setProfession("CREATIVE DEVELOPER")}
       >{profession}</div>
-      <div className="menu" onClick={() => toggleTheme(showLightTheme)}>
+      <div className="theme" onClick={() => toggleTheme(showLightTheme)}>
         {showLightTheme ? "DARK THEME" : "LIGHT THEME"}
       </div>
     </header>

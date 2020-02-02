@@ -1,0 +1,34 @@
+section.about {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  padding: 20% 0;
+  z-index: 5;
+  line-height: 30px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+
+  .about-container {
+    opacity: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 90%;
+
+    .intro {
+      font-weight: 900;
+      font-size: 32px;
+    }
+
+    .bolder { font-weight: 900; }
+
+    ul { list-style: square; }
+
+    .about-column {
+      width: 35%;
+
+      &.presentation { text-align: justify; }
+    }
+  }
+}

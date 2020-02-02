@@ -4,7 +4,6 @@ import "./project-item.scss";
 
 const ProjectItem = ({ project }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [className, setClassName] = useState("title-stroke");
   const projectContainer = useRef(null);
   const imgContainer = useRef(null);
 
@@ -31,11 +30,7 @@ const ProjectItem = ({ project }) => {
       onMouseLeave={() => setIsVisible(false)}
       ref={projectContainer}
     >
-      <h3 
-        className={className}
-        onMouseEnter={() => setClassName("title-plain")}
-        onMouseLeave={() => setClassName("title-stroke")}
-        onClick={() => window.open(project.url, '_blank')}
+      <h3 className="title-stroke" onClick={() => window.open(project.url, '_blank')}
       >{project.name}</h3>
       <h4 className="title-stroke">
         {project.year}

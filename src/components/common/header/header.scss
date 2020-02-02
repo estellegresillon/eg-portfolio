@@ -8,8 +8,9 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  .profession {
-    width: 20%;
+  .profession, .theme {
+    max-width: 20%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

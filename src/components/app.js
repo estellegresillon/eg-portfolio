@@ -4,6 +4,7 @@ import "./app.scss";
 import Header from "./common/header";
 import HeroScene from "./hero-scene";
 import Projects from "./projects";
+import About from "./about";
 import Contact from "./contact";
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
       <div className="cursor-small" ref={mouseContainer} />
       <Header />
       <HeroScene />
+      <About />
       <Projects />
       <Contact />
     </div>

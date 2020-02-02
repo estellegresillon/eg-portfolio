@@ -44,7 +44,7 @@ const Contact = ({ showLightTheme }) => {
             <div className="mail-wrapper">
               <img src="profile-pic.jpg" height="100px" width="auto" alt="shiny-uniorn" />
               <div className="column-right">
-                <p className="send-email">Send me an e-mail :</p>
+                <p className="send-email">Envoyez-moi un e-mail :</p>
                 <a 
                   href="mailto:estelle.gresillon@gmail.com"
                   alt="mail"
@@ -52,7 +52,7 @@ const Contact = ({ showLightTheme }) => {
                 >estelle.gresillon@gmail.com</a>
               </div>
             </div>
-            <p className="disponibility"><span aria-label="emoji-worker" role="img">👩‍💼</span> Available in April 2020 for freelance missions</p>
+            <p className="disponibility"><span aria-label="emoji-worker" role="img">👩‍💼</span> Disponible en Avril 2020 pour des missions freelance</p>
           </div>
 
           <div className="social-icons">
