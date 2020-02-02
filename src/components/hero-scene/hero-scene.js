@@ -18,8 +18,11 @@ const HeroScene = () => {
   const slideTitleToLeft = e => {
     const containerTop = heroScene.current.offsetTop
     const distanceFromTop = window.pageYOffset;
-    heroTitle.current.style.marginLeft = `${(distanceFromTop - containerTop) * -0.1}vw`;
-    heroTitleTop.current.style.marginLeft = `${(distanceFromTop - containerTop) * 0.1}vw`;
+
+    heroTitle.current.style.transform = 
+      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * -0.5},0,0,1)`;
+    heroTitleTop.current.style.transform = 
+      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * 0.5},0,0,1)`
   }
 
   useEffect(() => {
