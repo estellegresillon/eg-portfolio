@@ -67,13 +67,15 @@ const ProjectItem = ({ project }) => {
       <h3 ref={projectTitle} className="title-stroke">{project.name}</h3>
       <h4 className="title-stroke">
         {project.year}
-        <span><i className="fas fa-external-link-alt" /></span>
+        <span aria-label="External link">
+          <i aria-hidden="true" className="fas fa-external-link-alt" />
+        </span>
       </h4>
       <Waypoint
         onEnter={() => handleWaypointEnter(imgContainer.current)}
         onLeave={() => handleWaypointLeave(imgContainer.current)}
       >
-        <img ref={imgContainer} src={`${project.img}.jpg`} alt={project.img} />
+        <img ref={imgContainer} src={`${project.img}.jpg`} alt={`${project.name} website preview`} />
       </Waypoint>
     </div>
   );

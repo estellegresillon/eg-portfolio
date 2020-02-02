@@ -17,3 +17,17 @@ $red: #fe1000b8;
 @media screen and (max-width: 728px) {
   .cursor-small { display: none; }
 }
+
+.app {
+  position: relative;
+  width: 100vw;
+  cursor: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 728px) {
+  .app { cursor: initial; }
+}

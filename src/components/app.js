@@ -1,11 +1,12 @@
 import React, { useRef, useEffect } from 'react';
 
 import "./app.scss";
-import Header from "./common/header";
+import Header from "./header";
 import HeroScene from "./hero-scene";
 import Projects from "./projects";
 import About from "./about";
 import Contact from "./contact";
+import Footer from "./footer";
 
 const App = () => {
   const mouseContainer = useRef(null);
@@ -36,13 +37,14 @@ const App = () => {
   }, []);
 
   return (
-    <div className="estelle-gresillon">
-      <div className="cursor-small" ref={mouseContainer} />
+    <div className="app">
+      <div aria-hidden="true" className="cursor-small" ref={mouseContainer} />
       <Header />
       <HeroScene />
       <About />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 }

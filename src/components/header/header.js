@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { toggleTheme } from "../../../redux/actions";
+import { toggleTheme } from "../../redux/actions";
 import "./header.scss";
 
 const Header = ({ showLightTheme, toggleTheme }) => {
@@ -19,7 +19,7 @@ const Header = ({ showLightTheme, toggleTheme }) => {
         onMouseEnter={() => setProfession("💙💙💙")}
         onMouseLeave={() => setProfession("CREATIVE DEVELOPER")}
       >{profession}</div>
-      <div className="theme" onClick={() => toggleTheme(showLightTheme)}>
+      <div aria-hidden="true" className="theme" onClick={() => toggleTheme(showLightTheme)}>
         {showLightTheme ? "DARK THEME" : "LIGHT THEME"}
       </div>
     </header>

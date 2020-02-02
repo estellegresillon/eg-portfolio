@@ -48,6 +48,7 @@ const HeroScene = ({ showLightTheme }) => {
     <section 
       className="hero-scene" 
       ref={heroScene}
+      aria-hidden="true"
       style={{ 
         color: showLightTheme ? "#0e0e0e" : "#fff",
         background: showLightTheme ? "#fff" : "#0e0e0e"

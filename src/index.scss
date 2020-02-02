@@ -11,20 +11,6 @@ body {
   cursor: none;
 }
 
-.estelle-gresillon {
-  position: relative;
-  width: 100vw;
-  cursor: none;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media screen and (max-width: 728px) {
-  .estelle-gresillon { cursor: initial; }
-}
-
 body::-webkit-scrollbar {
   display: none;
 }
