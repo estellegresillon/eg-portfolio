@@ -18,7 +18,7 @@ const About = ({ showLightTheme, t }) => {
 
   return (
     <section 
-      className="about"
+      id="about"
       style={{ 
         color: showLightTheme ? "#0e0e0e" : "#fff",
         background: showLightTheme ? "#fff6f6" : "#ef3d3d"

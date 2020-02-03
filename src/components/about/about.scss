@@ -1,4 +1,4 @@
-section.about {
+section#about {
   height: 100%;
   width: 100vw;
   display: flex;
@@ -8,6 +8,14 @@ section.about {
   align-items: center;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
+
+  h5 {
+    font-size: 20px;
+
+    &:first-child {
+      margin-top: 0px;
+    }
+  }
 
   .about-container {
     opacity: 0;
@@ -28,13 +36,19 @@ section.about {
     .about-column {
       width: 35%;
 
-      &.presentation { text-align: justify; }
+      &.presentation { 
+        text-align: justify; 
+
+        p:first-child {
+          margin-top: 0px;
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: 728px) {
-  section.about .about-container {
+  section#about .about-container {
     flex-direction: column;
     width: 80%;
 

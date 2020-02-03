@@ -8,7 +8,7 @@ import ProjectItem from "./project-item";
 const Projects = ({ showLightTheme }) => {
   return (
     <section 
-      className="projects"
+      id="projects"
       style={{ 
         color: showLightTheme ? "#0e0e0e" : "#fff",
         background: showLightTheme ? "#fff" : "#0e0e0e"

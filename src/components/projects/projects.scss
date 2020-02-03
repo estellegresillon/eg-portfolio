@@ -1,4 +1,4 @@
-section.projects {
+section#projects {
   position: relative;
   height: 100%;
   width: 100vw;
@@ -19,7 +19,7 @@ section.projects {
 }
 
 @media screen and (max-width: 728px) {
-  section.projects  {
+  section#projects  {
     padding-top: 20vh;
   }
 }

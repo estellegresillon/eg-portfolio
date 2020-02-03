@@ -4,13 +4,15 @@ import i18n from 'i18next'
 import { connect } from "react-redux";
 
 import { toggleTheme } from "../../redux/actions";
+import { useComponentVisible } from "../../hooks/useComponentVisible";
 import "./header.scss";
 
 const Header = ({ showLightTheme, toggleTheme }) => {
+  const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
   const [logoValue, setLogoValue] = useState("ESTELLE GRESILLON");
   const [language, setLanguage] = useState("");
 
-  const handleLogoValueChange = e => {
+  const handleLogoValueChange = () => {
     const windowHeight = window.innerHeight;
     const distanceFromTop = window.pageYOffset;
     const windowScrollHeight = document.body.scrollHeight;
@@ -73,7 +75,23 @@ const Header = ({ showLightTheme, toggleTheme }) => {
         </div>
       </div>
 
-      <nav>MENU <i className="fas fa-bars" /></nav>
+      <nav onClick={() => setIsComponentVisible(true)}>MENU <i className="fas fa-bars" /></nav>
+      {isComponentVisible &&
+        <ul ref={ref}>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li className="mobile-only">
+            <span 
+              className={language === "fr" ? "bolder" : ""}
+              onClick={() => handleLanguageChange('fr')}
+            >FR</span>
+            <span 
+              className={language === "en" ? "bolder" : ""}
+              onClick={() => handleLanguageChange('en')}
+            >EN</span>
+          </li>
+        </ul>}
     </header>
   );
 }

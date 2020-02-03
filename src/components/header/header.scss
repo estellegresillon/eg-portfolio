@@ -1,16 +1,21 @@
 header {
+  position: relative;
   width: 92%;
   height: 13vh;
   position: fixed;
   display: flex;
   z-index: 999;
-  font-size: 12px;
+  font-size: 14px;
   align-items: center;
   justify-content: space-between;
 
   .logo { 
     cursor: pointer;
     position: absolute;
+  }
+
+  .mobile-only {
+    display: none;
   }
 
   .center-menu {
@@ -46,14 +51,14 @@ header {
 
       .fa-moon { 
         position: absolute;
-        top: 2px;
+        top: 3px;
         right: 0px;
         animation: 1s moonDown;
       }
       
       .fa-sun { 
         position: absolute;
-        top: 0px;
+        top: 3px;
         right: 0px;
         animation: 1s sunRise;
       }
@@ -64,6 +69,37 @@ header {
     cursor: pointer;
 
     .fa-bars { margin-left: 5px; }
+  }
+
+  ul {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    list-style: none;
+    text-align: right;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    li {
+      padding: 10px 0;
+      margin: 5px 0;
+      cursor: pointer;
+
+      span {
+        font-family: "Montserrat", sans-serif;
+
+        &:first-child {
+          margin-right: 10px;
+        }
+
+        &.bolder {
+          font-weight: 900;
+        }
+      }
+    }
   }
 }
 
@@ -86,5 +122,17 @@ header {
 }
 
 @media screen and (max-width: 728px) {
-  header .theme { display: none; }
+  header {
+    .logo {
+      position: relative;
+    }
+
+    .center-menu { 
+      display: none;
+    }
+
+    .mobile-only {
+      display: block;
+    }
+  }
 }

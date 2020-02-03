@@ -26,7 +26,7 @@ const Contact = ({ showLightTheme, t }) => {
 
   return (
     <section 
-      className="contact"
+      id="contact"
       style={{ 
         color: showLightTheme ? "#0e0e0e" : "#fff",
         background: showLightTheme ? "#fff6f6" : "#ef3d3d"
