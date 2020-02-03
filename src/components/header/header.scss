@@ -8,20 +8,33 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  .logo { cursor: pointer; }
+  .logo { 
+    cursor: pointer;
+    position: absolute;
+  }
 
   .center-menu {
     max-width: 20%;
     height: 30px;
+    margin-left: 48%;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    .lang {
+    .language-menu {
       padding-left: 16px;
       margin-left: 16px;
-      border-left: 1px solid #fff;
-      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+
+      span {
+        height: 100%;
+        margin-right: 16px;
+        cursor: pointer;
+
+        &.bolder {
+          font-weight: 900;
+        }
+      }
     }
 
     .theme {

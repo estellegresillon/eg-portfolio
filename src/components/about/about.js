@@ -31,27 +31,24 @@ const About = ({ showLightTheme, t }) => {
         <div className="about-container" ref={aboutContainer}>
           <div className="about-column presentation">
             <p><span className="intro">Hello</span>, {t("about.intro")}</p>
-            <p>
-              Passionnée de design et d'interaction, mon objectif est de créer des produits à l'expérience utilisateur unique et au design hautement qualitatif.
-              Je me suis spécialisée dans le développement front-end sur React.js durant diverses expériences sur Paris (magazine, opérateur télécom, site e-commerce) pendant 2 ans, et également via des projets personnels.
-            </p>
-            <p>Je recherche actuellement à participer à la conception et à la direction artistique de sites vitrines ou d'application desktop (développement from scratch, maintenance évolutive, ou intégration).</p>
+            <p>{t("about.first-paragraph")}</p>
+            <p>{t("about.second-paragraph")}</p>
           </div>
           <div className="about-column skills">
-            <h5><span aria-label="emoji-worker" role="img">💻</span> DÉVELOPPEMENT FRONT-END</h5>
+            <h5><span aria-label="emoji-worker" role="img">💻</span>{t("about.dev-title")}</h5>
             <ul>
               <li className="bolder">React.js / Redux / Nextjs / Context React</li>
-              <li>Développement d'app from scratch / Sites vitrines</li>
-              <li>Intégration CSS3 / Responsive design</li>
-              <li>Animations CSS et transitions, parallax</li>
+              <li>{t("about.dev-first")}</li>
+              <li>{t("about.dev-second")}</li>
+              <li>{t("about.dev-third")}</li>
             </ul>
 
-            <h5><span aria-label="emoji-worker" role="img">🎨</span> DESIGN</h5>
+            <h5><span aria-label="emoji-worker" role="img">🎨</span> DESIGN UX/UI</h5>
             <ul>
-              <li className="bolder">Sketch / Suite Adobe / Invision / Zeplin</li>
-              <li>Design d'interface, prototypage, maquettage</li>
-              <li>Conception d'identité/branding de marques</li>
-              <li>Design d'interaction, conception de parcours utilisateurs</li>
+              <li className="bolder">Sketch / Adobe / Invision / Zeplin</li>
+              <li>{t("about.design-first")}</li>
+              <li>{t("about.design-second")}</li>
+              <li>{t("about.design-third")}</li>
             </ul>
           </div>
         </div>
