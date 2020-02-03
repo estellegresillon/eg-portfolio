@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
+import { withTranslation } from 'react-i18next';
 import { Waypoint } from "react-waypoint";
 
 import "./contact.scss";
 import { printLetterByLetter } from "./helpers";
 import { FUNNY_MESSAGES_ARRAY } from "./constants";
 
-const Contact = ({ showLightTheme }) => {
+const Contact = ({ showLightTheme, t }) => {
   const contactContainer = useRef(null);
   const textContainer = useRef(null);
 
@@ -44,7 +45,7 @@ const Contact = ({ showLightTheme }) => {
             <div className="mail-wrapper">
               <img src="profile-pic.jpg" height="100px" width="auto" alt="Author portrait" />
               <div className="column-right">
-                <p className="send-email">Envoyez-moi un e-mail :</p>
+                <p className="send-email">{t('contact.send-mail')}</p>
                 <a 
                   href="mailto:estelle.gresillon@gmail.com"
                   title="Mail link"
@@ -52,7 +53,7 @@ const Contact = ({ showLightTheme }) => {
                 >estelle.gresillon@gmail.com</a>
               </div>
             </div>
-            <p className="disponibility"><span aria-label="Emoji businesswoman" role="img">👩‍💼</span> Disponible en Avril 2020 pour des missions freelance</p>
+            <p className="disponibility"><span aria-label="Emoji businesswoman" role="img">👩‍💼</span> {t('contact.availability')}</p>
           </div>
 
           <div className="social-icons">
@@ -95,4 +96,4 @@ const mapStateToProps = state => {
   return { showLightTheme: state.showLightTheme };
 };
 
-export default connect(mapStateToProps)(Contact);
+export default withTranslation()(connect(mapStateToProps)(Contact));

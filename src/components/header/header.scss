@@ -8,15 +8,70 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  .profession, .theme {
+  .logo { cursor: pointer; }
+
+  .center-menu {
     max-width: 20%;
-    height: 100%;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .lang {
+      padding-left: 16px;
+      margin-left: 16px;
+      border-left: 1px solid #fff;
+      cursor: pointer;
+    }
+
+    .theme {
+      position: relative;
+      overflow: hidden;
+      height: 16px;
+      width: 16px;
+      cursor: pointer;
+
+      .fa-moon { 
+        position: absolute;
+        top: 2px;
+        right: 0px;
+        animation: 1s moonDown;
+      }
+      
+      .fa-sun { 
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        animation: 1s sunRise;
+      }
+    }
+  }
+
+  nav {
+    cursor: pointer;
+
+    .fa-bars { margin-left: 5px; }
+  }
+}
+
+@keyframes moonDown {
+  from {
+    top: -20px;
+  }
+  to {
+    top: 2;
+  }
+}
+
+@keyframes sunRise {
+  from {
+    top: 20px;
+  }
+  to {
+    top: 0;
   }
 }
 
 @media screen and (max-width: 728px) {
-  header .profession { display: none; }
+  header .theme { display: none; }
 }

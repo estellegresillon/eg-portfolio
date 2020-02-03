@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import { connect } from "react-redux";
+import { withTranslation } from 'react-i18next'
 import { Waypoint } from "react-waypoint";
 
 import "./about.scss";
 
-const About = ({ showLightTheme }) => {
+const About = ({ showLightTheme, t }) => {
   const aboutContainer = useRef(null);
 
   const handleWaypointEnter = ref => {
@@ -29,7 +30,7 @@ const About = ({ showLightTheme }) => {
       >
         <div className="about-container" ref={aboutContainer}>
           <div className="about-column presentation">
-            <p><span className="intro">Hello</span>, je suis développeur front-end et designer.</p>
+            <p><span className="intro">Hello</span>, {t("about.intro")}</p>
             <p>
               Passionnée de design et d'interaction, mon objectif est de créer des produits à l'expérience utilisateur unique et au design hautement qualitatif.
               Je me suis spécialisée dans le développement front-end sur React.js durant diverses expériences sur Paris (magazine, opérateur télécom, site e-commerce) pendant 2 ans, et également via des projets personnels.
@@ -63,4 +64,4 @@ const mapStateToProps = state => {
   return { showLightTheme: state.showLightTheme };
 };
 
-export default connect(mapStateToProps)(About);
+export default withTranslation()(connect(mapStateToProps)(About));

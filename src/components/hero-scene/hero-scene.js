@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import { connect } from "react-redux";
+import { withTranslation } from 'react-i18next';
 
 import "./hero-scene.scss";
 
-const HeroScene = ({ showLightTheme }) => {
+const HeroScene = ({ showLightTheme, t }) => {
   const heroCursor = useRef(null);
   const heroScene = useRef(null);
   const heroTitleOne = useRef(null);
@@ -85,13 +86,13 @@ const HeroScene = ({ showLightTheme }) => {
         <span className="title-stroke">FRONTEND</span>
       </h1>
       <ul className="skillset">
-        <li>DéVELOPPEMENT FRONT-END</li>
+        <li>{t('hero-scene.front-end')}</li>
         <li className="tools">REACT.JS - NEXTJS - REDUX - CONTEXT REACT</li>
         <br />
         <li>UI/UX DESIGN</li>
         <li className="tools">SKETCH - ADOBE - INVISION - ZEPLIN</li>
       </ul>
-      <p className="availability">Disponible en Avril 2020</p>
+      <p className="availability">{t('hero-scene.availability')}</p>
     </section>
   );
 }
@@ -100,4 +101,4 @@ const mapStateToProps = state => {
   return { showLightTheme: state.showLightTheme };
 };
 
-export default connect(mapStateToProps)(HeroScene);
+export default withTranslation()(connect(mapStateToProps)(HeroScene));

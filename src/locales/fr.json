@@ -1,0 +1,17 @@
+{
+  "hero-scene": {
+    "front-end": "Développement Front-End",
+    "availability": "Disponible en Avril 2020"
+  },
+  "about": {
+    "intro": "je suis développeur front-end et designer UI/UX."
+  },
+  "contact": {
+    "send-mail": "Envoyez-moi un e-mail :",
+    "availability": "Disponible en Avril 2020 pour des missions freelance"
+  },
+  "footer": {
+    "credits": "Design et développement par Estelle Grésillon ©2020 - Tous droits réservés",
+    "techno": "Site réalisé avec React / Redux / NextJS / i18next / Stylus"
+  }
+}
