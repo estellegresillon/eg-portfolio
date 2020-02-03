@@ -78,9 +78,9 @@ const Header = ({ showLightTheme, toggleTheme }) => {
       <nav onClick={() => setIsComponentVisible(true)}>MENU <i className="fas fa-bars" /></nav>
       {isComponentVisible &&
         <ul onClick={() => setIsComponentVisible(false)} ref={ref}>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+          <li><a style={{ color: showLightTheme ? "#000" : "#fff" }} href="#about">ABOUT</a></li>
+          <li><a style={{ color: showLightTheme ? "#000" : "#fff" }} href="#projects">PROJECTS</a></li>
+          <li><a style={{ color: showLightTheme ? "#000" : "#fff" }} href="#contact">CONTACT</a></li>
           <li className="mobile-only">
             <span 
               className={language === "fr" ? "bolder" : ""}
