@@ -50,7 +50,7 @@ const Header = ({ showLightTheme, toggleTheme }) => {
   return (
     <header 
       className="App-header"
-      style={{ color: showLightTheme ? "#0e0e0e" : "#fff" }}
+      style={{ color: showLightTheme ? "#000" : "#fff" }}
     >
       <div className="logo" aria-label="Estelle Grésillon" aria-hidden="true" onClick={() => window.scrollTo(0, 0)}>{logoValue}</div>
       
@@ -62,7 +62,7 @@ const Header = ({ showLightTheme, toggleTheme }) => {
         </div>
         <div 
           className="language-menu"
-          style={{ borderLeft: `1px solid ${showLightTheme ? "#0e0e0e" : "#fff"}` }}
+          style={{ borderLeft: `1px solid ${showLightTheme ? "#000" : "#fff"}` }}
         >
           <span 
             className={language === "fr" ? "bolder" : ""}

@@ -8,8 +8,8 @@ const Footer = ({ showLightTheme, t }) => {
   return (
     <footer
       style={{ 
-        color: showLightTheme ? "#0e0e0e" : "#fff",
-        background: showLightTheme ? "#fff" : "#0e0e0e"
+        color: showLightTheme ? "#000" : "#fff",
+        background: showLightTheme ? "#fff" : "#000"
       }}
     >
       <p>{t('footer.credits')}</p>
