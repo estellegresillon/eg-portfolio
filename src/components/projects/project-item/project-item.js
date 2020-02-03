@@ -28,7 +28,7 @@ const ProjectItem = ({ project }) => {
       `matrix3d(1,0,0.00,${distanceFromMiddleX * 0.0000001},0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.1},${distanceFromMiddleY * -0.1},0,1)`;
   }
 
-  const moveTitle = e => {
+  const moveTitle = () => {
     const containerTop = projectContainer.current.offsetTop
     const distanceFromTop = window.pageYOffset;
 

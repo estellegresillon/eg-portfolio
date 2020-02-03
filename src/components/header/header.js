@@ -77,7 +77,7 @@ const Header = ({ showLightTheme, toggleTheme }) => {
 
       <nav onClick={() => setIsComponentVisible(true)}>MENU <i className="fas fa-bars" /></nav>
       {isComponentVisible &&
-        <ul ref={ref}>
+        <ul onClick={() => setIsComponentVisible(false)} ref={ref}>
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#projects">PROJECTS</a></li>
           <li><a href="#contact">CONTACT</a></li>
