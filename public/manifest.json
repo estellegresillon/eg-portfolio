@@ -9,15 +9,53 @@
       "type": "image/x-icon"
     },
     {
-      "src": "images/icon-192x192.png",
+      "src": "\/apple-touch-icon-57x57.png",
+      "sizes": "57x57",
+      "type": "image\/png",
+      "density": "0.75"
+     },
+     {
+      "src": "\/apple-touch-icon-60x60.png",
+      "sizes": "60x60",
+      "type": "image\/png",
+      "density": "1.0"
+     },
+     {
+      "src": "\/apple-touch-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image\/png",
+      "density": "1.5"
+     },
+     {
+      "src": "\/apple-touch-icon-76x76.png",
+      "sizes": "76x76",
+      "type": "image\/png",
+      "density": "2.0"
+     },
+     {
+      "src": "\/apple-touch-icon-114x114.png",
+      "sizes": "144x144",
+      "type": "image\/png",
+      "density": "3.0"
+     },
+     {
+      "src": "\/apple-touch-icon-120x120.png",
+      "sizes": "144x144",
+      "type": "image\/png",
+      "density": "3.0"
+     },
+     {
+      "src": "\/apple-touch-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image\/png",
+      "density": "3.0"
+     },
+     {
+      "src": "\/apple-touch-icon-152x152.png",
       "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "images/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+      "type": "image\/png",
+      "density": "4.0"
+     }
   ],
   "start_url": ".",
   "display": "standalone",
