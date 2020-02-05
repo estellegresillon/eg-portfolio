@@ -65,7 +65,7 @@ const About = ({ showLightTheme, t }) => {
               <li>{t("about.dev-third")}</li>
             </ul>
 
-            <h5><span aria-label="emoji-worker" role="img">🎨</span> DESIGN UX/UI</h5>
+            <h5><span aria-label="emoji-worker" role="img">🎨</span> UI DESIGN</h5>
             <ul>
               <li className="bolder">Sketch / Adobe / Invision / Zeplin</li>
               <li>{t("about.design-first")}</li>

@@ -62,7 +62,7 @@ const HeroScene = ({ showLightTheme, t }) => {
       />
       <h1 className="first" ref={heroTitleOne}>
         <span className="title-stroke">DESIGNER</span>
-        <span className="title-plain">UX</span>
+        <span className="title-plain">UI</span>
         <span className="title-stroke">DESIGNER</span>
         <span className="title-plain">UI</span>
         <span className="title-stroke">DESIGNER</span>
@@ -77,7 +77,7 @@ const HeroScene = ({ showLightTheme, t }) => {
         <span className="title-stroke">DESIGNER</span>
         <span className="title-plain">UI</span>
         <span className="title-stroke">DESIGNER</span>
-        <span className="title-plain">UX</span>
+        <span className="title-plain">UI</span>
         <span className="title-stroke">DESIGNER</span>
       </h1>
       <h1 className="mobile-only" ref={heroTitleFour}>
@@ -89,7 +89,7 @@ const HeroScene = ({ showLightTheme, t }) => {
         <li>{t('hero-scene.front-end')}</li>
         <li className="tools">REACT.JS - NEXTJS - REDUX - CONTEXT REACT</li>
         <br />
-        <li>UI/UX DESIGN</li>
+        <li>UI DESIGN</li>
         <li className="tools">SKETCH - ADOBE - INVISION - ZEPLIN</li>
       </ul>
       <p className="availability">{t('hero-scene.availability')}</p>
