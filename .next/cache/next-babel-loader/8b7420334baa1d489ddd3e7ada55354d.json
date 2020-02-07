@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./contact\";","map":{"version":3,"sources":["/Users/estellegresillon/Code/eg-portfolio/src/components/contact/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,WAAxB","sourcesContent":["export { default } from \"./contact\";\n"]},"metadata":{},"sourceType":"module"}
