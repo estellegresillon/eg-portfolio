@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default } from \"./about\";","map":{"version":3,"sources":["/Users/estellegresillon/Code/eg-portfolio/src/components/about/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,SAAxB","sourcesContent":["export { default } from \"./about\";\n"]},"metadata":{},"sourceType":"module"}

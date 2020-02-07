@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default } from \"./hero-scene\";","map":{"version":3,"sources":["/Users/estellegresillon/Code/eg-portfolio/src/components/hero-scene/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,cAAxB","sourcesContent":["export { default } from \"./hero-scene\";\n"]},"metadata":{},"sourceType":"module"}
