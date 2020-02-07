@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta title="Estelle Grésillon - Développeur Front-end & UI Designer" />
           <meta
@@ -59,7 +59,7 @@ class MyDocument extends Document {
 
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap" rel="stylesheet" />
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
-            integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous" />
+            integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossOrigin="anonymous" />
           <link rel="manifest" href="manifest.json" />
         </Head>
         <body>
