@@ -6,3 +6,4 @@ export const PROJECTS = [
   { name: "Otaku Market", year: 2018, img: "otaku", url: "https://www.otaku-market.com" },
   { name: "That's My Rock", year: 2018, img: "thatsmyrock", url: "http://www.thatsmyrock.com/" },
 ];
+ 
