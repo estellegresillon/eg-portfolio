@@ -8,6 +8,7 @@ header {
   font-size: 14px;
   align-items: center;
   justify-content: space-between;
+  color: #fff;
 
   .logo { 
     cursor: pointer;
@@ -29,6 +30,7 @@ header {
     .language-menu {
       padding-left: 16px;
       margin-left: 16px;
+      border-left: 1px solid #fff;
       font-family: "Montserrat", sans-serif;
 
       span {
@@ -80,6 +82,7 @@ header {
 
     a {
       text-decoration: none;
+      color: #fff;
     }
     
     li {

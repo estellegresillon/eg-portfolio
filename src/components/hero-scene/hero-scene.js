@@ -11,6 +11,8 @@ const HeroScene = ({ showLightTheme, t }) => {
   const heroTitleTwo = useRef(null);
   const heroTitleThree = useRef(null);
   const heroTitleFour = useRef(null);
+  const circleTop = useRef(null);
+  const circleBottom = useRef(null);
 
   const onCursorMove = (e, container, cursor, offset) => {
     const relX = e.pageX - container.offsetLeft - offset;
@@ -33,11 +35,29 @@ const HeroScene = ({ showLightTheme, t }) => {
       `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * -0.5},0,0,1)`;
   }
 
+  const moveCircles = e => {
+    const pageMiddleX = window.innerWidth / 2;
+    const pageMiddleY = window.innerHeight / 2;
+    const distanceFromMiddleX = e.clientX - pageMiddleX;
+    const distanceFromMiddleY = e.clientY - pageMiddleY;
+
+    circleTop.current.style.transform =
+      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.2},${distanceFromMiddleY * -0.1},0,1)`;
+    circleBottom.current.style.transform =
+      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * 0.2},${distanceFromMiddleY * -0.1},0,1)`;
+  }
+
   useEffect(() => {
     const heroContainer = heroScene.current;
     const mouseContainer = heroCursor.current;
-    heroContainer.addEventListener("mousemove", (e) => { onCursorMove(e, heroContainer, mouseContainer, 280) }, false);
-    return () => heroContainer.removeEventListener("mousemove", (e) => { onCursorMove(e, heroContainer, mouseContainer, 280) }, false);
+    heroContainer.addEventListener("mousemove", (e) => { onCursorMove(e, heroContainer, mouseContainer, 75) }, false);
+    return () => heroContainer.removeEventListener("mousemove", (e) => { onCursorMove(e, heroContainer, mouseContainer, 75) }, false);
+  }, []);
+
+  useEffect(() => {
+    const heroContainer = heroScene.current;
+    heroContainer.addEventListener("mousemove", moveCircles, false);
+    return () => heroContainer.removeEventListener("mousemove", moveCircles, false);
   }, []);
 
   useEffect(() => {
@@ -50,16 +70,9 @@ const HeroScene = ({ showLightTheme, t }) => {
       className="hero-scene" 
       ref={heroScene}
       aria-hidden="true"
-      style={{ 
-        color: showLightTheme ? "#000" : "#fff",
-        background: showLightTheme ? "#fff" : "linear-gradient(187deg, rgb(0, 0, 0) 0%, rgb(20, 31, 45) 100%)"
-      }}
+      style={{ background: showLightTheme ? "linear-gradient(rgb(71, 150, 247) 0%, rgb(72, 185, 239) 100%)" : "linear-gradient(180deg, #0a0c13 0%, #15192b 100%)" }}
     >
-      <div
-        className="hero-cursor"
-        ref={heroCursor}
-        style={{ mixBlendMode: showLightTheme ? "screen" : "darken" }}
-      />
+      <div className="hero-cursor" ref={heroCursor} />
       <h1 className="first" ref={heroTitleOne}>
         <span className="title-stroke">DESIGNER</span>
         <span className="title-plain">UI</span>
@@ -93,6 +106,13 @@ const HeroScene = ({ showLightTheme, t }) => {
         <li className="tools">SKETCH - ADOBE - INVISION - ZEPLIN</li>
       </ul>
       <p className="availability">{t('hero-scene.availability')}</p>
+
+      <div className="scroll-animation">
+        <div className="mouse-scroll-ball" />
+      </div>
+
+      <div className="circle circle-top" ref={circleTop} />
+      <div className="circle circle-bottom" ref={circleBottom} />
     </section>
   );
 }

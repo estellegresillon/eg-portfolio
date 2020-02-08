@@ -1,14 +1,20 @@
+$blue: #3a9cff;
+
 section#contact {
+  position: relative;
   height: 80vh;
   width: 100vw;
   display: flex;
+  z-index: 1;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
+  color: #fff;
 
   .contact-container {
     opacity: 0;
+    z-index: 1;
   }
   
   .social-icons {
@@ -19,7 +25,7 @@ section#contact {
     margin-top: 50px;
     font-size: 24px;
 
-    a { color: white; }
+    a { color: #fff; }
 
     i { margin-right: 20px; }
   }
@@ -58,6 +64,26 @@ section#contact {
       color: #fff;
       font-size: 48px;
     }
+  }
+
+  .circle {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: $blue;
+    border-radius: 50%;
+    z-index: 0;
+    transition: 0.5s all ease;
+  }
+
+  .circle-top {
+    top: -2vh;
+    right: -2vw;
+  }
+
+  .circle-bottom {
+    bottom: -2vh;
+    left: -2vw;
   }
 }
 

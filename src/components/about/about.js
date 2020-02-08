@@ -20,10 +20,7 @@ const About = ({ showLightTheme, t }) => {
   return (
     <section 
       id="about"
-      style={{ 
-        color: showLightTheme ? "#000" : "#fff",
-        background: showLightTheme ? "#fff" : "#000"
-      }}
+      style={{ background: showLightTheme ? "#47b9ef" : "#15192b" }}
     >
       <div className="about-container">
         <Waypoint

@@ -1,19 +1,19 @@
 $pink: #ffe8e8;
-$red: #fe1000b8;
+$darker-pink: #ff5b5b;
 
 .hero-cursor {
   position: absolute;
-  width: 240px;
-  height: 240px;
+  width: 150px;
+  height: 150px;
   top: 0;
   left: 0;
   background: $pink;
-  border-radius: 80%;
-  border: 160px solid $red;
+  border-radius: 50%;
   backface-visibility: hidden;
   pointer-events: none;
   z-index: 10;
-  transition: 0.5s all linear;
+  mix-blend-mode: color-dodge;
+  opacity: 0.3;
 }
 
 section.hero-scene {
@@ -25,6 +25,7 @@ section.hero-scene {
   height: 100vh;
   width: 100vw;
   z-index: 1;
+  color: #fff;
 
   .mobile-only {
     display: none;
@@ -35,12 +36,15 @@ section.hero-scene {
     margin-top: 0;
     margin-bottom: 0;
 
-    &.first { margin-bottom: -70px; }
+    &.first { 
+      margin-bottom: -60px; 
+      margin-top: 5vh;
+    }
   }
 
   .skillset {
     position: absolute;
-    bottom: 2vh;
+    top: 22vh;
     left: 0;
     list-style: none;
     text-transform: uppercase;
@@ -50,16 +54,52 @@ section.hero-scene {
 
   .availability {
     position: absolute;
-    height: 100vw;
-    width: 100vh;
-    padding-left: 6%;
-    padding-bottom: 4%;
-    display: flex;
-    align-items: flex-end;
-    font-size: 16px;
-    letter-spacing: 5px;
+    right: 2vw;
+    bottom: 29vh;
+    font-size: 12px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    transform: rotate(-90deg);
+  }
+
+  .scroll-animation {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    bottom: 3vh;
+    left: calc(50vw - 10px);
+    border: 2px solid #fff;
+    border-radius: 32px;
+
+    .mouse-scroll-ball {
+      width: 6px;
+      height: 6px;
+      margin-top: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      animation: 4s scrollBall infinite;
+    }
+  }
+
+  .circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: $darker-pink;
+    border-radius: 50%;
+    z-index: -100;
+    transition: 0.5s all ease;
+  }
+
+  .circle-top {
+    top: 10vh;
+    right: 10vw;
+  }
+
+  .circle-bottom {
+    bottom: 10vh;
+    left: 10vw;
   }
 }
 
@@ -81,4 +121,10 @@ section.hero-scene {
     
     .availability { display: none; }
   }
+}
+
+@keyframes scrollBall {
+  from { margin-top: 10px; }
+  80% { margin-top: 20px; }
+  to { margin-top: 10px ;}
 }

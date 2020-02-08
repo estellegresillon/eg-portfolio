@@ -9,10 +9,7 @@ const Projects = ({ showLightTheme }) => {
   return (
     <section 
       id="projects"
-      style={{ 
-        color: showLightTheme ? "#000" : "#fff",
-        background: showLightTheme ? "#fff" : "#000"
-      }}
+      style={{ background: showLightTheme ? "#47b9ef" : "#15192b" }}
     >
       {PROJECTS.map(prj => <ProjectItem key={prj.name} project={prj} />)}
     </section>

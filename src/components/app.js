@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { connect } from "react-redux";
 
 import "./app.scss";
 import Header from "./header";
@@ -8,7 +9,7 @@ import About from "./about";
 import Contact from "./contact";
 import Footer from "./footer";
 
-const App = () => {
+const App = ({ showLightTheme }) => {
   const mouseContainer = useRef(null);
   const mouseRef = useRef(null);
 
@@ -38,7 +39,11 @@ const App = () => {
 
   return (
     <div className="app">
-      <div aria-hidden="true" className="cursor-small" ref={mouseContainer} />
+      <div 
+        aria-hidden="true"
+        className="cursor-small" 
+        ref={mouseContainer}
+      />
       <Header />
       <HeroScene />
       <About />
@@ -49,4 +54,8 @@ const App = () => {
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return { showLightTheme: state.showLightTheme };
+};
+
+export default connect(mapStateToProps)(App);

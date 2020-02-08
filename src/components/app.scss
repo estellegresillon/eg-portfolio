@@ -1,17 +1,16 @@
-$red: #fe1000b8;
+$pink: #ff3131;
 
 .cursor-small {
   position: fixed;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   top: 0;
   left: 0;
-  background-color: $red;
+  background-color: $pink;
   border-radius: 80%;
   backface-visibility: hidden;
   pointer-events: none;
   z-index: 999;
-  mix-blend-mode: difference;
 }
 
 @media screen and (max-width: 728px) {

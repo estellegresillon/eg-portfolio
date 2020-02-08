@@ -48,22 +48,16 @@ const Header = ({ showLightTheme, toggleTheme }) => {
   }, []);
 
   return (
-    <header 
-      className="App-header"
-      style={{ color: showLightTheme ? "#000" : "#fff" }}
-    >
+    <header className="App-header">
       <div className="logo" aria-label="Estelle Grésillon" aria-hidden="true" onClick={() => window.scrollTo(0, 0)}>{logoValue}</div>
       
       <div className="center-menu">
         <div aria-hidden="true" className="theme" onClick={() => toggleTheme(showLightTheme)}>
           {showLightTheme ? 
-            <i className="fas fa-sun" /> :
-            <i className="fas fa-moon" />}
+            <i className="fas fa-moon" /> :
+            <i className="fas fa-sun" />}
         </div>
-        <div 
-          className="language-menu"
-          style={{ borderLeft: `1px solid ${showLightTheme ? "#000" : "#fff"}` }}
-        >
+        <div className="language-menu">
           <span 
             className={language === "fr" ? "bolder" : ""}
             onClick={() => handleLanguageChange('fr')}
@@ -78,9 +72,9 @@ const Header = ({ showLightTheme, toggleTheme }) => {
       <nav onClick={() => setIsComponentVisible(true)}>MENU <i className="fas fa-bars" /></nav>
       {isComponentVisible &&
         <ul onClick={() => setIsComponentVisible(false)} ref={ref}>
-          <li><a style={{ color: showLightTheme ? "#000" : "#fff" }} href="#about">ABOUT</a></li>
-          <li><a style={{ color: showLightTheme ? "#000" : "#fff" }} href="#projects">PROJECTS</a></li>
-          <li><a style={{ color: showLightTheme ? "#000" : "#fff" }} href="#contact">CONTACT</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
           <li className="mobile-only">
             <span 
               className={language === "fr" ? "bolder" : ""}
