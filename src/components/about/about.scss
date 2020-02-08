@@ -34,7 +34,7 @@ section#about {
     ul { list-style: square; }
 
     .about-column {
-      width: 40%;
+      width: 45%;
 
       &.skills {
         margin-right: -10%;
@@ -42,9 +42,10 @@ section#about {
       }
 
       &.presentation { 
-        text-align: justify; 
+        text-align: left;
         margin-left: -10%;
         opacity: 0;
+        font-size: 14px;
 
         p:first-child {
           margin-top: 0px;
