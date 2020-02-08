@@ -18,6 +18,7 @@
     width: auto;
     top: -50px;
     opacity: 0;
+    transition: 0.5s all ease;
   }
 
   &.rafaelbolano, &.foodlab, &.otaku {
@@ -46,7 +47,6 @@
 
 .transition-project-on {
   animation: 2s fadeInProject;
-  animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
 

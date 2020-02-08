@@ -6,10 +6,8 @@ import { Waypoint } from "react-waypoint";
 import "./contact.scss";
 import { printLetterByLetter } from "./helpers";
 import { FUNNY_MESSAGES_ARRAY } from "./constants";
-import { useWindowSize } from "../../hooks/useWindowSize";
 
 const Contact = ({ showLightTheme, t }) => {
-  const windowSize = useWindowSize();
   const contactContainer = useRef(null);
   const textContainer = useRef(null);
 
@@ -20,22 +18,6 @@ const Contact = ({ showLightTheme, t }) => {
   const handleWaypointLeave = ref => {
     ref.classList.remove("transition-on");
   };
-
-  const moveContainer = () => {
-    const containerTop = contactContainer.current.offsetTop
-    const distanceFromTop = window.pageYOffset;
-
-    contactContainer.current.style.transform =
-      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * -0.8},0,0,1)`;
-  }
-
-  useEffect(() => {
-    if (windowSize.width > 728) {
-      window.addEventListener("scroll", moveContainer, false);
-      return () => window.removeEventListener("scroll", moveContainer, false);
-    }
-  // eslint-disable-next-line
-  }, []);
 
   useEffect(() => {
     printLetterByLetter(textContainer.current, FUNNY_MESSAGES_ARRAY[0]);

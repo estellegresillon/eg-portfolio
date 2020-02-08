@@ -52,7 +52,7 @@ const HeroScene = ({ showLightTheme, t }) => {
       aria-hidden="true"
       style={{ 
         color: showLightTheme ? "#000" : "#fff",
-        background: showLightTheme ? "#fff" : "#000"
+        background: showLightTheme ? "#fff" : "linear-gradient(187deg, rgb(0, 0, 0) 0%, rgb(20, 31, 45) 100%)"
       }}
     >
       <div

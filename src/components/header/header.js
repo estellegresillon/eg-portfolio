@@ -28,7 +28,7 @@ const Header = ({ showLightTheme, toggleTheme }) => {
     } else if (distanceFromTop > windowHeight * 2) {
       setLogoValue("HELLO ?");
     } else if (distanceFromTop > windowHeight){
-      setLogoValue("🖤🖤🖤");
+      setLogoValue("💗💗💗");
     } else setLogoValue("ESTELLE GRESILLON");
   }
 

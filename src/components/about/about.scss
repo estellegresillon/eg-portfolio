@@ -2,7 +2,7 @@ section#about {
   height: 100%;
   width: 100vw;
   display: flex;
-  padding: 20% 0;
+  padding: 20% 0 5% 0;
   z-index: 5;
   line-height: 30px;
   align-items: center;
@@ -18,11 +18,10 @@ section#about {
   }
 
   .about-container {
-    opacity: 0;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
 
     .intro {
       font-weight: 900;
@@ -34,16 +33,55 @@ section#about {
     ul { list-style: square; }
 
     .about-column {
-      width: 35%;
+      width: 40%;
+
+      &.skills {
+        margin-right: -10%;
+        opacity: 0;
+      }
 
       &.presentation { 
         text-align: justify; 
+        margin-left: -10%;
+        opacity: 0;
 
         p:first-child {
           margin-top: 0px;
         }
       }
     }
+  }
+}
+
+.transition-about-left {
+  animation: 2s slideFromLeft;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideFromLeft {
+  from { 
+    margin-left: -10%;
+    opacity: 0;
+  }
+  to { 
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.transition-about-right {
+  animation: 2s slideFromRight;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideFromRight {
+  from { 
+    margin-right: -10%;
+    opacity: 0;
+  }
+  to { 
+    margin-right: 0;
+    opacity: 1;
   }
 }
 
