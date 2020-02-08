@@ -21,6 +21,6 @@
   },
   "footer": {
     "credits": "Designed and developed by Estelle Grésillon ©2020 - All rights reserved",
-    "techno": "Website made with ReactJS / Redux / NextJS / i18next"
+    "techno": "Website made with ReactJS / Redux / i18next"
   }
 }
