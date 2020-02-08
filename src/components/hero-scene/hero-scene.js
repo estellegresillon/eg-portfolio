@@ -9,8 +9,6 @@ const HeroScene = ({ showLightTheme, t }) => {
   const heroScene = useRef(null);
   const heroTitleOne = useRef(null);
   const heroTitleTwo = useRef(null);
-  const heroTitleThree = useRef(null);
-  const heroTitleFour = useRef(null);
   const circleTop = useRef(null);
   const circleBottom = useRef(null);
 
@@ -21,6 +19,12 @@ const HeroScene = ({ showLightTheme, t }) => {
     cursor.style.top = relY + "px";
   }
 
+  const toggleCursor = bool => {
+    if (bool) {
+      heroCursor.current.style.opacity = 0.2;
+    } else heroCursor.current.style.opacity = 0;
+  }
+
   const slideTitleToLeft = e => {
     const containerTop = heroScene.current.offsetTop
     const distanceFromTop = window.pageYOffset;
@@ -28,10 +32,6 @@ const HeroScene = ({ showLightTheme, t }) => {
     heroTitleOne.current.style.transform = 
       `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * 0.5},0,0,1)`;
     heroTitleTwo.current.style.transform = 
-      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * -0.5},0,0,1)`;
-    heroTitleThree.current.style.transform = 
-      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * 0.5},0,0,1)`;
-    heroTitleFour.current.style.transform = 
       `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * -0.5},0,0,1)`;
   }
 
@@ -70,6 +70,8 @@ const HeroScene = ({ showLightTheme, t }) => {
       className="hero-scene" 
       ref={heroScene}
       aria-hidden="true"
+      onMouseEnter={() => toggleCursor(true)}
+      onMouseLeave={() => toggleCursor(false)}
       style={{ background: showLightTheme ? "linear-gradient(rgb(71, 150, 247) 0%, rgb(72, 185, 239) 100%)" : "linear-gradient(180deg, #0a0c13 0%, #15192b 100%)" }}
     >
       <div className="hero-cursor" ref={heroCursor} />
@@ -86,18 +88,7 @@ const HeroScene = ({ showLightTheme, t }) => {
         <span className="title-stroke">FRONTEND</span>
         <span className="title-plain">DEVELOPER</span>
       </h1>
-      <h1 className="first mobile-only" ref={heroTitleThree}>
-        <span className="title-stroke">DESIGNER</span>
-        <span className="title-plain">UI</span>
-        <span className="title-stroke">DESIGNER</span>
-        <span className="title-plain">UI</span>
-        <span className="title-stroke">DESIGNER</span>
-      </h1>
-      <h1 className="mobile-only" ref={heroTitleFour}>
-        <span className="title-stroke">FRONTEND</span>
-        <span className="title-plain">DEVELOPER</span>
-        <span className="title-stroke">FRONTEND</span>
-      </h1>
+     
       <ul className="skillset">
         <li>{t('hero-scene.front-end')}</li>
         <li className="tools">REACT.JS - NEXTJS - REDUX - CONTEXT REACT</li>
@@ -113,9 +104,27 @@ const HeroScene = ({ showLightTheme, t }) => {
 
       <div className="circle circle-top" ref={circleTop} />
       <div className="circle circle-bottom" ref={circleBottom} />
+
+      <Cross position="top-left" />
+      <Cross position="top-right" />
+      <Cross position="bottom-left" />
+      <Cross position="bottom-right" />
+
+      <div style={{ opacity: showLightTheme ? 0.1 : 1 }}>
+        <img src="triangle.svg" alt="triangle" className="triangle top-left-triangle" />
+        <img src="triangle.svg" alt="triangle" className="triangle bottom-right-triangle" />
+        <img src="triangle.svg" alt="triangle" className="triangle bottom-left-triangle" />
+      </div>
     </section>
   );
 }
+
+const Cross = ({ position }) => (
+  <div className={`cross-wrapper ${position}-cross`}>
+    <div className="cross-vertical" />
+    <div className="cross-horizontal" />
+  </div>
+)
 
 const mapStateToProps = state => {
   return { showLightTheme: state.showLightTheme };

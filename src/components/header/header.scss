@@ -4,7 +4,7 @@ header {
   height: 13vh;
   position: fixed;
   display: flex;
-  z-index: 999;
+  z-index: 10;
   font-size: 14px;
   align-items: center;
   justify-content: space-between;
@@ -13,6 +13,7 @@ header {
   .logo { 
     cursor: pointer;
     position: absolute;
+    padding: 10px;
   }
 
   .mobile-only {
@@ -28,15 +29,15 @@ header {
     justify-content: center;
 
     .language-menu {
-      padding-left: 16px;
+      padding-left: 10px;
       margin-left: 16px;
       border-left: 1px solid #fff;
       font-family: "Montserrat", sans-serif;
 
       span {
         height: 100%;
-        margin-right: 16px;
         cursor: pointer;
+        padding: 10px;
 
         &.bolder {
           font-weight: 900;
@@ -50,17 +51,18 @@ header {
       height: 16px;
       width: 16px;
       cursor: pointer;
+      padding: 10px;
 
       .fa-moon { 
         position: absolute;
-        top: 1px;
+        top: 11px;
         right: 0px;
         animation: 1s moonDown;
       }
       
       .fa-sun { 
         position: absolute;
-        top: 1px;
+        top: 11px;
         right: 0px;
         animation: 1s sunRise;
       }
@@ -69,16 +71,21 @@ header {
 
   nav {
     cursor: pointer;
+    padding: 10px;
 
     .fa-bars { margin-left: 5px; }
   }
 
   ul {
     position: absolute;
-    right: 0;
-    top: 50px;
+    top: 17px;
+    right: 0px;
+    padding-right: 75px;
     list-style: none;
     text-align: right;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
 
     a {
       text-decoration: none;
@@ -86,9 +93,10 @@ header {
     }
     
     li {
-      padding: 10px 0;
-      margin: 5px 0;
       cursor: pointer;
+      animation: 0.5s aboutItem;
+      animation-fill-mode: forwards;
+      padding: 10px;
 
       span {
         font-family: "Montserrat", sans-serif;
@@ -110,7 +118,7 @@ header {
     top: -20px;
   }
   to {
-    top: 1px;
+    top: 11px;
   }
 }
 
@@ -119,7 +127,18 @@ header {
     top: 20px;
   }
   to {
-    top: 1px;
+    top: 11px;
+  }
+}
+
+@keyframes aboutItem {
+  from {
+    margin-right: -50px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 15px;
+    opacity: 1;
   }
 }
 
@@ -135,6 +154,16 @@ header {
 
     .mobile-only {
       display: block;
+    }
+
+    ul {
+      top: 40px;
+      padding-right: 0;
+      display: unset;
+    }
+
+    ul li {
+      animation: none;
     }
   }
 }

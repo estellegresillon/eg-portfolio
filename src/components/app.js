@@ -27,8 +27,8 @@ const App = ({ showLightTheme }) => {
 
   useEffect(() => {
     const smallCursor = mouseContainer.current;
-    window.addEventListener("mousemove", (e) => { onCursorMove(e, smallCursor, 5) }, false);
-    return () => window.removeEventListener("mousemove", (e) => { onCursorMove(e, smallCursor, 5) }, false);
+    window.addEventListener("mousemove", (e) => { onCursorMove(e, smallCursor, 7) }, false);
+    return () => window.removeEventListener("mousemove", (e) => { onCursorMove(e, smallCursor, 7) }, false);
   }, []);
 
   useEffect(() => {

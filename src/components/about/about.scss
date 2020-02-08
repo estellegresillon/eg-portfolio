@@ -88,12 +88,26 @@ section#about {
 }
 
 @media screen and (max-width: 728px) {
-  section#about .about-container {
-    flex-direction: column;
-    width: 80%;
+  section#about {
+    h5:first-child {
+      margin-top: 40px;
+    }
 
-    .about-column {
-      width: 100%;
+    ul {
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 24px;
+
+      li { margin-bottom: 15px; }
+    }
+
+    .about-container {
+      flex-direction: column;
+      width: 80%;
+
+      .about-column {
+        width: 100%;
+      }
     }
   }
 }

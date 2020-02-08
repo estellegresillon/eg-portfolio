@@ -7,7 +7,7 @@ import "./footer.scss";
 const Footer = ({ showLightTheme, t }) => {
   return (
     <footer
-      style={{ background: showLightTheme ? "rgb(77, 214, 254)" : "rgb(10, 11, 19)" }}
+      style={{ background: showLightTheme ? "rgb(77, 214, 254)" : "rgb(10, 12, 20)" }}
     >
       <p>{t('footer.credits')}</p>
       <p>{t('footer.techno')}</p>
