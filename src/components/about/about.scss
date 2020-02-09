@@ -148,6 +148,9 @@ section#about {
           width: calc(100% - 80px);
           border-radius: 0;
           transform: none;
+          animation: none;
+          opacity: 1;
+          margin-left: 0;
         }
       }
     }

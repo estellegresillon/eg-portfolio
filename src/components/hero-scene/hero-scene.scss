@@ -108,6 +108,19 @@ section.hero-scene {
 
 @media screen and (max-width: 728px) {
   section.hero-scene {
+    .hero-scene-wrapper {
+      opacity: 1;
+      animation: none;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      z-index: 1;
+    }
+
     .hero-cursor { display: none; }
 
     h1 { font-size: 48px; }
