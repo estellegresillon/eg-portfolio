@@ -2,13 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { withTranslation } from 'react-i18next'
 import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 import "./detail.scss";
 import Header from "../header";
 import { PROJECTS } from "../../constants";
 import BgElements from "../bg-elements";
 
-const Detail = ({ showLightTheme, t }) => {
+const Detail = ({ showLightTheme, t, history }) => {
   const [project, setProject] = useState({});
   const pageContainer = useRef(null);
   const mouseContainer = useRef(null);
@@ -78,11 +79,29 @@ const Detail = ({ showLightTheme, t }) => {
     }
   }
 
+  const handleKeyDown = e => {
+    // 37 arrow left / 39 arrow right
+    if (e.keyCode === 37) {
+      history.push(previousProject);
+    } else if (e.keyCode === 39) {
+      history.push(nextProject);
+    };
+
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     const projectName = window.location.pathname.substring(1);
     window.scrollTo(0, 0);
     createNavigation(projectName);
   }, []);
+
+  useEffect(() => { 
+    if (nextProject) {
+      window.addEventListener("keydown", handleKeyDown, true);
+      return () => window.removeEventListener("keydown", handleKeyDown, true);
+    }
+  }, [nextProject]);
 
   return (
     <div
@@ -136,4 +155,4 @@ const mapStateToProps = state => {
   return { showLightTheme: state.showLightTheme };
 };
 
-export default withTranslation()(connect(mapStateToProps)(Detail));
+export default withRouter(withTranslation()(connect(mapStateToProps)(Detail)));
