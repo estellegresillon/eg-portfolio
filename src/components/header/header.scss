@@ -45,13 +45,19 @@ header {
       }
     }
 
+    .set-theme {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
     .theme {
       position: relative;
       overflow: hidden;
       height: 16px;
       width: 16px;
-      cursor: pointer;
       padding: 10px;
+      padding-left: 0px;
 
       .fa-moon { 
         position: absolute;
@@ -154,16 +160,23 @@ header {
 
     .mobile-only {
       display: block;
+      font-weight: 400;
+
+      .fr { margin-right: 5px; }
     }
 
     ul {
       top: 40px;
       padding-right: 0;
       display: unset;
+      padding: 25px;
+      background-color: #2d36a6;
+      box-shadow: 5px 5px 20px rgba(32, 32, 66, 0.5);
     }
 
     ul li {
-      animation: none;
+      padding: 20px;
+      padding-right: 0;
     }
   }
 }

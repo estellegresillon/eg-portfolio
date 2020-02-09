@@ -52,10 +52,13 @@ const Header = ({ showLightTheme, toggleTheme }) => {
       <div className="logo" aria-label="Estelle Grésillon" aria-hidden="true" onClick={() => window.scrollTo(0, 0)}>{logoValue}</div>
       
       <div className="center-menu">
-        <div aria-hidden="true" className="theme" onClick={() => toggleTheme(showLightTheme)}>
-          {showLightTheme ? 
-            <i className="fas fa-moon" /> :
-            <i className="fas fa-sun" />}
+        <div className="set-theme" onClick={() => toggleTheme(showLightTheme)}>
+          <div>{showLightTheme ? "dark mode" : "light mode"}</div>
+          <div aria-hidden="true" className="theme">
+            {showLightTheme ? 
+              <i className="fas fa-moon" /> :
+              <i className="fas fa-sun" />}
+          </div>
         </div>
         <div className="language-menu">
           <span 
@@ -84,6 +87,16 @@ const Header = ({ showLightTheme, toggleTheme }) => {
               className={language === "en" ? "bolder" : ""}
               onClick={() => handleLanguageChange('en')}
             >EN</span>
+          </li>
+          <li className="mobile-only">
+            <div aria-hidden="true" className="theme" onClick={() => toggleTheme(showLightTheme)}>
+              <span>
+                {showLightTheme ? "dark mode" : "light mode"}
+              </span>
+              {showLightTheme ? 
+                <i className="fas fa-moon" /> :
+                <i className="fas fa-sun" />}
+            </div>
           </li>
         </ul>}
     </header>

@@ -8,6 +8,7 @@ import Projects from "./projects";
 import About from "./about";
 import Contact from "./contact";
 import Footer from "./footer";
+import { animateTitle } from "./animate-title";
 
 const App = ({ showLightTheme }) => {
   const mouseContainer = useRef(null);
@@ -37,12 +38,17 @@ const App = ({ showLightTheme }) => {
     return () => window.removeEventListener("scroll", () => { onScroll(smallCursor) });
   }, []);
 
+  useEffect(() => {
+    animateTitle();
+  }, []);
+
   return (
     <div className="app">
       <div 
         aria-hidden="true"
         className="cursor-small" 
         ref={mouseContainer}
+        style={{ backgroundColor: showLightTheme ? "#1c1c8e" : "#8646ee" }}
       />
       <Header />
       <HeroScene />

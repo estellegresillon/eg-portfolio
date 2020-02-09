@@ -37,8 +37,8 @@
 
     &.circle-zest, &.circle-santorini, &.circle-thatsmyrock {
       right: 7vw;
-      height: 130px;
-      width: 130px;
+      height: 100px;
+      width: 100px;
     }
   }
 
@@ -95,6 +95,7 @@
     height: 40vh;
 
     .circle-project {
+      top: 0;
       z-index: -1;
     }
 
@@ -102,8 +103,14 @@
       display: unset;
       margin-left: 10px;
       font-size: 14px;
-      -webkit-text-stroke-width: 0;
-      -webkit-text-fill-color: #fff;
+      color: #fff;
+    }
+
+    @supports (-webkit-text-stroke-width: 0) { // check if browser supports the webkit
+      .fa-external-link-alt {
+        -webkit-text-stroke-width: 0;
+        -webkit-text-fill-color: #fff;
+      }
     }
 
     &.rafaelbolano, &.foodlab, &.otaku {

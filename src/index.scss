@@ -25,8 +25,14 @@ body::-webkit-scrollbar {
   font-weight: 900;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+
+@supports (-webkit-text-stroke-width: 1px) { // check if browser supports the webkit
+  .title-stroke {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  }
 }
 
 .title-plain {
