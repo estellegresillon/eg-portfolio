@@ -35,7 +35,7 @@
       &.detail-right {
         transition: 0.5s all ease;
         opacity: 0.2;
-        background-size: 95%;
+        background-size: cover;
       }
 
       &.detail-left {
@@ -65,7 +65,7 @@
         .detail-year {
           font-family: "Montserrat", sans-serif;
           font-weight: 900;
-          margin-bottom: 100px;
+          margin-bottom: 50px;
         }
 
         .detail-subtitle {

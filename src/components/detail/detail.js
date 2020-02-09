@@ -101,6 +101,7 @@ const Detail = ({ showLightTheme, t, history }) => {
       window.addEventListener("keydown", handleKeyDown, true);
       return () => window.removeEventListener("keydown", handleKeyDown, true);
     }
+  // eslint-disable-next-line
   }, [nextProject]);
 
   return (
@@ -121,7 +122,7 @@ const Detail = ({ showLightTheme, t, history }) => {
           <div className="detail-title title-stroke">{project.name}</div>
           <div className="detail-subtitle title-stroke">{project.description}</div>
           <div className="detail-year">- {project.year} -</div>
-          <a href={project.url} target="_blank">
+          <a href={project.url} target="_blank" rel="noopener noreferrer">
             {t("detail.visit")}
             <span aria-label="External link">
               <i aria-hidden="true" className="fas fa-external-link-alt" />
