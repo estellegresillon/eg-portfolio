@@ -1,13 +1,16 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { withTranslation } from 'react-i18next'
 import { Waypoint } from "react-waypoint";
 
 import "./about.scss";
+import BgElements from "../bg-elements";
 
 const About = ({ showLightTheme, t }) => {
+  const aboutContainer = useRef(null);
   const leftColumn = useRef(null);
   const rightColumn = useRef(null);
+  const circleBottom = useRef(null);
 
   const handleWaypointEnterLeft = ref => {
     ref.classList.add("transition-about-left");
@@ -17,12 +20,30 @@ const About = ({ showLightTheme, t }) => {
     ref.classList.add("transition-about-right");
   };
 
+  const moveElements = e => {
+    const pageMiddleX = window.innerWidth / 2;
+    const pageMiddleY = window.innerHeight / 2;
+    const distanceFromMiddleX = e.clientX - pageMiddleX;
+    const distanceFromMiddleY = e.clientY - pageMiddleY;
+
+    leftColumn.current.style.transform =
+      `matrix3d(1,0,0.00,${distanceFromMiddleX * 0.0000006},0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.09},${distanceFromMiddleY * -0.09},0,1)`;
+    circleBottom.current.style.transform =
+      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * 0.1},${distanceFromMiddleY * -0.1},0,1)`;
+  }
+
+  useEffect(() => {
+    const about = aboutContainer.current;
+    about.addEventListener("mousemove", moveElements, false);
+    return () => about.removeEventListener("mousemove", moveElements, false);
+  }, []);
+
   return (
     <section 
       id="about"
       style={{ background: showLightTheme ? "#47b9ef" : "#15192b" }}
     >
-      <div className="about-container">
+      <div className="about-container" ref={aboutContainer}>
         <Waypoint
           onEnter={() => handleWaypointEnterLeft(leftColumn.current)}
         >
@@ -54,6 +75,9 @@ const About = ({ showLightTheme, t }) => {
           </div>
         </Waypoint>
       </div>
+
+      <div className="circle circle-bottom" ref={circleBottom} />
+      <BgElements />
     </section>
   );
 }

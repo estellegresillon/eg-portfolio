@@ -6,6 +6,7 @@ import { Waypoint } from "react-waypoint";
 import "./contact.scss";
 import { printLetterByLetter } from "./helpers";
 import { FUNNY_MESSAGES_ARRAY } from "./constants";
+import BgElements from "../bg-elements";
 
 const Contact = ({ showLightTheme, t }) => {
   const contactContainer = useRef(null);
@@ -102,6 +103,8 @@ const Contact = ({ showLightTheme, t }) => {
 
       <div className="circle circle-top" ref={circleTop} />
       <div className="circle circle-bottom" ref={circleBottom} />
+
+      <BgElements />
     </section>
   );
 }

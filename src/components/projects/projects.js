@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import "./projects.scss";
-import { PROJECTS } from "./constants";
+import { PROJECTS } from "../../constants";
 import ProjectItem from "./project-item";
 
 const Projects = ({ showLightTheme }) => {

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { withTranslation } from 'react-i18next';
 
 import "./hero-scene.scss";
+import BgElements from "../bg-elements";
 
 const HeroScene = ({ showLightTheme, t }) => {
   const heroCursor = useRef(null);
@@ -105,26 +106,10 @@ const HeroScene = ({ showLightTheme, t }) => {
       <div className="circle circle-top" ref={circleTop} />
       <div className="circle circle-bottom" ref={circleBottom} />
 
-      <Cross position="top-left" />
-      <Cross position="top-right" />
-      <Cross position="bottom-left" />
-      <Cross position="bottom-right" />
-
-      <div style={{ opacity: showLightTheme ? 0.1 : 1 }}>
-        <img src="triangle.svg" alt="triangle" className="triangle top-left-triangle" />
-        <img src="triangle.svg" alt="triangle" className="triangle bottom-right-triangle" />
-        <img src="triangle.svg" alt="triangle" className="triangle bottom-left-triangle" />
-      </div>
+      <BgElements />
     </section>
   );
 }
-
-const Cross = ({ position }) => (
-  <div className={`cross-wrapper ${position}-cross`}>
-    <div className="cross-vertical" />
-    <div className="cross-horizontal" />
-  </div>
-)
 
 const mapStateToProps = state => {
   return { showLightTheme: state.showLightTheme };

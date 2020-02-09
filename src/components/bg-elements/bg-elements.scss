@@ -1,0 +1,85 @@
+.cross-wrapper {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0.2;
+
+  .cross-vertical {
+    height: 100%;
+    width: 4px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: absolute;
+  }
+
+  .cross-horizontal {
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+
+  &.top-left-cross {
+    top: 10vh;
+    left: 15vw;
+    transform: rotate(42deg);
+    animation: 5s rotateCross infinite linear;
+  }
+
+  &.top-right-cross {
+    top: 20vh;
+    right: 25vw;
+    transform: rotate(42deg);
+    animation: 3s rotateCross infinite;
+  }
+
+  &.bottom-right-cross {
+    right: 5vw;
+    bottom: 15vh;
+    animation: 3s rotateCross infinite;
+  }
+
+  &.bottom-left-cross {
+    left: 40vw;
+    bottom: 25vh;
+    animation: 5s rotateCross infinite linear;
+  }
+}
+
+.triangle {
+  position: absolute;
+  z-index: 999;
+
+  &.top-left-triangle {
+    top: 15vh;
+    left: 40vw;
+    animation: 3s rotateCross infinite;
+  }
+
+  &.bottom-right-triangle {
+    bottom: 40vh;
+    right: 40vw;
+    animation: 5s rotateCross infinite linear;
+  }
+
+  &.bottom-left-triangle {
+    bottom: 2vh;
+    left: 4vw;
+    animation: 5s rotateCross infinite linear;
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .triangle.top-left-triangle {
+    left: 76vw;
+  }
+
+  .cross-wrapper.top-right-cross,
+  .triangle.bottom-right-triangle {
+    display: none;
+  }
+}

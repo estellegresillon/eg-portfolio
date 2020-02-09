@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { Waypoint } from "react-waypoint";
+import { withRouter } from 'react-router-dom';
 
 import "./project-item.scss";
 import { useWindowSize } from "../../../hooks/useWindowSize";
+import BgElements from "../../bg-elements";
 
-const ProjectItem = ({ project }) => {
+const ProjectItem = ({ project, history }) => {
   const windowSize = useWindowSize();
   const projectContainer = useRef(null);
   const imgContainer = useRef(null);
@@ -72,16 +74,11 @@ const ProjectItem = ({ project }) => {
     <div 
       className={`project-card ${project.img}`} 
       ref={projectContainer}
-      onClick={() => window.open(project.url, '_blank')}
+      onClick={() => history.push(project.img)}
     >
       <h2 ref={projectTitle} className="title-stroke">{project.name}</h2>
       <h3 ref={projectDescription} className="title-stroke">{project.description}</h3>
-      <h4 className="title-stroke" ref={projectSubtitle}>
-        {project.year}
-        <span aria-label="External link">
-          <i aria-hidden="true" className="fas fa-external-link-alt" />
-        </span>
-      </h4>
+      <h4 className="title-stroke" ref={projectSubtitle}>{project.year}</h4>
       <Waypoint
         onEnter={() => handleWaypointEnter(imgContainer.current)}
         onLeave={() => handleWaypointLeave(imgContainer.current)}
@@ -90,8 +87,10 @@ const ProjectItem = ({ project }) => {
       </Waypoint>
 
       <div className={`circle-project circle-${project.img}`} />
+
+      <BgElements />
     </div>
   );
 }
 
-export default ProjectItem;
+export default withRouter(ProjectItem);

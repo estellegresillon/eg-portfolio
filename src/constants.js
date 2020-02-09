@@ -1,10 +1,10 @@
 export const PROJECTS = [
   { 
-    name: "Rafael Bolano",
+    name: "Foodlab",
     year: 2020,
-    img: "rafaelbolano",
-    url: "https://rafaelbolano.estellegresillon.fr",
-    description: "Portfolio",
+    img: "foodlab",
+    url: "https://foodlab.space",
+    description: "React App",
   },
   { 
     name: "Zest",
@@ -14,11 +14,11 @@ export const PROJECTS = [
     description: "Landing Page",
   },
   { 
-    name: "Foodlab",
+    name: "Rafael Bolano",
     year: 2019,
-    img: "foodlab",
-    url: "https://foodlab.space",
-    description: "React App",
+    img: "rafaelbolano",
+    url: "https://rafaelbolano.estellegresillon.fr",
+    description: "Portfolio",
   },
   { 
     name: "Dive In Santorini",

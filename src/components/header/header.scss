@@ -16,6 +16,16 @@ header {
     padding: 10px;
   }
 
+  .fa-chevron-left {
+    margin-right: 10px;
+  }
+
+  .logo-link {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+  }
+
   .mobile-only {
     display: none;
   }
@@ -153,6 +163,8 @@ header {
     .logo {
       position: relative;
     }
+
+    .logo-link { margin-left: 20px; }
 
     .center-menu { 
       display: none;

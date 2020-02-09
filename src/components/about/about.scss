@@ -1,4 +1,5 @@
 section#about {
+  position: relative;
   height: 100%;
   width: 100vw;
   display: flex;
@@ -20,7 +21,7 @@ section#about {
 
   .about-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     width: 70%;
 
@@ -41,15 +42,21 @@ section#about {
         opacity: 0;
       }
 
+      ul:last-child { margin-bottom: 0px; }
+
       &.presentation { 
         text-align: left;
         margin-left: -10%;
         opacity: 0;
         font-size: 14px;
         line-height: 24px;
-        padding: 40px;
+        padding: 60px;
+        border-radius: 10px;
         background-color: #35c9d8;
-        width: calc(45% - 80px);
+        width: calc(45% - 120px);
+        
+        transition: 0.5s all ease;
+        transform: matrix3d(1, 0, 0, 0.0001935, 0, 1, 0, 0, 0, 0, 1, 0, -29.025, -6.435, 0, 1);
 
         p:first-child {
           margin-top: 0px;
@@ -60,6 +67,21 @@ section#about {
         }
       }
     }
+  }
+
+  .circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #35c9d8;
+    border-radius: 50%;
+    z-index: -100;
+    transition: 0.5s all ease;
+  }
+
+  .circle-bottom {
+    bottom: -150px;
+    right: -150px;
   }
 }
 
@@ -113,7 +135,7 @@ section#about {
       flex-direction: column;
       width: 100%;
 
-      .about-column, {
+      .about-column {
         width: 100%;
 
         &.skills {
@@ -124,6 +146,8 @@ section#about {
         &.presentation {
           padding: 60px 40px;
           width: calc(100% - 80px);
+          border-radius: 0;
+          transform: none;
         }
       }
     }
