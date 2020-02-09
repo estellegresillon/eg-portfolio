@@ -9,14 +9,6 @@ section#projects {
   justify-content: center;
   flex-direction: column;
   color: #fff;
-
-  h2 {
-    position: absolute;
-    top: 0;
-    left: 20vw;
-    font-size: 81px;
-    transform: rotate(-90deg);
-  }
 }
 
 @media screen and (max-width: 728px) {

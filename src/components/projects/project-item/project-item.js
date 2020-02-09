@@ -9,6 +9,8 @@ const ProjectItem = ({ project }) => {
   const projectContainer = useRef(null);
   const imgContainer = useRef(null);
   const projectTitle = useRef(null);
+  const projectSubtitle = useRef(null);
+  const projectDescription = useRef(null);
 
   const handleWaypointEnter = ref => {
     ref.classList.add("transition-project-on");
@@ -35,8 +37,16 @@ const ProjectItem = ({ project }) => {
     if (project.img === "rafaelbolano" || project.img === "foodlab" || project.img === "otaku") {
       projectTitle.current.style.transform =
         `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * -0.6},0,0,1)`;
+      projectSubtitle.current.style.transform =
+        `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * -0.6},0,0,1)`;
+      projectDescription.current.style.transform =
+        `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * -0.6},0,0,1)`;
     } else {
       projectTitle.current.style.transform =
+        `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * 0.6},0,0,1)`;
+      projectSubtitle.current.style.transform =
+        `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * 0.6},0,0,1)`;
+      projectDescription.current.style.transform =
         `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${(distanceFromTop - containerTop) * 0.6},0,0,1)`;
     }
   }
@@ -64,8 +74,9 @@ const ProjectItem = ({ project }) => {
       ref={projectContainer}
       onClick={() => window.open(project.url, '_blank')}
     >
-      <h3 ref={projectTitle} className="title-stroke">{project.name}</h3>
-      <h4 className="title-stroke">
+      <h2 ref={projectTitle} className="title-stroke">{project.name}</h2>
+      <h3 ref={projectDescription} className="title-stroke">{project.description}</h3>
+      <h4 className="title-stroke" ref={projectSubtitle}>
         {project.year}
         <span aria-label="External link">
           <i aria-hidden="true" className="fas fa-external-link-alt" />
@@ -77,6 +88,8 @@ const ProjectItem = ({ project }) => {
       >
         <img ref={imgContainer} src={`${project.img}.jpg`} alt={`${project.name} website preview`} />
       </Waypoint>
+
+      <div className={`circle-project circle-${project.img}`} />
     </div>
   );
 }

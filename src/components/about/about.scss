@@ -46,9 +46,17 @@ section#about {
         margin-left: -10%;
         opacity: 0;
         font-size: 14px;
+        line-height: 24px;
+        padding: 40px;
+        background-color: #35c9d8;
+        width: calc(45% - 80px);
 
         p:first-child {
           margin-top: 0px;
+        }
+
+        p:last-child {
+          margin-bottom: 0px;
         }
       }
     }
@@ -103,10 +111,19 @@ section#about {
 
     .about-container {
       flex-direction: column;
-      width: 80%;
+      width: 100%;
 
-      .about-column {
+      .about-column, {
         width: 100%;
+
+        &.skills {
+          width: calc(100% - 80px);
+          padding: 40px;
+        }
+
+        &.presentation {
+          width: calc(100% - 80px);
+        }
       }
     }
   }

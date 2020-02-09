@@ -19,6 +19,27 @@
     top: -50px;
     opacity: 0;
     transition: 0.5s all ease;
+    z-index: -1;
+  }
+
+  .circle-project {
+    position: absolute;
+    border-radius: 50%;
+    top: -110px;
+    z-index: 7;
+    background-color: #2e37a9;
+
+    &.circle-rafaelbolano, &.circle-foodlab, &.circle-otaku {
+      left: 7vw;
+      height: 150px;
+      width: 150px;
+    }
+
+    &.circle-zest, &.circle-santorini, &.circle-thatsmyrock {
+      right: 7vw;
+      height: 130px;
+      width: 130px;
+    }
   }
 
   &.rafaelbolano, &.foodlab, &.otaku {
@@ -26,7 +47,7 @@
     right: -50vw;
 
     img { left: 5vw; }
-    h3, h4 { margin-right: 5vw; }
+    h2, h3, h4 { margin-right: 5vw; }
   }
 
   &.zest, &.santorini, &.thatsmyrock {
@@ -34,15 +55,21 @@
     left: -50vw;
 
     img { right: 5vw; }
-    h3, h4 { margin-left: 5vw; }
+    h2, h3, h4 { margin-left: 5vw; }
+  }
+
+  h2 {
+    font-size: 100px;
   }
 
   h3 {
-    font-size: 100px;
-    z-index: 999;
+    font-size: 24px;
+    margin-top: -90px;
   }
 
-  h4 { margin-top: -100px; }
+  h4 {
+    margin-top: -20px;
+  }
 }
 
 .transition-project-on {
@@ -67,6 +94,10 @@
   .project-card {
     height: 40vh;
 
+    .circle-project {
+      z-index: -1;
+    }
+
     .fa-external-link-alt {
       display: unset;
       margin-left: 10px;
@@ -83,8 +114,8 @@
 
       h4 {
         margin: 0;
-        margin-top: -45px;
         margin-left: 10vw;
+        margin-top: -20px;
       }
     }
 
@@ -93,23 +124,29 @@
 
       img { display: none; }
 
-      h3 {
+      h2, h3 {
         margin-left: 10vw;
       }
 
       h4 {
-        margin-top: -45px;
         margin-left: 10vw;
+        margin-top: -20px;
       }
     }
 
-    h3 { 
+    h2 { 
       margin-left: 10vw;
       font-size: 42px;
     }
 
+    h3 {
+      font-size: 24px;
+      margin-left: 10vw;
+      margin-top: -35px;
+    }
+
     h4 { 
-      margin-top: -50px;
+      margin-top: 0px;
     }
   }
 }
