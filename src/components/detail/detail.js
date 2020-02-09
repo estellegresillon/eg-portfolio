@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { withTranslation } from 'react-i18next'
+import { Link } from "react-router-dom";
 
 import "./detail.scss";
 import Header from "../header";
@@ -12,6 +13,8 @@ const Detail = ({ showLightTheme, t }) => {
   const pageContainer = useRef(null);
   const mouseContainer = useRef(null);
   const projectImage = useRef(null);
+  const [previousProject, setPreviousProject] = useState("");
+  const [nextProject, setNextProject] = useState("");
 
   const onCursorMove = (e, cursor, offset) => {
     const relX = e.clientX - offset;
@@ -44,6 +47,43 @@ const Detail = ({ showLightTheme, t }) => {
     setProject(currentProject[0]);
   }, []);
 
+  const createNavigation = projectName => {
+    switch (projectName) {
+      case "foodlab":
+        setPreviousProject("/thatsmyrock");
+        setNextProject("/zest");
+        break;
+      case "zest":
+        setPreviousProject("/foodlab");
+        setNextProject("/rafaelbolano");
+        break;
+      case "rafaelbolano":
+        setPreviousProject("/zest");
+        setNextProject("/santorini");
+        break;
+      case "santorini":
+        setPreviousProject("/rafaelbolano");
+        setNextProject("/otaku");
+        break;
+      case "otaku":
+        setPreviousProject("/santorini");
+        setNextProject("/thatsmyrock");
+        break;
+      case "thatsmyrock":
+        setPreviousProject("/otaku");
+        setNextProject("/foodlab");
+        break;
+      default:
+        break;
+    }
+  }
+
+  useEffect(() => {
+    const projectName = window.location.pathname.substring(1);
+    window.scrollTo(0, 0);
+    createNavigation(projectName);
+  }, []);
+
   return (
     <div
       className="detail-page"
@@ -74,6 +114,18 @@ const Detail = ({ showLightTheme, t }) => {
           ref={projectImage}
           className="column detail-right" />
       </section>
+
+      <div className="detail-navigation">
+        <Link to={previousProject}>
+          <span><i className="fas fa-chevron-left" /></span>
+          {t("detail.prev-project")}
+        </Link>
+
+        <Link to={nextProject}>
+          {t("detail.next-project")} 
+          <span><i className="fas fa-chevron-right" /></span>
+        </Link>
+      </div>
 
       <BgElements />
     </div>

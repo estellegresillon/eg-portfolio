@@ -24,6 +24,8 @@
     "techno": "Website made with ReactJS / Redux / i18next"
   },
   "detail": {
-    "visit": "View the website"
+    "visit": "View the website",
+    "prev-project": "Previous project",
+    "next-project": "Next project"
   }
 }

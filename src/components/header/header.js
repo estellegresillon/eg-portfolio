@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { bindActionCreators } from "redux";
 import i18n from 'i18next'
 import { connect } from "react-redux";
-import { withRouter } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import { toggleTheme } from "../../redux/actions";
 import { useComponentVisible } from "../../hooks/useComponentVisible";
 import "./header.scss";
 
-const Header = ({ showLightTheme, toggleTheme, history }) => {
+const Header = ({ showLightTheme, toggleTheme }) => {
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
   const [logoValue, setLogoValue] = useState("ESTELLE GRESILLON");
   const [language, setLanguage] = useState("");
@@ -52,10 +52,10 @@ const Header = ({ showLightTheme, toggleTheme, history }) => {
     <header className="App-header">
       {window.location.pathname === "/" ?
         <div className="logo" aria-label="Estelle Grésillon" aria-hidden="true" onClick={() => window.scrollTo(0, 0)}>{logoValue}</div> :
-        <div className="logo-link" onClick={() => history.goBack()}>
+        <Link className="logo-link" to="/">
           <span><i className="fas fa-chevron-left" /></span>
           GO BACK
-        </div>
+        </Link>
       }
       
       <div className="center-menu">
@@ -121,4 +121,4 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators({ toggleTheme }, dispatch);
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

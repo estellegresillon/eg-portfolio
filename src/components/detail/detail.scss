@@ -5,6 +5,25 @@
   height: 100vh;
   color: #fff;
 
+  .detail-navigation {
+    position: absolute;
+    left: 5vw;
+    bottom: 5vw;
+    z-index: 999;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 900;
+      margin-right: 30px;
+
+      i {
+        margin: 10px;
+      }
+    }
+  }
+
   section {
     display: flex;
     height: 100%;
@@ -60,6 +79,15 @@
 @media screen and (max-width: 728px) {
   .detail-page {
     align-items: flex-start;
+
+    .detail-navigation {
+      width: 90vw;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+
+      a { margin-right: 0; }
+    }
 
     section {
       .column.detail-right {
