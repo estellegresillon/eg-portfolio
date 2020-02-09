@@ -75,37 +75,38 @@ const HeroScene = ({ showLightTheme, t }) => {
       onMouseLeave={() => toggleCursor(false)}
       style={{ background: showLightTheme ? "linear-gradient(rgb(71, 150, 247) 0%, rgb(72, 185, 239) 100%)" : "linear-gradient(180deg, #0a0c13 0%, #15192b 100%)" }}
     >
-      <div className="hero-cursor" ref={heroCursor} />
-      <h1 className="first" ref={heroTitleOne}>
-        <span className="title-stroke">DESIGNER</span>
-        <span className="title-plain">UI</span>
-        <span className="title-stroke">DESIGNER</span>
-        <span className="title-plain">UI</span>
-        <span className="title-stroke">DESIGNER</span>
-      </h1>
-      <h1 ref={heroTitleTwo}>
-        <span className="title-stroke">FRONTEND</span>
-        <span className="title-plain">DEVELOPER</span>
-        <span className="title-stroke">FRONTEND</span>
-        <span className="title-plain">DEVELOPER</span>
-      </h1>
-     
-      <ul className="skillset">
-        <li>{t('hero-scene.front-end')}</li>
-        <li className="tools">REACT.JS - NEXTJS - REDUX - CONTEXT REACT</li>
-        <br />
-        <li>UI DESIGN</li>
-        <li className="tools">SKETCH - ADOBE - INVISION - ZEPLIN</li>
-      </ul>
-      <p className="availability">{t('hero-scene.availability')}</p>
+        <div className="hero-scene-wrapper">
+        <div className="hero-cursor" ref={heroCursor} />
+        <h1 className="first" ref={heroTitleOne}>
+          <span className="title-stroke">DESIGNER</span>
+          <span className="title-plain">UI</span>
+          <span className="title-stroke">DESIGNER</span>
+          <span className="title-plain">UI</span>
+          <span className="title-stroke">DESIGNER</span>
+        </h1>
+        <h1 ref={heroTitleTwo}>
+          <span className="title-stroke">FRONTEND</span>
+          <span className="title-plain">DEVELOPER</span>
+          <span className="title-stroke">FRONTEND</span>
+          <span className="title-plain">DEVELOPER</span>
+        </h1>
+      
+        <ul className="skillset">
+          <li>{t('hero-scene.front-end')}</li>
+          <li className="tools">REACT.JS - NEXTJS - REDUX - CONTEXT REACT</li>
+          <br />
+          <li>UI DESIGN</li>
+          <li className="tools">SKETCH - ADOBE - INVISION - ZEPLIN</li>
+        </ul>
+        <p className="availability">{t('hero-scene.availability')}</p>
 
-      <div className="scroll-animation">
-        <div className="mouse-scroll-ball" />
+        <div className="scroll-animation">
+          <div className="mouse-scroll-ball" />
+        </div>
       </div>
-
+      
       <div className="circle circle-top" ref={circleTop} />
       <div className="circle circle-bottom" ref={circleBottom} />
-
       <BgElements />
     </section>
   );

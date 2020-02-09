@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 
 import "./project-item.scss";
 import { useWindowSize } from "../../../hooks/useWindowSize";
-import BgElements from "../../bg-elements";
 
 const ProjectItem = ({ project, history }) => {
   const windowSize = useWindowSize();
@@ -87,8 +86,6 @@ const ProjectItem = ({ project, history }) => {
       </Waypoint>
 
       <div className={`circle-project circle-${project.img}`} />
-
-      <BgElements />
     </div>
   );
 }

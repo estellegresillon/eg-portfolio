@@ -4,7 +4,6 @@ import { withTranslation } from 'react-i18next'
 import { Waypoint } from "react-waypoint";
 
 import "./about.scss";
-import BgElements from "../bg-elements";
 
 const About = ({ showLightTheme, t }) => {
   const aboutContainer = useRef(null);
@@ -77,7 +76,6 @@ const About = ({ showLightTheme, t }) => {
       </div>
 
       <div className="circle circle-bottom" ref={circleBottom} />
-      <BgElements />
     </section>
   );
 }
