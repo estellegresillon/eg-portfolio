@@ -38,6 +38,10 @@ section#contact {
       height: 5vh;
       font-size: 24px;
       margin-bottom: 10vh;
+
+      .text-wrapper-static {
+        margin-right: 10px;
+      }
     }
 
     .mail-wrapper {
@@ -138,6 +142,10 @@ section#contact {
       .text-wrapper {
         margin-left: 5vw;
         margin-right: 5vw;
+        display: block;
+        height: 20vh;
+        font-size: 24px;
+        margin-bottom: 6vh;
       }
 
       .mail-wrapper {

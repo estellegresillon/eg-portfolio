@@ -57,7 +57,8 @@ const Contact = ({ showLightTheme, t }) => {
         <div className="contact-container" ref={contactContainer}>
           <div className="contact-infos">
             <div aria-hidden="true" className="text-wrapper">
-              <div id="text-container" ref={textContainer} />
+              <span className="text-wrapper-static">Let's work together and make</span>
+              <span id="text-container" ref={textContainer} />
             </div>
 
             <div className="mail-wrapper">
