@@ -9,3 +9,7 @@ footer {
   text-align: center;
   color: #fff;
 }
+
+@media screen and (max-width: 728px) {
+  footer { margin-top: 20px; }
+}

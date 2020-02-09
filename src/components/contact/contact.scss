@@ -113,6 +113,11 @@ section#contact {
 
     .circle-top { display: none; }
 
+    .contact-container {
+      animation: none;
+      opacity: 1;
+    }
+
     .social-icons {
       width: 100vw;
       align-items: center;
