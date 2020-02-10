@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import { createStore, combineReducers } from "redux";
 import { I18nextProvider } from 'react-i18next';
 import { BrowserRouter, Route } from 'react-router-dom';
+import HttpsRedirect from 'react-https-redirect';
 
 import './index.scss';
 import Home from './components/home';
@@ -36,7 +37,9 @@ if (rootElement.hasChildNodes()) {
   hydrate(
     <I18nextProvider i18n={i18n}>
       <Provider store={createStore(reducers)}>
-        <App />
+        <HttpsRedirect>
+          <App />
+        </HttpsRedirect>
       </Provider>
     </I18nextProvider>,
     rootElement
@@ -45,7 +48,9 @@ if (rootElement.hasChildNodes()) {
   render(
     <I18nextProvider i18n={i18n}>
       <Provider store={createStore(reducers)}>
-        <App />
+        <HttpsRedirect>
+          <App />
+        </HttpsRedirect>
       </Provider>
     </I18nextProvider>,
     rootElement
