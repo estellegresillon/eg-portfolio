@@ -1,5 +1,4 @@
 {
-  "homepage": "/",
   "name": "eg-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -27,9 +26,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "reactSnap": { 
-    "publicPath": "/"
   },
   "browserslist": {
     "production": [
