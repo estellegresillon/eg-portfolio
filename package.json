@@ -1,4 +1,5 @@
 {
+  "homepage": "/",
   "name": "eg-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -28,7 +29,7 @@
     "extends": "react-app"
   },
   "reactSnap": { 
-    "publicPath": "https://www.estellegresillon.fr/"
+    "publicPath": "/"
   },
   "browserslist": {
     "production": [
