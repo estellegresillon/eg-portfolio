@@ -70,11 +70,11 @@ const ProjectItem = ({ project }) => {
   }, []);
 
   return (
-    <Link className="project-link" to={project.img}>
-      <div 
-        className={`project-card ${project.img}`} 
-        ref={projectContainer}
-      >
+    <div 
+      className={`project-card ${project.img}`} 
+      ref={projectContainer}
+    >
+      <Link className="project-link" to={project.img}>
         <h2 ref={projectTitle} className="title-stroke">{project.name}</h2>
         <h3 ref={projectDescription} className="title-stroke">{project.description}</h3>
         <h4 className="title-stroke" ref={projectSubtitle}>{project.year}</h4>
@@ -86,8 +86,8 @@ const ProjectItem = ({ project }) => {
         </Waypoint>
 
         <div aria-hidden="true" className={`circle-project circle-${project.img}`} />
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 
