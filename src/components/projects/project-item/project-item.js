@@ -82,7 +82,7 @@ const ProjectItem = ({ project, history }) => {
         onEnter={() => handleWaypointEnter(imgContainer.current)}
         onLeave={() => handleWaypointLeave(imgContainer.current)}
       >
-        <img ref={imgContainer} src={`${project.img}.jpg`} alt={`${project.name} website preview`} />
+        <img ref={imgContainer} src={`${project.img}-img.jpg`} alt={`${project.name} website preview`} />
       </Waypoint>
 
       <div aria-hidden="true" className={`circle-project circle-${project.img}`} />

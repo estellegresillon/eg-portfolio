@@ -130,7 +130,7 @@ const Detail = ({ showLightTheme, t, history }) => {
           </a>
         </div>
         <div 
-          style={{ backgroundImage: `url(${project.img}.jpg)`}}
+          style={{ backgroundImage: `url(${project.img}-img.jpg)`}}
           ref={projectImage}
           className="column detail-right" />
       </section>
