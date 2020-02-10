@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { Waypoint } from "react-waypoint";
-import { withRouter } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 import "./project-item.scss";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 
-const ProjectItem = ({ project, history }) => {
+const ProjectItem = ({ project }) => {
   const windowSize = useWindowSize();
   const projectContainer = useRef(null);
   const imgContainer = useRef(null);
@@ -70,24 +70,25 @@ const ProjectItem = ({ project, history }) => {
   }, []);
 
   return (
-    <div 
-      className={`project-card ${project.img}`} 
-      ref={projectContainer}
-      onClick={() => history.push(project.img)}
-    >
-      <h2 ref={projectTitle} className="title-stroke">{project.name}</h2>
-      <h3 ref={projectDescription} className="title-stroke">{project.description}</h3>
-      <h4 className="title-stroke" ref={projectSubtitle}>{project.year}</h4>
-      <Waypoint
-        onEnter={() => handleWaypointEnter(imgContainer.current)}
-        onLeave={() => handleWaypointLeave(imgContainer.current)}
+    <Link className="project-link" to={project.img}>
+      <div 
+        className={`project-card ${project.img}`} 
+        ref={projectContainer}
       >
-        <img ref={imgContainer} src={`${project.img}-img.jpg`} alt={`${project.name} website preview`} />
-      </Waypoint>
+        <h2 ref={projectTitle} className="title-stroke">{project.name}</h2>
+        <h3 ref={projectDescription} className="title-stroke">{project.description}</h3>
+        <h4 className="title-stroke" ref={projectSubtitle}>{project.year}</h4>
+        <Waypoint
+          onEnter={() => handleWaypointEnter(imgContainer.current)}
+          onLeave={() => handleWaypointLeave(imgContainer.current)}
+        >
+          <img ref={imgContainer} src={`${project.img}-img.jpg`} alt={`${project.name} website preview`} />
+        </Waypoint>
 
-      <div aria-hidden="true" className={`circle-project circle-${project.img}`} />
-    </div>
+        <div aria-hidden="true" className={`circle-project circle-${project.img}`} />
+      </div>
+    </Link>
   );
 }
 
-export default withRouter(ProjectItem);
+export default ProjectItem;
