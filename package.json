@@ -27,6 +27,9 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "reactSnap": { 
+    "publicPath": "https://www.estellegresillon.fr/"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
