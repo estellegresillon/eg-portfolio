@@ -136,12 +136,12 @@ const Detail = ({ showLightTheme, t, history }) => {
       </section>
 
       <div className="detail-navigation">
-        <Link to={previousProject}>
+        <Link rel="prev" to={previousProject}>
           <span><i className="fas fa-chevron-left" /></span>
           {t("detail.prev-project")}
         </Link>
 
-        <Link to={nextProject}>
+        <Link rel="next" to={nextProject}>
           {t("detail.next-project")} 
           <span><i className="fas fa-chevron-right" /></span>
         </Link>

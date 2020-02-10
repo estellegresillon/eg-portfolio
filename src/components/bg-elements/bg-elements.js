@@ -5,7 +5,7 @@ import "./bg-elements.scss";
 
 const BgElements = ({ showLightTheme }) => {
   return (
-    <>
+    <div aria-hidden="true">
       <div style={{ opacity: showLightTheme ? 0.7 : 0.3 }}>
         <Cross position="top-left" />
         <Cross position="top-right" />
@@ -18,7 +18,7 @@ const BgElements = ({ showLightTheme }) => {
         <img src="triangle.svg" alt="triangle" className="triangle bottom-right-triangle" />
         <img src="triangle.svg" alt="triangle" className="triangle bottom-left-triangle" />
       </div>
-    </>
+    </div>
   );
 }
 

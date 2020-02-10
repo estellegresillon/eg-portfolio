@@ -59,15 +59,15 @@ const Header = ({ showLightTheme, toggleTheme }) => {
       }
       
       <div className="center-menu">
-        <div className="set-theme" onClick={() => toggleTheme(showLightTheme)}>
+        <div aria-hidden="true" className="set-theme" onClick={() => toggleTheme(showLightTheme)}>
           <div>{showLightTheme ? "dark mode" : "light mode"}</div>
-          <div aria-hidden="true" className="theme">
+          <div className="theme">
             {showLightTheme ? 
               <i className="fas fa-moon" /> :
               <i className="fas fa-sun" />}
           </div>
         </div>
-        <div className="language-menu">
+        <div aria-label="select language" className="language-menu">
           <span 
             className={language === "fr" ? "bolder" : ""}
             onClick={() => handleLanguageChange('fr')}
@@ -87,7 +87,7 @@ const Header = ({ showLightTheme, toggleTheme }) => {
               <li><a href="#about">ABOUT</a></li>
               <li><a href="#projects">PROJECTS</a></li>
               <li><a href="#contact">CONTACT</a></li>
-              <li className="mobile-only">
+              <li aria-label="select language" className="mobile-only">
                 <span 
                   className={language === "fr" ? "bolder" : ""}
                   onClick={() => handleLanguageChange('fr')}
@@ -97,8 +97,8 @@ const Header = ({ showLightTheme, toggleTheme }) => {
                   onClick={() => handleLanguageChange('en')}
                 >EN</span>
               </li>
-              <li className="mobile-only">
-                <div aria-hidden="true" className="theme" onClick={() => toggleTheme(showLightTheme)}>
+              <li aria-hidden="true" className="mobile-only">
+                <div className="theme" onClick={() => toggleTheme(showLightTheme)}>
                   <span>
                     {showLightTheme ? "dark mode" : "light mode"}
                   </span>

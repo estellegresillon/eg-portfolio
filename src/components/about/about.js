@@ -56,7 +56,7 @@ const About = ({ showLightTheme, t }) => {
           onEnter={() => handleWaypointEnterRight(rightColumn.current)}
         >
           <div className="about-column skills" ref={rightColumn}>
-            <h5><span aria-label="emoji-worker" role="img">💻</span>{t("about.dev-title")}</h5>
+            <h5><span aria-label="emoji-computer" role="img">💻</span>{t("about.dev-title")}</h5>
             <ul>
               <li className="bolder">React.js / Redux / Nextjs / Context React</li>
               <li>{t("about.dev-first")}</li>
@@ -75,7 +75,7 @@ const About = ({ showLightTheme, t }) => {
         </Waypoint>
       </div>
 
-      <div className="circle circle-bottom" ref={circleBottom} />
+      <div aria-hidden="true" className="circle circle-bottom" ref={circleBottom} />
     </section>
   );
 }

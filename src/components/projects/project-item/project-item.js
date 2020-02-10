@@ -85,7 +85,7 @@ const ProjectItem = ({ project, history }) => {
         <img ref={imgContainer} src={`${project.img}.jpg`} alt={`${project.name} website preview`} />
       </Waypoint>
 
-      <div className={`circle-project circle-${project.img}`} />
+      <div aria-hidden="true" className={`circle-project circle-${project.img}`} />
     </div>
   );
 }

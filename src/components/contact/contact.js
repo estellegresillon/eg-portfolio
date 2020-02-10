@@ -102,8 +102,8 @@ const Contact = ({ showLightTheme, t }) => {
         </div>
       </Waypoint>
 
-      <div className="circle circle-top" ref={circleTop} />
-      <div className="circle circle-bottom" ref={circleBottom} />
+      <div aria-hidden="true" className="circle circle-top" ref={circleTop} />
+      <div aria-hidden="true" className="circle circle-bottom" ref={circleBottom} />
 
       <BgElements />
     </section>
