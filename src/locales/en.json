@@ -4,8 +4,8 @@
     "availability": "Available in January 2021"
   },
   "about": {
-    "intro": "I am a front-end developer and a UI designer.",
-    "first-paragraph": "With a passion for design and interaction, my goal is to create websites and apps with a high quality design and user experience. I started front-end development 2 years ago with React.js in Paris during various experiences (web magazine, telephone operator, luxury e-commerce website).",
+    "intro": "I am a front-end developer and a designer.",
+    "first-paragraph": "With a passion for design and interaction, my goal is to create websites and apps with a high quality design and user experience. I started front-end development 3 years ago with React.js in Paris during various experiences (web magazine, telephone operator, luxury e-commerce website).",
     "second-paragraph": "I love participating in new projects : I am looking for missions that could bring me the opportunity to code apps from scratch and also create their identity and design.",
     "dev-title": " FRONT-END DEVELOPMENT",
     "dev-first": "Development from scratch / Static websites",
@@ -13,7 +13,9 @@
     "dev-third": "CSS animations and transitions, parallax",
     "design-first": "Interface design, prototyping",
     "design-second": "Branding and indenity design",
-    "design-third": "Interaction design, user journey"
+    "design-third": "Interaction design, user journey",
+    "also-first": "Agile methodology (sprints / daily meeting)",
+    "also-second": "Development of REST and CQRS APIs with NodeJs / Nestjs"
   },
   "contact": {
     "send-mail": "Send me an e-mail :",

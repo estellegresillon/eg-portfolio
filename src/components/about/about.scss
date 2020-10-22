@@ -13,6 +13,7 @@ section#about {
 
   h5 {
     font-size: 20px;
+    margin-bottom: -10px;
 
     &:first-child {
       margin-top: 0px;
@@ -30,9 +31,13 @@ section#about {
       font-size: 32px;
     }
 
-    .bolder { font-weight: 900; }
+    .bolder {
+      font-weight: 900;
+    }
 
-    ul { list-style: square; }
+    ul {
+      list-style: square;
+    }
 
     .about-column {
       width: 45%;
@@ -42,9 +47,11 @@ section#about {
         opacity: 0;
       }
 
-      ul:last-child { margin-bottom: 0px; }
+      ul:last-child {
+        margin-bottom: 0px;
+      }
 
-      &.presentation { 
+      &.presentation {
         text-align: left;
         margin-left: -10%;
         opacity: 0;
@@ -54,9 +61,26 @@ section#about {
         border-radius: 10px;
         background-color: #35c9d8;
         width: calc(45% - 120px);
-        
+
         transition: 0.5s all ease;
-        transform: matrix3d(1, 0, 0, 0.0001935, 0, 1, 0, 0, 0, 0, 1, 0, -29.025, -6.435, 0, 1);
+        transform: matrix3d(
+          1,
+          0,
+          0,
+          0.0001935,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -29.025,
+          -6.435,
+          0,
+          1
+        );
 
         p:first-child {
           margin-top: 0px;
@@ -91,11 +115,11 @@ section#about {
 }
 
 @keyframes slideFromLeft {
-  from { 
+  from {
     margin-left: -10%;
     opacity: 0;
   }
-  to { 
+  to {
     margin-left: 0;
     opacity: 1;
   }
@@ -107,11 +131,11 @@ section#about {
 }
 
 @keyframes slideFromRight {
-  from { 
+  from {
     margin-right: -10%;
     opacity: 0;
   }
-  to { 
+  to {
     margin-right: 0;
     opacity: 1;
   }
@@ -128,7 +152,9 @@ section#about {
       font-size: 14px;
       line-height: 24px;
 
-      li { margin-bottom: 15px; }
+      li {
+        margin-bottom: 15px;
+      }
     }
 
     .about-container {

@@ -13,7 +13,9 @@
     "dev-third": "Animations CSS et transitions, parallax",
     "design-first": "Design d'interface, prototypage, maquettage",
     "design-second": "Conception d'identité/branding de marques",
-    "design-third": "Design d'interaction, conception de parcours utilisateurs"
+    "design-third": "Design d'interaction, conception de parcours utilisateurs",
+    "also-first": "Méthode Agile (sprints / daily meeting)",
+    "also-second": "Création d'API REST et CQRS sur NodeJs / Nestjs"
   },
   "contact": {
     "send-mail": "Envoyez-moi un e-mail :",
