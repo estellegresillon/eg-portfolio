@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
-import { withTranslation } from 'react-i18next'
+import { withTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
@@ -28,30 +28,51 @@ const Detail = ({ showLightTheme, t, history }) => {
     const distanceFromMiddleX = e.clientX - pageMiddleX;
     const distanceFromMiddleY = e.clientY - pageMiddleY;
 
-    projectImage.current.style.backgroundPositionY = `${distanceFromMiddleY * - 0.05}px`;
-    projectImage.current.style.backgroundPositionX = `${distanceFromMiddleX * - 0.05}px`;
+    projectImage.current.style.backgroundPositionY = `${
+      distanceFromMiddleY * -0.05
+    }px`;
+    projectImage.current.style.backgroundPositionX = `${
+      distanceFromMiddleX * -0.05
+    }px`;
   };
 
   useEffect(() => {
     const smallCursor = mouseContainer.current;
     const container = pageContainer.current;
-    container.addEventListener("mousemove", (e) => { onCursorMove(e, smallCursor, 7) }, false);
-    return () => container.removeEventListener("mousemove", () => { onCursorMove() }, false);
+    container.addEventListener(
+      "mousemove",
+      (e) => {
+        onCursorMove(e, smallCursor, 7);
+      },
+      false
+    );
+    return () =>
+      container.removeEventListener(
+        "mousemove",
+        () => {
+          onCursorMove();
+        },
+        false
+      );
   }, []);
 
   useEffect(() => {
     const projectName = window.location.pathname.substring(1);
-    const currentProject = PROJECTS.filter(project => {
+    const currentProject = PROJECTS.filter((project) => {
       return project.img === projectName;
     });
 
     setProject(currentProject[0]);
   }, []);
 
-  const createNavigation = projectName => {
+  const createNavigation = (projectName) => {
     switch (projectName) {
+      case "kardinal":
+        setPreviousProject("/foodlab");
+        setNextProject("/thatsmyrock");
+        break;
       case "foodlab":
-        setPreviousProject("/thatsmyrock");
+        setPreviousProject("/kardinal");
         setNextProject("/zest");
         break;
       case "zest":
@@ -77,15 +98,15 @@ const Detail = ({ showLightTheme, t, history }) => {
       default:
         break;
     }
-  }
+  };
 
-  const handleKeyDown = e => {
+  const handleKeyDown = (e) => {
     // 37 arrow left / 39 arrow right
     if (e.keyCode === 37) {
       history.push(previousProject);
     } else if (e.keyCode === 39) {
       history.push(nextProject);
-    };
+    }
 
     window.scrollTo(0, 0);
   };
@@ -96,12 +117,12 @@ const Detail = ({ showLightTheme, t, history }) => {
     createNavigation(projectName);
   }, []);
 
-  useEffect(() => { 
+  useEffect(() => {
     if (nextProject) {
       window.addEventListener("keydown", handleKeyDown, true);
       return () => window.removeEventListener("keydown", handleKeyDown, true);
     }
-  // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [nextProject]);
 
   return (
@@ -110,9 +131,9 @@ const Detail = ({ showLightTheme, t, history }) => {
       ref={pageContainer}
       style={{ background: showLightTheme ? "#47b9ef" : "#15192b" }}
     >
-      <div 
+      <div
         aria-hidden="true"
-        className="cursor-small" 
+        className="cursor-small"
         ref={mouseContainer}
         style={{ backgroundColor: showLightTheme ? "#1c1c8e" : "#8646ee" }}
       />
@@ -120,39 +141,48 @@ const Detail = ({ showLightTheme, t, history }) => {
       <section id="detail">
         <div className="column detail-left">
           <div className="detail-title title-stroke">{project.name}</div>
-          <div className="detail-subtitle title-stroke">{project.description}</div>
+          <div className="detail-subtitle title-stroke">
+            {project.description}
+          </div>
           <div className="detail-year">- {project.year} -</div>
-          <a href={project.url} target="_blank" rel="noopener noreferrer">
-            {t("detail.visit")}
-            <span aria-label="External link">
-              <i aria-hidden="true" className="fas fa-external-link-alt" />
-            </span>
-          </a>
+          {project.url !== "notlive" && (
+            <a href={project.url} target="_blank" rel="noopener noreferrer">
+              {t("detail.visit")}
+              <span aria-label="External link">
+                <i aria-hidden="true" className="fas fa-external-link-alt" />
+              </span>
+            </a>
+          )}
         </div>
-        <div 
-          style={{ backgroundImage: `url(${project.img}-img.jpg)`}}
+        <div
+          style={{ backgroundImage: `url(${project.img}-img.jpg)` }}
           ref={projectImage}
-          className="column detail-right" />
+          className="column detail-right"
+        />
       </section>
 
       <div className="detail-navigation">
         <Link rel="prev" to={previousProject}>
-          <span><i className="fas fa-chevron-left" /></span>
+          <span>
+            <i className="fas fa-chevron-left" />
+          </span>
           {t("detail.prev-project")}
         </Link>
 
         <Link rel="next" to={nextProject}>
-          {t("detail.next-project")} 
-          <span><i className="fas fa-chevron-right" /></span>
+          {t("detail.next-project")}
+          <span>
+            <i className="fas fa-chevron-right" />
+          </span>
         </Link>
       </div>
 
       <BgElements />
     </div>
-  )
-}
+  );
+};
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return { showLightTheme: state.showLightTheme };
 };
 
