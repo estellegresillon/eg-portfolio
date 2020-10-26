@@ -1,0 +1,124 @@
+@import "mixins";
+
+#Contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 110vh;
+  width: 100vw;
+  overflow: hidden;
+
+  .big-stripes {
+    position: absolute;
+    width: 250px;
+    z-index: 0;
+    left: 13%;
+    top: 40%;
+    opacity: 0.7;
+  }
+
+  .medium-stripes {
+    position: absolute;
+    width: 170px;
+    z-index: 0;
+    bottom: 15%;
+    right: -40px;
+    opacity: 0.7;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 50%;
+    z-index: 2;
+    position: relative;
+    color: #4447b3;
+
+    .small-stripes {
+      position: absolute;
+      width: 110px;
+      z-index: 0;
+      top: 30px;
+      left: 200px;
+      opacity: 0.7;
+    }
+
+    h3 {
+      color: #ec98e1;
+      font-size: 60px;
+      margin-bottom: 10px;
+      margin-top: 0;
+      z-index: 1;
+    }
+
+    p {
+      font-family: "IBM Plex Sans";
+    }
+  }
+
+  .mailbox-1 {
+    position: absolute;
+    width: 30%;
+    left: 15%;
+    animation: 10s floatingMail infinite;
+    z-index: 2;
+  }
+
+  @keyframes floatingMail {
+    from {
+      bottom: 25vh;
+    }
+    50% {
+      bottom: 30vh;
+    }
+    to {
+      bottom: 25vh;
+    }
+  }
+
+  .red-dot-top {
+    top: 15vh;
+    right: 5vw;
+    background-color: #ec98e1;
+    animation: 5s rotateDots infinite linear;
+  }
+
+  .red-dot-bottom {
+    top: 80vh;
+    left: 5vw;
+    background-color: #ec98e1;
+    animation: 2s rotateDots infinite;
+  }
+
+  .blue-dot-top {
+    top: 20vh;
+    left: 5vw;
+    background-color: #74bff7;
+    animation: 5s rotateDots infinite;
+  }
+
+  .blue-dot-medium {
+    top: 40vh;
+    right: 15vw;
+    background-color: #74bff7;
+    animation: 2s rotateDots infinite;
+  }
+
+  .dark-blue-dot-medium {
+    top: 45vh;
+    left: 40vw;
+    background-color: #4447b3;
+    animation: 5s rotateDots infinite linear;
+    z-index: 4;
+  }
+
+  .dark-blue-dot-bottom {
+    bottom: 30vh;
+    right: 20vw;
+    background-color: #4447b3;
+    animation: 4s rotateDots infinite;
+  }
+}

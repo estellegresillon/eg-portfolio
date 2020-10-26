@@ -1,0 +1,26 @@
+#Home-Page {
+  position: relative;
+  font-family: "Gilroy";
+
+  .dot {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    border-radius: 5px;
+  }
+
+  @keyframes rotateDots {
+    from {
+      margin-top: 0px;
+      transform: rotate(0deg);
+    }
+    50% {
+      margin-top: 15px;
+      transform: rotate(180deg);
+    }
+    to {
+      margin-top: 0px;
+      transform: rotate(360deg);
+    }
+  }
+}
