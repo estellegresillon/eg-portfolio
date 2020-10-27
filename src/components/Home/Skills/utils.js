@@ -8,6 +8,10 @@ export const CODE_SKILLS = [
     icon: "fab fa-dev",
   },
   {
+    label: "Docker / Rancher",
+    icon: "fab fa-docker",
+  },
+  {
     label: "Jest / Enzyme / React Testing Library",
     icon: "fas fa-shield-alt",
   },
