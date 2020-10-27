@@ -230,7 +230,7 @@
 
   @media screen and (max-width: 420px) {
     height: auto;
-    margin-bottom: 120px;
+    margin-bottom: 150px;
 
     .robot-wrapper {
       position: unset;
@@ -238,8 +238,6 @@
 
       .robot {
         height: 70%;
-        top: 2%;
-        animation: none;
         left: -112px;
       }
     }
@@ -255,7 +253,7 @@
 
     .about-section {
       width: 100%;
-      margin: 0 30px;
+      margin: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -272,6 +270,18 @@
       h2 {
         font-size: 48px;
         margin-bottom: 20px;
+      }
+    }
+
+    @keyframes floatingRobot {
+      from {
+        top: 0%;
+      }
+      50% {
+        top: 5%;
+      }
+      to {
+        top: 0%;
       }
     }
   }
