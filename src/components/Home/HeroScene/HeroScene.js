@@ -58,9 +58,17 @@ const HeroScene = () => {
           {/* <p>MENU</p>
           <i className="fas fa-hamburger"></i> */}
           {PAGES.map((page) => (
-            <Link to={page.url}>{page.name}</Link>
+            <Link key={page.name} to={page.url}>
+              {page.name}
+            </Link>
           ))}
-          <p>Blog</p>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://blog.estellegresillon.fr/"
+          >
+            Blog
+          </a>
           <p>EN / FR</p>
         </div>
       </nav>

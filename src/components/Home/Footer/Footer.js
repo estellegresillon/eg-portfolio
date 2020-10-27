@@ -17,9 +17,19 @@ const Footer = () => (
           if (page.name === "Home") {
             return null;
           }
-          return <Link to={page.url}>{page.name}</Link>;
+          return (
+            <Link key={page.name} to={page.url}>
+              {page.name}
+            </Link>
+          );
         })}
-        <p>Blog</p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://blog.estellegresillon.fr/"
+        >
+          Blog
+        </a>
         <p>EN / FR</p>
       </div>
     </div>
