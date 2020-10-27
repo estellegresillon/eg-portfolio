@@ -177,6 +177,25 @@
     animation: 5s rotateDots infinite;
   }
 
+  @media screen and (max-width: 1024px) {
+    .hero-cube {
+      width: 18%;
+    }
+
+    .hero-whistle {
+      width: 19%;
+      top: 22%;
+    }
+
+    .hero-gamepad {
+      width: 23%;
+    }
+
+    .hero-rocket {
+      width: 20%;
+    }
+  }
+
   @media screen and (max-width: 420px) {
     h1 {
       font-size: 48px;
@@ -219,25 +238,6 @@
     nav {
       width: calc(100% - 40px);
       padding: 20px;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    .hero-cube {
-      width: 18%;
-    }
-
-    .hero-whistle {
-      width: 19%;
-      top: 22%;
-    }
-
-    .hero-gamepad {
-      width: 23%;
-    }
-
-    .hero-rocket {
-      width: 20%;
     }
   }
 }

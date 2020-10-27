@@ -5,7 +5,7 @@ export const CODE_SKILLS = [
   },
   {
     label: "NextJs / Hooks / Redux",
-    icon: "fab fa-dev",
+    icon: "fas fa-code",
   },
   {
     label: "Docker / Rancher",
@@ -25,7 +25,7 @@ export const CODE_SKILLS = [
   },
   {
     label: "WebSockets",
-    icon: "fas fa-code",
+    icon: "fas fa-server",
   },
   {
     label: "HTML / CSS / Responsive Design",
