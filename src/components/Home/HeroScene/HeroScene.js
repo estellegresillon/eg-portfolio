@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
 
 import "./HeroScene.scss";
+import { useWindowSize } from "hooks/useWindowSize";
 
 const HeroScene = () => {
+  const windowSize = useWindowSize();
   const heroScene = useRef(null);
   const whistleRef = useRef(null);
   const gamepadRef = useRef(null);
@@ -33,11 +35,15 @@ const HeroScene = () => {
   };
 
   useEffect(() => {
+    if (windowSize.width < 420) {
+      return;
+    }
+
     const section = heroScene.current;
     section.addEventListener("mousemove", moveSectionElements, false);
     return () =>
       section.removeEventListener("mousemove", moveSectionElements, false);
-  }, []);
+  }, [windowSize.width]);
 
   return (
     <div ref={heroScene} id="HeroScene">
@@ -59,29 +65,29 @@ const HeroScene = () => {
       </div>
       <img
         ref={gamepadRef}
-        className="hero-gamepad"
+        className="hero-gamepad hero-picture"
         src="gamepad-small.png"
         alt="gamepad"
       />
       <img
         ref={whistleRef}
-        className="hero-whistle"
+        className="hero-whistle hero-picture"
         src="whistle-small.png"
         alt="whistle"
       />
       <img
         ref={cubeRef}
-        className="hero-cube"
+        className="hero-cube hero-picture"
         src="cube-small.png"
         alt="cube"
       />
       <img
         ref={rocketRef}
-        className="hero-rocket"
+        className="hero-rocket hero-picture"
         src="rocket-small.png"
         alt="rocket"
       />
-      <div className="availability">
+      <div className="availability hero-picture">
         <i className="far fa-clock" />
         Available in 2021
       </div>

@@ -79,21 +79,19 @@
 
   h1 {
     font-size: 72px;
-    margin-left: 10%;
+    margin: 0 10% 20px 10%;
     font-weight: 700;
     color: white;
-    margin-top: -20px;
     z-index: 2;
 
     div {
-      margin-bottom: -30px;
+      line-height: 66px;
     }
   }
 
   .subtitle {
-    margin-left: 10%;
+    margin: 0 10%;
     color: white;
-    margin-top: -20px;
     font-weight: 400;
     font-family: "IBM Plex Sans";
   }
@@ -177,5 +175,69 @@
     left: 35vw;
     background-color: white;
     animation: 5s rotateDots infinite;
+  }
+
+  @media screen and (max-width: 420px) {
+    h1 {
+      font-size: 48px;
+
+      div {
+        line-height: 48px;
+      }
+    }
+
+    .hero-picture {
+      display: none;
+    }
+
+    .white-dot-medium-top {
+      display: none;
+    }
+
+    .white-dot-top {
+      top: 18vh;
+    }
+
+    .white-dot-medium {
+      right: 15vw;
+    }
+
+    .white-dot-bottom {
+      top: 75vh;
+      left: 18vw;
+    }
+
+    .small-stripes {
+      width: 100px;
+      top: 30%;
+    }
+
+    .big-stripes {
+      width: 120px;
+    }
+
+    nav {
+      width: calc(100% - 40px);
+      padding: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .hero-cube {
+      width: 18%;
+    }
+
+    .hero-whistle {
+      width: 19%;
+      top: 22%;
+    }
+
+    .hero-gamepad {
+      width: 23%;
+    }
+
+    .hero-rocket {
+      width: 20%;
+    }
   }
 }
