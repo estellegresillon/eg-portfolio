@@ -182,8 +182,22 @@
     height: auto;
     margin: 0;
 
-    .white-dot-medium {
+    .small-stripes {
+      z-index: 0;
+      bottom: 37%;
+    }
+
+    .white-dot-medium,
+    .blue-dot-medium {
       display: none;
+    }
+
+    .blue-dot-top {
+      top: -6vh;
+    }
+
+    .dark-blue-dot-bottom {
+      bottom: -5vh;
     }
 
     .column {

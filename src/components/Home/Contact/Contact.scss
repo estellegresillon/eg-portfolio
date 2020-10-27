@@ -63,7 +63,7 @@
     position: absolute;
     width: 30%;
     left: 15%;
-    animation: 10s floatingMail infinite;
+    animation: 7s floatingMail infinite;
     z-index: 2;
   }
 
@@ -146,11 +146,15 @@
 
   @media screen and (max-width: 420px) {
     height: 80vh;
-    margin-bottom: 150px;
     margin-top: 50px;
 
-    .dark-blue-dot-medium {
+    .dark-blue-dot-medium,
+    .blue-dot-medium {
       display: none;
+    }
+
+    .red-dot-top {
+      top: 1vh;
     }
 
     .container {
@@ -168,19 +172,19 @@
 
     @keyframes floatingMail {
       from {
-        bottom: 0vh;
+        bottom: -3vh;
       }
       50% {
-        bottom: 5vh;
+        bottom: 3vh;
       }
       to {
-        bottom: 0vh;
+        bottom: -3vh;
       }
     }
   }
 
   @media screen and (max-width: 320px) {
-    height: 100vh;
+    height: 110vh;
 
     .container h3 {
       font-size: 48px;
