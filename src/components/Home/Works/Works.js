@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Works.scss";
-import Button from "../../common/Button";
+import Button from "components/common/Button";
 
 const Works = () => (
   <div id="Works">
@@ -9,7 +10,9 @@ const Works = () => (
       <img src="diamond-small.png" alt="pro" className="diamond" />
       <h3>&gt; Freelance missions</h3>
       <p>Take a look at my CV and a detailed timeline of my former missions</p>
-      <Button label="check it out" />
+      <Link to="/cv">
+        <Button label="check it out" />
+      </Link>
     </div>
     <div className="perso-right column">
       <img src="folder-small.png" alt="perso" className="folder" />

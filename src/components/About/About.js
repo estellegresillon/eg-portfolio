@@ -5,7 +5,7 @@ import "./About.scss";
 import Button from "components/common/Button";
 
 const About = () => (
-  <div id="About">
+  <div id="About-Page">
     <img
       className="big-stripes"
       src="stripes.svg"
@@ -61,7 +61,7 @@ const About = () => (
         both professionally and personally. Feel free to contact me as I'd love
         to hear about your project and engage in new challenges !
       </div>
-      <Link to="/about">
+      <Link to="about">
         <Button label="let's get started" />
       </Link>
     </div>

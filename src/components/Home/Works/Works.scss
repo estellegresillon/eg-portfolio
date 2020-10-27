@@ -40,6 +40,10 @@
     z-index: 1;
     transition: 1s all ease;
 
+    a {
+      text-decoration: none;
+    }
+
     p {
       font-family: "IBM Plex Sans";
       width: 60%;

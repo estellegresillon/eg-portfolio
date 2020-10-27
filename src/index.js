@@ -6,8 +6,8 @@ import { I18nextProvider } from "react-i18next";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import "assets/styles/base.scss";
-import Home from "./components/Home";
-import i18n from "./locales/i18n-config";
+import i18n from "locales/i18n-config";
+import { PAGES } from "./constants";
 
 import toggleThemeReducer from "./redux/reducers";
 
@@ -18,7 +18,14 @@ const reducers = combineReducers({
 const App = () => (
   <BrowserRouter>
     <React.Fragment>
-      <Route exact path="/" component={Home} />
+      {PAGES.map((page) => (
+        <Route
+          key={page.name}
+          exact
+          path={page.url}
+          component={page.component}
+        />
+      ))}
     </React.Fragment>
   </BrowserRouter>
 );

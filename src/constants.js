@@ -1,3 +1,31 @@
+import Home from "components/Home";
+import About from "components/About";
+import Contact from "components/Contact";
+import CV from "components/CV";
+
+export const PAGES = [
+  {
+    name: "Home",
+    url: "/",
+    component: Home,
+  },
+  {
+    name: "About",
+    url: "/about",
+    component: About,
+  },
+  {
+    name: "CV",
+    url: "/cv",
+    component: CV,
+  },
+  {
+    name: "Contact",
+    url: "/contact",
+    component: Contact,
+  },
+];
+
 export const PROJECTS = [
   {
     name: "Kardinal",

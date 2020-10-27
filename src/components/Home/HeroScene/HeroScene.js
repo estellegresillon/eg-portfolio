@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import "./HeroScene.scss";
+import { PAGES } from "../../../constants";
 import { useWindowSize } from "hooks/useWindowSize";
 
 const HeroScene = () => {
@@ -53,8 +55,13 @@ const HeroScene = () => {
           <div>GRéSILLON</div>
         </div>
         <div className="menu">
-          <p>MENU</p>
-          <i className="fas fa-hamburger"></i>
+          {/* <p>MENU</p>
+          <i className="fas fa-hamburger"></i> */}
+          {PAGES.map((page) => (
+            <Link to={page.url}>{page.name}</Link>
+          ))}
+          <p>Blog</p>
+          <p>EN / FR</p>
         </div>
       </nav>
       <h1>

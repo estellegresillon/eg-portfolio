@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Footer.scss";
+import { PAGES } from "../../../constants";
 
 const Footer = () => (
   <div id="Footer">
@@ -11,11 +13,14 @@ const Footer = () => (
         <p>estelle.gresillon@gmail.com</p>
       </div>
       <div className="links">
-        <p>About</p>
-        <p>CV</p>
-        <p>Personal Projects</p>
-        <p>Code & Design Resources</p>
-        <p>Contact</p>
+        {PAGES.map((page) => {
+          if (page.name === "Home") {
+            return null;
+          }
+          return <Link to={page.url}>{page.name}</Link>;
+        })}
+        <p>Blog</p>
+        <p>EN / FR</p>
       </div>
     </div>
     <div className="terms">

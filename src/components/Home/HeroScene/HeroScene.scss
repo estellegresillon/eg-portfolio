@@ -60,14 +60,20 @@
     }
 
     .menu {
+      font-family: "IBM Plex Sans";
       display: flex;
       align-items: center;
-      cursor: pointer;
       font-size: 14px;
-      letter-spacing: 2px;
+
+      a {
+        color: white;
+        text-decoration: none;
+        margin-right: 30px;
+      }
 
       p {
-        margin-right: 10px;
+        margin-right: 30px;
+        cursor: pointer;
       }
 
       i.fa-hamburger {

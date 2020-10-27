@@ -1,6 +1,6 @@
 @import "mixins";
 
-#Contact {
+#Contact-Page {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -56,10 +56,6 @@
     p {
       font-family: "IBM Plex Sans";
       max-width: 70%;
-    }
-
-    a {
-      text-decoration: none;
     }
   }
 
