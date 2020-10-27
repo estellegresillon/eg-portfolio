@@ -187,6 +187,28 @@
     .title {
       font-size: 150px;
     }
+
+    .column {
+      .code-skills-list,
+      .design-skills-list {
+        max-width: 80%;
+      }
+    }
+
+    @keyframes floatingPaint {
+      from {
+        top: -3%;
+        transform: rotate(-10deg);
+      }
+      50% {
+        top: 2%;
+        transform: rotate(0deg);
+      }
+      to {
+        top: -3%;
+        transform: rotate(-10deg);
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -196,6 +218,11 @@
       font-size: 100px;
       bottom: -1%;
       right: 3%;
+    }
+
+    .white-dot-medium-top {
+      top: 5vh;
+      right: 45vw;
     }
 
     .column {

@@ -210,6 +210,15 @@
   @media screen and (max-width: 1024px) {
     height: 100vh;
 
+    .blue-dot-medium {
+      display: none;
+    }
+
+    .dark-blue-dot-bottom {
+      bottom: 20vh;
+      right: 7vw;
+    }
+
     .robot-wrapper {
       height: 60%;
       width: 40%;

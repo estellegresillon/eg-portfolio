@@ -28,7 +28,7 @@
       p {
         cursor: pointer;
         margin: 0;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
 
         &:hover {
           text-decoration: underline;
@@ -101,7 +101,7 @@
 
   @media screen and (max-width: 1024px) {
     height: 50vh;
-    background-size: 100vw 70vh;
+    background-size: 100vw 110vh;
   }
 
   @media screen and (max-width: 768px) {
@@ -109,6 +109,18 @@
 
     .terms {
       z-index: 1;
+    }
+
+    @keyframes floatingAnchor {
+      from {
+        bottom: 47%;
+      }
+      50% {
+        bottom: 42%;
+      }
+      to {
+        bottom: 47%;
+      }
     }
   }
 
@@ -127,11 +139,17 @@
 
       .links p {
         font-size: 32px;
+        line-height: 32px;
       }
     }
 
     .small-stripes {
       top: -2%;
+    }
+
+    .medium-stripes {
+      width: 220px;
+      right: -22%;
     }
 
     .anchor {
@@ -149,12 +167,28 @@
     .container {
       .localisation {
         font-size: 16px;
-        margin-bottom: 45px;
+        margin-bottom: 40px;
+
+        p {
+          margin-bottom: 8px;
+          line-height: 19px;
+        }
       }
 
       .links p {
         font-size: 20px;
+        margin-bottom: 15px;
       }
+    }
+
+    .small-stripes {
+      top: -4%;
+    }
+
+    .medium-stripes {
+      width: 150px;
+      right: -13%;
+      bottom: -2%;
     }
 
     .terms {
