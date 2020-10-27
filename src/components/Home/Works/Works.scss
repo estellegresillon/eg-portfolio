@@ -187,10 +187,15 @@
     height: auto;
     margin: 0;
 
+    .white-dot-medium {
+      display: none;
+    }
+
     .column {
       width: 80vw;
       background-size: 80vw 35vh;
       height: 35vh;
+      font-size: 16px;
 
       &:first-child {
         margin-bottom: 35%;
@@ -207,10 +212,13 @@
 
       p {
         width: 75%;
+        margin: 10px;
       }
 
       .CTA-Button {
         margin-top: 15px;
+        width: auto;
+        height: auto;
       }
     }
 
