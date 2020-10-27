@@ -180,4 +180,36 @@
       transform: rotate(-10deg);
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    height: 50vh;
+
+    .title {
+      font-size: 150px;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      display: none;
+    }
+
+    .column {
+      width: 90%;
+      margin: 30px;
+
+      h3 {
+        margin-bottom: 40px;
+      }
+
+      .code-skills-list,
+      .design-skills-list {
+        max-width: 100%;
+      }
+    }
+  }
 }
