@@ -163,6 +163,26 @@
     }
   }
 
+  @media screen and (max-width: 768px) {
+    .column {
+      font-size: 14px;
+
+      &:first-child {
+        margin-bottom: 5%;
+      }
+
+      p {
+        width: 70%;
+        margin: 0;
+      }
+
+      .CTA-Button {
+        width: 100px;
+        height: 18px;
+      }
+    }
+  }
+
   @media screen and (max-width: 420px) {
     height: auto;
     margin: 0;

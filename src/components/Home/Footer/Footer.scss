@@ -98,4 +98,65 @@
     bottom: -5%;
     opacity: 0.5;
   }
+
+  @media screen and (max-width: 1024px) {
+    height: 50vh;
+    background-size: 100vw 70vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 70vh;
+
+    .terms {
+      z-index: 1;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    height: 100vh;
+    background-size: 300vw 130vh;
+
+    .container {
+      .localisation {
+        margin-bottom: 50px;
+        font-size: 20px;
+        line-height: 32px;
+      }
+
+      .links p {
+        font-size: 32px;
+      }
+    }
+
+    .small-stripes {
+      top: -2%;
+    }
+
+    .anchor {
+      display: none;
+    }
+
+    .terms {
+      right: 0;
+      margin: 0 10%;
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .container {
+      .localisation {
+        font-size: 16px;
+        margin-bottom: 45px;
+      }
+
+      .links p {
+        font-size: 20px;
+      }
+    }
+
+    .terms {
+      font-size: 12px;
+    }
+  }
 }
