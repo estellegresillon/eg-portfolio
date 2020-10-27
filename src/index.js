@@ -5,10 +5,8 @@ import { createStore, combineReducers } from "redux";
 import { I18nextProvider } from "react-i18next";
 import { BrowserRouter, Route } from "react-router-dom";
 
-//import "./index.scss";
 import "assets/styles/base.scss";
-import Home from "./compo/Home";
-// import Detail from "./components/detail";
+import Home from "./components/Home";
 import i18n from "./locales/i18n-config";
 
 import toggleThemeReducer from "./redux/reducers";
@@ -21,13 +19,6 @@ const App = () => (
   <BrowserRouter>
     <React.Fragment>
       <Route exact path="/" component={Home} />
-      {/* <Route exact path="/kardinal" component={Detail} />
-      <Route exact path="/rafaelbolano" component={Detail} />
-      <Route exact path="/foodlab" component={Detail} />
-      <Route exact path="/zest" component={Detail} />
-      <Route exact path="/santorini" component={Detail} />
-      <Route exact path="/thatsmyrock" component={Detail} />
-      <Route exact path="/otaku" component={Detail} /> */}
     </React.Fragment>
   </BrowserRouter>
 );
