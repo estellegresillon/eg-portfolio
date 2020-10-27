@@ -17,7 +17,7 @@ const Contact = () => (
         For any business inquiries, questions, project proposal or
         suggestions...
       </p>
-      <Button label="...it's this way" width="120px" />
+      <Button label="...it's this way" />
     </div>
     <img src="mailboxblue-small.png" className="mailbox-1" alt="mailbox" />
     <div className="dot red-dot-top" />

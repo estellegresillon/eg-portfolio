@@ -9,7 +9,7 @@ const Works = () => (
       <img src="diamond-small.png" alt="pro" className="diamond" />
       <h3>&gt; Freelance missions</h3>
       <p>Take a look at my CV and a detailed timeline of my former missions</p>
-      <Button label="check it out" width="110px" />
+      <Button label="check it out" />
     </div>
     <div className="perso-right column">
       <img src="folder-small.png" alt="perso" className="folder" />
@@ -18,7 +18,7 @@ const Works = () => (
         Code & UI Challenges, onepages, custom hooks, design & front-end
         resources...
       </p>
-      <Button label="check it out" width="110px" />
+      <Button label="check it out" />
     </div>
     <img
       className="medium-stripes"

@@ -1,4 +1,7 @@
+@import "mixins";
+
 .CTA-Button {
+  @include flex;
   background-color: #4447b3;
   color: white;
   height: 22px;
@@ -11,12 +14,10 @@
   box-shadow: 0 5px 30px rgba(50, 50, 93, 0.2);
   transition: 1s all ease;
   position: relative;
+  max-width: 170px;
 
   i {
-    position: absolute;
-    margin-left: 5px;
-    right: 30px;
-    top: 17px;
+    margin-left: 10px;
   }
 
   &:hover {

@@ -60,7 +60,7 @@ const About = () => (
         both professionally and personally. Feel free to contact me as I'd love
         to hear about your project and engage in new challenges !
       </div>
-      <Button label="let's get started" width="140px" />
+      <Button label="let's get started" />
     </div>
   </div>
 );
