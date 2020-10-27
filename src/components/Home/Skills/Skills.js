@@ -26,7 +26,7 @@ const Skills = () => (
             <div className="icon-wrapper">
               <i className={skill.icon} />
             </div>
-            <div>{skill.label}</div>
+            <div className="skill-label">{skill.label}</div>
           </div>
         ))}
       </div>
@@ -40,7 +40,7 @@ const Skills = () => (
             <div className="icon-wrapper">
               <i className={skill.icon} />
             </div>
-            <div>{skill.label}</div>
+            <div className="skill-label">{skill.label}</div>
           </div>
         ))}
       </div>
