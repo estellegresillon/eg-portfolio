@@ -25,7 +25,8 @@
       margin-right: 5%;
       font-size: 42px;
 
-      a {
+      a,
+      .language-select {
         color: white;
         text-decoration: none;
         margin: 0;
@@ -134,7 +135,8 @@
         line-height: 32px;
       }
 
-      .links p {
+      .links a,
+      .links .language-select {
         font-size: 32px;
         line-height: 32px;
       }
@@ -172,7 +174,8 @@
         }
       }
 
-      .links p {
+      .links a,
+      .links .language-select {
         font-size: 20px;
         margin-bottom: 15px;
       }

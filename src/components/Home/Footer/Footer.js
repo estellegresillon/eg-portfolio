@@ -30,7 +30,7 @@ const Footer = () => (
         >
           Blog
         </a>
-        <p>EN / FR</p>
+        <p className="language-select">EN / FR</p>
       </div>
     </div>
     <div className="terms">

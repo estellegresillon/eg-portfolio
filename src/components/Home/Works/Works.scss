@@ -31,7 +31,7 @@
 
   .column-container {
     height: 40vh;
-    width: 60%;
+    width: 40%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -169,6 +169,10 @@
   @media screen and (max-width: 1024px) {
     .pink-dot-bottom {
       top: 65vh;
+    }
+
+    .column-container {
+      width: 60%;
     }
   }
 

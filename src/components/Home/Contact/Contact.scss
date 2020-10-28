@@ -65,7 +65,7 @@
 
   .mailbox-1 {
     position: absolute;
-    width: 30%;
+    height: 120%;
     left: 15%;
     animation: 7s floatingMail infinite;
     z-index: 2;
@@ -112,7 +112,7 @@
   }
 
   .dark-blue-dot-medium {
-    top: 45vh;
+    bottom: -20px;
     left: 40vw;
     background-color: #4447b3;
     animation: 5s rotateDots infinite linear;
@@ -136,6 +136,12 @@
     .dark-blue-dot-bottom {
       bottom: 42vh;
     }
+
+    .mailbox-1 {
+      left: 5%;
+      height: auto;
+      width: 40%;
+    }
   }
 
   @media screen and (max-width: 630px) {
@@ -149,12 +155,13 @@
     }
 
     .container {
-      margin-left: 10%;
+      margin: 10%;
       margin-bottom: 60%;
     }
 
     .mailbox-1 {
       width: 60%;
+      left: 10%;
     }
 
     .big-stripes {
