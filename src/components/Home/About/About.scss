@@ -2,13 +2,14 @@
 
 #About {
   position: relative;
-  height: 140vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
   color: #2a2b56;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
+  margin-bottom: 150px;
 
   .big-stripes {
     position: absolute;
@@ -31,7 +32,7 @@
   .robot-wrapper {
     position: relative;
     @include flex;
-    height: 60%;
+    height: 60vh;
     width: 40%;
 
     .robot {
@@ -212,8 +213,6 @@
   }
 
   @media screen and (max-width: 1024px) {
-    height: 100vh;
-
     .blue-dot-medium {
       display: none;
     }
@@ -224,8 +223,6 @@
     }
 
     .robot-wrapper {
-      height: 60%;
-      width: 40%;
       margin-right: 5%;
     }
 
@@ -245,25 +242,14 @@
   }
 
   @media screen and (max-width: 768px) {
-    margin-bottom: 10%;
-
-    .about-section {
-      height: 85%;
-    }
-  }
-
-  @media screen and (max-width: 420px) {
-    height: auto;
-    margin-bottom: 150px;
-
     .robot-wrapper {
       position: unset;
       width: unset;
       margin-right: 0;
 
       .robot {
-        height: 70%;
-        left: -112px;
+        height: 70vh;
+        left: -65px;
       }
     }
 
@@ -277,7 +263,7 @@
     }
 
     .about-section {
-      width: 100%;
+      width: 80%;
       margin: 30px;
       display: flex;
       flex-direction: column;
@@ -308,6 +294,12 @@
       to {
         top: 0%;
       }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .about-section {
+      width: 100%;
     }
   }
 }

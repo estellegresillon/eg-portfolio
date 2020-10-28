@@ -67,18 +67,6 @@
     z-index: 2;
   }
 
-  @keyframes floatingMail {
-    from {
-      bottom: 25vh;
-    }
-    50% {
-      bottom: 30vh;
-    }
-    to {
-      bottom: 25vh;
-    }
-  }
-
   .red-dot-top {
     top: 15vh;
     right: 5vw;
@@ -128,18 +116,6 @@
     .dark-blue-dot-bottom {
       bottom: 40vh;
     }
-
-    @keyframes floatingMail {
-      from {
-        bottom: 10vh;
-      }
-      50% {
-        bottom: 15vh;
-      }
-      to {
-        bottom: 10vh;
-      }
-    }
   }
 
   @media screen and (max-width: 768px) {
@@ -147,18 +123,6 @@
 
     .dark-blue-dot-bottom {
       bottom: 42vh;
-    }
-
-    @keyframes floatingMail {
-      from {
-        bottom: 15vh;
-      }
-      50% {
-        bottom: 20vh;
-      }
-      to {
-        bottom: 15vh;
-      }
     }
   }
 
@@ -186,18 +150,6 @@
 
     .big-stripes {
       display: none;
-    }
-
-    @keyframes floatingMail {
-      from {
-        bottom: -3vh;
-      }
-      50% {
-        bottom: 3vh;
-      }
-      to {
-        bottom: -3vh;
-      }
     }
   }
 

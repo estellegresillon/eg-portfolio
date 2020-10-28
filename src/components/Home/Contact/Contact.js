@@ -35,12 +35,6 @@ const Contact = () => (
       alt="stripe"
       aria-hidden="true"
     />
-    <img
-      className="medium-stripes"
-      src="stripes.svg"
-      alt="stripe"
-      aria-hidden="true"
-    />
   </div>
 );
 

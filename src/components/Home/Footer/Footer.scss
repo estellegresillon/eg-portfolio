@@ -7,7 +7,7 @@
   justify-content: center;
   height: 100vh;
   background-image: url("/mesh-footer-small.png");
-  background-size: 100vw;
+  background-size: 100% 100%;
   color: white;
   width: 100vw;
   overflow: hidden;
@@ -102,13 +102,8 @@
     opacity: 0.5;
   }
 
-  @media screen and (max-width: 1024px) {
-    height: 50vh;
-    background-size: 100vw 110vh;
-  }
-
   @media screen and (max-width: 768px) {
-    height: 70vh;
+    background-size: 300vw 130vh;
 
     .terms {
       z-index: 1;
@@ -128,7 +123,6 @@
   }
 
   @media screen and (max-width: 420px) {
-    height: 100vh;
     background-size: 300vw 130vh;
 
     .container {
@@ -197,5 +191,9 @@
     .terms {
       font-size: 12px;
     }
+  }
+
+  @media screen and (min-height: 900px) {
+    height: 80vh;
   }
 }

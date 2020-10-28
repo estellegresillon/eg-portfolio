@@ -6,22 +6,28 @@ import Button from "components/common/Button";
 
 const Works = () => (
   <div id="Works">
-    <div className="pro-left column">
-      <img src="diamond-small.png" alt="pro" className="diamond" />
-      <h3>&gt; Freelance missions</h3>
-      <p>Take a look at my CV and a detailed timeline of my former missions</p>
-      <Link to="/cv">
-        <Button label="check it out" />
-      </Link>
+    <div className="column-container">
+      <div className="pro-left column">
+        <img src="diamond-small.png" alt="pro" className="diamond" />
+        <h3>&gt; Freelance missions</h3>
+        <p>
+          Take a look at my CV and a detailed timeline of my former missions
+        </p>
+        <Link to="/cv">
+          <Button label="check it out" />
+        </Link>
+      </div>
     </div>
-    <div className="perso-right column">
-      <img src="folder-small.png" alt="perso" className="folder" />
-      <h3>&gt; Personal projects</h3>
-      <p>
-        Code & UI Challenges, onepages, custom hooks, design & front-end
-        resources...
-      </p>
-      <Button label="check it out" />
+    <div className="column-container">
+      <div className="perso-right column">
+        <img src="folder-small.png" alt="perso" className="folder" />
+        <h3>&gt; Personal projects</h3>
+        <p>
+          Code & UI Challenges, onepages, custom hooks, design & front-end
+          resources...
+        </p>
+        <Button label="check it out" />
+      </div>
     </div>
     <img
       className="medium-stripes"

@@ -2,13 +2,14 @@
 
 #About-Page {
   position: relative;
-  height: 140vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
   color: #2a2b56;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
+  margin-bottom: 150px;
 
   .big-stripes {
     position: absolute;
@@ -31,7 +32,7 @@
   .robot-wrapper {
     position: relative;
     @include flex;
-    height: 60%;
+    height: 60vh;
     width: 40%;
 
     .robot {
@@ -212,8 +213,6 @@
   }
 
   @media screen and (max-width: 1024px) {
-    height: 100vh;
-
     .blue-dot-medium {
       display: none;
     }
@@ -245,17 +244,12 @@
   }
 
   @media screen and (max-width: 768px) {
-    margin-bottom: 10%;
-
     .about-section {
       height: 85%;
     }
   }
 
   @media screen and (max-width: 420px) {
-    height: auto;
-    margin-bottom: 150px;
-
     .robot-wrapper {
       position: unset;
       width: unset;
