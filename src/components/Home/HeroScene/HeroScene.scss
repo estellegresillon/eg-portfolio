@@ -59,6 +59,57 @@
       margin: 0 35px;
     }
 
+    .mobile-menu {
+      display: none;
+      align-items: center;
+      font-size: 14px;
+      cursor: pointer;
+
+      .menu-close {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 11;
+      }
+
+      p {
+        margin-right: 10px;
+      }
+
+      i.fa-hamburger {
+        font-size: 20px;
+        margin-top: -3px;
+      }
+
+      .mobile-menu-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 10;
+        cursor: initial;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        align-items: center;
+
+        .menu-close {
+          cursor: pointer;
+        }
+
+        a {
+          margin-bottom: 10%;
+          color: white;
+          text-decoration: none;
+          font-size: 24px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
     .menu {
       font-family: "IBM Plex Sans";
       display: flex;
@@ -69,11 +120,12 @@
         color: white;
         text-decoration: none;
         margin-right: 30px;
+        white-space: nowrap;
       }
 
       p {
-        margin-right: 30px;
         cursor: pointer;
+        white-space: nowrap;
       }
 
       i.fa-hamburger {
@@ -199,6 +251,16 @@
 
     .hero-rocket {
       width: 20%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    nav .mobile-menu {
+      display: flex;
+    }
+
+    nav .menu {
+      display: none;
     }
   }
 

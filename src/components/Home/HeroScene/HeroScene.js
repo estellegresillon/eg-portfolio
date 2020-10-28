@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import "./HeroScene.scss";
@@ -6,6 +6,7 @@ import { PAGES } from "../../../constants";
 import { useWindowSize } from "hooks/useWindowSize";
 
 const HeroScene = () => {
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
   const windowSize = useWindowSize();
   const heroScene = useRef(null);
   const whistleRef = useRef(null);
@@ -54,9 +55,33 @@ const HeroScene = () => {
           <div>ESTELLE</div>
           <div>GRéSILLON</div>
         </div>
+        <div className="mobile-menu">
+          <p onClick={() => setIsMenuVisible(true)}>MENU</p>
+          <i
+            onClick={() => setIsMenuVisible(true)}
+            className="fas fa-hamburger"
+          />
+          {isMenuVisible && (
+            <div className="mobile-menu-content">
+              <div
+                onClick={() => setIsMenuVisible(false)}
+                className="menu-close"
+              >
+                <i className="fas fa-times" />
+              </div>
+              {PAGES.map((page) => (
+                <Link
+                  onClick={() => setIsMenuVisible(false)}
+                  key={page.name}
+                  to={page.url}
+                >
+                  {page.name}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
         <div className="menu">
-          {/* <p>MENU</p>
-          <i className="fas fa-hamburger"></i> */}
           {PAGES.map((page) => (
             <Link key={page.name} to={page.url}>
               {page.name}
