@@ -55,12 +55,14 @@ const HeroScene = () => {
           <div>ESTELLE</div>
           <div>GRéSILLON</div>
         </div>
-        <div className="mobile-menu">
-          <p onClick={() => setIsMenuVisible(true)}>MENU</p>
-          <i
-            onClick={() => setIsMenuVisible(true)}
-            className="fas fa-hamburger"
-          />
+        <div className="mobile-menu-wrapper">
+          <div onClick={() => setIsMenuVisible(true)} className="mobile-menu">
+            <p>MENU</p>
+            <i
+              onClick={() => setIsMenuVisible(true)}
+              className="fas fa-hamburger"
+            />
+          </div>
           {isMenuVisible && (
             <div className="mobile-menu-content">
               <div

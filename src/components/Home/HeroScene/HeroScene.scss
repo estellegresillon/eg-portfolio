@@ -59,17 +59,23 @@
       margin: 0 35px;
     }
 
-    .mobile-menu {
+    .mobile-menu-wrapper {
       display: none;
       align-items: center;
       font-size: 14px;
       cursor: pointer;
 
+      .mobile-menu {
+        display: flex;
+        align-items: center;
+      }
+
       .menu-close {
         position: absolute;
-        top: 10px;
-        left: 10px;
+        top: 20px;
+        left: 20px;
         z-index: 11;
+        font-size: 20px;
       }
 
       p {
@@ -77,7 +83,6 @@
       }
 
       i.fa-hamburger {
-        font-size: 20px;
         margin-top: -3px;
       }
 
@@ -88,6 +93,7 @@
         position: absolute;
         z-index: 10;
         cursor: initial;
+        font-size: 24px;
         top: 0;
         left: 0;
         width: 100vw;
@@ -104,7 +110,6 @@
           margin-bottom: 10%;
           color: white;
           text-decoration: none;
-          font-size: 24px;
           text-transform: uppercase;
         }
       }
@@ -255,7 +260,7 @@
   }
 
   @media screen and (max-width: 768px) {
-    nav .mobile-menu {
+    nav .mobile-menu-wrapper {
       display: flex;
     }
 
