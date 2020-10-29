@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./Footer.scss";
-import { PAGES } from "../../../constants";
+import { PAGES, BLOG_URL } from "utils/constants";
 
 const Footer = () => (
   <div id="Footer">
@@ -23,11 +23,7 @@ const Footer = () => (
             </Link>
           );
         })}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://blog.estellegresillon.fr/"
-        >
+        <a target="_blank" rel="noopener noreferrer" href={BLOG_URL}>
           Blog
         </a>
         <p className="language-select">EN / FR</p>

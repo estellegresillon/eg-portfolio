@@ -7,9 +7,9 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import "assets/styles/base.scss";
 import i18n from "locales/i18n-config";
-import { PAGES } from "./constants";
+import { PAGES } from "utils/constants";
 
-import toggleThemeReducer from "./redux/reducers";
+import toggleThemeReducer from "redux/reducers";
 
 const reducers = combineReducers({
   showLightTheme: toggleThemeReducer,

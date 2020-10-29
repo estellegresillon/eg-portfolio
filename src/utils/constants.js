@@ -26,6 +26,8 @@ export const PAGES = [
   },
 ];
 
+export const BLOG_URL = "https://blog.estellegresillon.fr";
+
 export const PROJECTS = [
   {
     name: "Kardinal",

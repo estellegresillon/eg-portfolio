@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 
 import "./HeroScene.scss";
-import { PAGES } from "../../../constants";
+import MenuList from "./MenuList";
 import { useWindowSize } from "hooks/useWindowSize";
 
 const HeroScene = () => {
@@ -58,10 +57,7 @@ const HeroScene = () => {
         <div className="mobile-menu-wrapper">
           <div onClick={() => setIsMenuVisible(true)} className="mobile-menu">
             <p>MENU</p>
-            <i
-              onClick={() => setIsMenuVisible(true)}
-              className="fas fa-hamburger"
-            />
+            <i className="fas fa-hamburger" />
           </div>
           {isMenuVisible && (
             <div className="mobile-menu-content">
@@ -71,32 +67,12 @@ const HeroScene = () => {
               >
                 <i className="fas fa-times" />
               </div>
-              {PAGES.map((page) => (
-                <Link
-                  onClick={() => setIsMenuVisible(false)}
-                  key={page.name}
-                  to={page.url}
-                >
-                  {page.name}
-                </Link>
-              ))}
+              <MenuList onClick={() => setIsMenuVisible(false)} />
             </div>
           )}
         </div>
         <div className="menu">
-          {PAGES.map((page) => (
-            <Link key={page.name} to={page.url}>
-              {page.name}
-            </Link>
-          ))}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://blog.estellegresillon.fr/"
-          >
-            Blog
-          </a>
-          <p>EN / FR</p>
+          <MenuList />
         </div>
       </nav>
       <h1>
