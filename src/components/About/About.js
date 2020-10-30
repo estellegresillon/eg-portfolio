@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import "./About.scss";
-import Button from "components/common/Button";
 
 const About = () => (
   <div id="About-Page">
@@ -30,7 +28,7 @@ const About = () => (
       <img src="robot-small.png" alt="robot" className="robot" />
     </div>
     <div className="about-section">
-      <h2>&gt; About</h2>
+      <h2>Hey.</h2>
       <img
         className="small-stripes"
         src="stripes.svg"
@@ -61,9 +59,6 @@ const About = () => (
         both professionally and personally. Feel free to contact me as I'd love
         to hear about your project and engage in new challenges !
       </div>
-      <Link to="about">
-        <Button label="let's get started" />
-      </Link>
     </div>
   </div>
 );

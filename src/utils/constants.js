@@ -1,7 +1,6 @@
 import Home from "components/Home";
 import About from "components/About";
 import Contact from "components/Contact";
-import CV from "components/CV";
 
 export const PAGES = [
   {
@@ -13,11 +12,6 @@ export const PAGES = [
     name: "About",
     url: "/about",
     component: About,
-  },
-  {
-    name: "CV",
-    url: "/cv",
-    component: CV,
   },
   {
     name: "Contact",

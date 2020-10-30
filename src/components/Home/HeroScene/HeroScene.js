@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 import "./HeroScene.scss";
-import MenuList from "./MenuList";
 import { useWindowSize } from "hooks/useWindowSize";
 
 const HeroScene = () => {
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
   const windowSize = useWindowSize();
   const heroScene = useRef(null);
   const whistleRef = useRef(null);
@@ -49,32 +47,6 @@ const HeroScene = () => {
 
   return (
     <div ref={heroScene} id="HeroScene">
-      <nav>
-        <div className="logo">
-          <div>ESTELLE</div>
-          <div>GRéSILLON</div>
-        </div>
-        <div className="mobile-menu-wrapper">
-          <div onClick={() => setIsMenuVisible(true)} className="mobile-menu">
-            <p>MENU</p>
-            <i className="fas fa-hamburger" />
-          </div>
-          {isMenuVisible && (
-            <div className="mobile-menu-content">
-              <div
-                onClick={() => setIsMenuVisible(false)}
-                className="menu-close"
-              >
-                <i className="fas fa-times" />
-              </div>
-              <MenuList onClick={() => setIsMenuVisible(false)} />
-            </div>
-          )}
-        </div>
-        <div className="menu">
-          <MenuList />
-        </div>
-      </nav>
       <h1>
         <div>Front-end developer</div> <div>& designer</div>
       </h1>

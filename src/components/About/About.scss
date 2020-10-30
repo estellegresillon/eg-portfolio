@@ -72,7 +72,7 @@
 
     .intro {
       width: 70%;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       font-family: "IBM Plex Sans";
 
       strong {
@@ -82,6 +82,7 @@
 
     a {
       text-decoration: none;
+      margin-bottom: 30px;
     }
   }
 
@@ -223,8 +224,6 @@
     }
 
     .robot-wrapper {
-      height: 60%;
-      width: 40%;
       margin-right: 5%;
     }
 
@@ -244,20 +243,14 @@
   }
 
   @media screen and (max-width: 768px) {
-    .about-section {
-      height: 85%;
-    }
-  }
-
-  @media screen and (max-width: 420px) {
     .robot-wrapper {
       position: unset;
       width: unset;
       margin-right: 0;
 
       .robot {
-        height: 70%;
-        left: -112px;
+        height: 70vh;
+        left: -65px;
       }
     }
 
@@ -271,7 +264,7 @@
     }
 
     .about-section {
-      width: 100%;
+      width: 80%;
       margin: 30px;
       display: flex;
       flex-direction: column;
@@ -302,6 +295,12 @@
       to {
         top: 0%;
       }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .about-section {
+      width: 100%;
     }
   }
 }

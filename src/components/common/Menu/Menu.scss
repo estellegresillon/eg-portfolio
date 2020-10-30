@@ -1,0 +1,156 @@
+@import "mixins";
+
+#Nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: calc(100% - 120px);
+  padding: 20px 60px;
+  color: white;
+  z-index: 10;
+
+  &.dark-nav {
+    color: #4447b3;
+
+    .separator,
+    .logo {
+      border-color: #4447b3;
+    }
+
+    .logo,
+    .menu a,
+    .mobile-menu-wrapper .fa-hamburger {
+      color: #4447b3;
+    }
+
+    .mobile-menu-content p,
+    i {
+      color: white;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .logo {
+    border-left: 3px solid white;
+    padding-left: 4px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    line-height: 15px;
+  }
+
+  .separator {
+    height: 40px;
+    border: 1px solid white;
+    width: 0px;
+    margin: 0 35px;
+  }
+
+  .mobile-menu-wrapper {
+    display: none;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+
+    .mobile-menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-close {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 11;
+      font-size: 20px;
+    }
+
+    p {
+      margin-right: 10px;
+    }
+
+    i.fa-hamburger {
+      margin-top: -3px;
+    }
+
+    .mobile-menu-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      z-index: 10;
+      cursor: initial;
+      font-size: 24px;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      flex-direction: column;
+      align-items: center;
+
+      .menu-close {
+        cursor: pointer;
+      }
+
+      .mobile-menu-language {
+        margin: 0;
+        margin-bottom: 7%;
+      }
+
+      a {
+        margin-bottom: 7%;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .menu {
+    font-family: "IBM Plex Sans";
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    a {
+      color: white;
+      margin-right: 30px;
+      white-space: nowrap;
+    }
+
+    p {
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    i.fa-hamburger {
+      font-size: 20px;
+      margin-top: -3px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .mobile-menu-wrapper {
+      display: flex;
+    }
+
+    .menu {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 40px);
+    padding: 20px;
+  }
+}
