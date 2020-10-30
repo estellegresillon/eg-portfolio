@@ -20,6 +20,25 @@ export const PAGES = [
   },
 ];
 
+export const SOCIAL_LINKS = [
+  {
+    url: "https://www.linkedin.com/in/estellegresillon/",
+    icon: "fab fa-linkedin",
+  },
+  {
+    url: "https://dribbble.com/estellegresillon",
+    icon: "fab fa-dribbble",
+  },
+  {
+    url: "https://github.com/estellegresillon",
+    icon: "fab fa-github-alt",
+  },
+  {
+    url: "mailto:estelle.gresillon@gmail.com",
+    icon: "far fa-paper-plane",
+  },
+];
+
 export const CONTACT_PAGE_WORDS = [
   "an app from scratch",
   "a great feature to develop",

@@ -12,23 +12,6 @@
   width: 100vw;
   overflow: hidden;
 
-  .social-icons {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-top: 30px;
-    font-size: 24px;
-    margin-bottom: 60px;
-
-    a {
-      color: white;
-    }
-
-    i {
-      margin-right: 35px;
-    }
-  }
-
   .container {
     padding: 0 10%;
     display: flex;

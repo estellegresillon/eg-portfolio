@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./Contact.scss";
 import Map from "./Map";
+import SocialLinks from "components/common/SocialLinks";
 import { CONTACT_PAGE_WORDS } from "utils/constants";
 
 const Contact = () => {
@@ -37,29 +38,7 @@ const Contact = () => {
             estelle.gresillon@gmail.com
           </a>
         </div>
-        <div className="social-icons">
-          <a
-            href="https://www.linkedin.com/in/estellegresillon/"
-            aria-label="LinkedIn link"
-          >
-            <i aria-hidden="true" className="fab fa-linkedin" />
-          </a>
-          <a
-            href="https://dribbble.com/estellegresillon"
-            aria-label="Dribbble link"
-          >
-            <i aria-hidden="true" className="fab fa-dribbble" />
-          </a>
-          <a
-            href="https://github.com/estellegresillon"
-            aria-label="GitHub link"
-          >
-            <i aria-hidden="true" className="fab fa-github-alt" />
-          </a>
-          <a href="mailto:estelle.gresillon@gmail.com" aria-label="Mail link">
-            <i aria-hidden="true" className="far fa-paper-plane" />
-          </a>
-        </div>
+        <SocialLinks color="#4447b3" />
       </div>
 
       <Map />
