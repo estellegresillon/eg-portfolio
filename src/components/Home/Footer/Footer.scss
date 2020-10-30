@@ -12,6 +12,23 @@
   width: 100vw;
   overflow: hidden;
 
+  .social-icons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 30px;
+    font-size: 24px;
+    margin-bottom: 60px;
+
+    a {
+      color: white;
+    }
+
+    i {
+      margin-right: 35px;
+    }
+  }
+
   .container {
     padding: 0 10%;
     display: flex;
@@ -41,7 +58,7 @@
     }
 
     .localisation {
-      margin-bottom: 80px;
+      margin-bottom: 20px;
       font-size: 24px;
 
       p {
@@ -130,7 +147,6 @@
       margin-top: -50px;
 
       .localisation {
-        margin-bottom: 50px;
         font-size: 20px;
         line-height: 32px;
       }
@@ -163,10 +179,14 @@
   }
 
   @media screen and (max-width: 320px) {
+    .social-icons {
+      margin-bottom: 30px;
+    }
+
     .container {
       .localisation {
         font-size: 16px;
-        margin-bottom: 40px;
+        margin-bottom: 0px;
 
         p {
           margin-bottom: 8px;

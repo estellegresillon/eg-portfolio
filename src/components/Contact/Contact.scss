@@ -80,6 +80,22 @@
     }
   }
 
+  .social-icons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 30px;
+    font-size: 24px;
+
+    a {
+      color: #4447b3;
+    }
+
+    i {
+      margin-right: 35px;
+    }
+  }
+
   .red-dot-top {
     top: 15vh;
     right: 5vw;
