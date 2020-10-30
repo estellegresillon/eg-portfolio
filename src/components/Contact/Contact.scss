@@ -5,66 +5,79 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 110vh;
+  height: 100vh;
   width: 100vw;
   overflow: hidden;
 
-  .big-stripes {
+  .dot {
     position: absolute;
-    width: 250px;
-    z-index: 0;
-    left: 13%;
-    top: 40%;
-    opacity: 0.7;
+    height: 14px;
+    width: 14px;
+    border-radius: 5px;
   }
 
   .medium-stripes {
     position: absolute;
-    width: 170px;
+    width: 120px;
     z-index: 0;
-    bottom: 15%;
+    bottom: 40%;
     right: -40px;
     opacity: 0.7;
+  }
+
+  .mailbox {
+    position: absolute;
+    z-index: -1;
+    bottom: 37%;
+    right: 7%;
+    height: 45%;
+    animation: 10s floatingMailbox ease infinite;
   }
 
   .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 50%;
+    justify-content: center;
+    margin-left: 10%;
     z-index: 2;
     position: relative;
     color: #4447b3;
+    height: 60vh;
 
     .small-stripes {
       position: absolute;
       width: 110px;
       z-index: 0;
-      top: 30px;
-      left: 200px;
+      top: 33%;
+      left: -5%;
       opacity: 0.7;
     }
 
     h3 {
       color: #ec98e1;
       font-size: 60px;
-      margin-bottom: 10px;
-      margin-top: 0;
+      margin: 30px 0;
       z-index: 1;
     }
 
-    p {
+    .contact-intro {
       font-family: "IBM Plex Sans";
       max-width: 70%;
+      margin: 20px 0;
+      white-space: nowrap;
     }
-  }
 
-  .mailbox-1 {
-    position: absolute;
-    width: 30%;
-    left: 15%;
-    animation: 7s floatingMail infinite;
-    z-index: 2;
+    .mail {
+      i {
+        margin-right: 10px;
+      }
+
+      a {
+        color: #4447b3;
+        font-size: 36px;
+      }
+    }
   }
 
   .red-dot-top {
@@ -96,8 +109,8 @@
   }
 
   .dark-blue-dot-medium {
-    top: 45vh;
-    left: 40vw;
+    top: 10vh;
+    left: 55vw;
     background-color: #4447b3;
     animation: 5s rotateDots infinite linear;
     z-index: 4;
@@ -105,59 +118,85 @@
 
   .dark-blue-dot-bottom {
     bottom: 30vh;
-    right: 20vw;
+    right: 5vw;
     background-color: #4447b3;
     animation: 4s rotateDots infinite;
   }
 
-  @media screen and (max-width: 1024px) {
-    height: 45vh;
-
-    .dark-blue-dot-bottom {
-      bottom: 40vh;
+  @keyframes floatingMailbox {
+    from {
+      bottom: 35%;
+    }
+    50% {
+      bottom: 40%;
+    }
+    to {
+      bottom: 35%;
     }
   }
 
   @media screen and (max-width: 768px) {
-    height: 55vh;
-
-    .dark-blue-dot-bottom {
-      bottom: 42vh;
+    .container .mail a {
+      font-size: 24px;
     }
   }
 
   @media screen and (max-width: 420px) {
-    height: 80vh;
-    margin-top: 50px;
-
-    .dark-blue-dot-medium,
     .blue-dot-medium {
       display: none;
     }
 
-    .red-dot-top {
-      top: 1vh;
+    .container .mail a {
+      font-size: 18px;
     }
 
-    .container {
-      margin-left: 10%;
-      margin-bottom: 60%;
+    .mailbox {
+      height: 30%;
     }
 
-    .mailbox-1 {
-      width: 70%;
-    }
-
-    .big-stripes {
-      display: none;
+    .container h3 {
+      font-size: 48px;
+      margin: 0;
+      margin-top: -70px;
     }
   }
 
   @media screen and (max-width: 320px) {
-    height: 110vh;
+    .google-map {
+      display: none;
+    }
+
+    .red-dot-top {
+      display: none;
+    }
+
+    .container {
+      height: 100vh;
+
+      .small-stripes {
+        top: -3%;
+      }
+
+      .contact-intro {
+        font-size: 14px;
+      }
+    }
 
     .container h3 {
       font-size: 48px;
+      margin-top: -70px;
+    }
+
+    @keyframes floatingMailbox {
+      from {
+        bottom: 5%;
+      }
+      50% {
+        bottom: 10%;
+      }
+      to {
+        bottom: 5%;
+      }
     }
   }
 }

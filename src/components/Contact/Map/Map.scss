@@ -1,0 +1,11 @@
+.google-map {
+  .gm-svpc,
+  .gmnoprint,
+  .gm-style-cc,
+  .gm-control-active,
+  .gm-fullscreen-control,
+  div[title="Afficher les images satellite"],
+  div[title="Afficher un plan de ville"] {
+    display: none !important;
+  }
+}

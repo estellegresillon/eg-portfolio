@@ -20,6 +20,17 @@ export const PAGES = [
   },
 ];
 
+export const CONTACT_PAGE_WORDS = [
+  "an app from scratch",
+  "a great feature to develop",
+  "some refactoring",
+  "a collaboration",
+  "an outsanding showcase website ",
+  "a brand new app concept ",
+  "a breathtaking portfolio ",
+  "a cool project ",
+];
+
 export const BLOG_URL = "https://blog.estellegresillon.fr";
 
 export const PROJECTS = [
