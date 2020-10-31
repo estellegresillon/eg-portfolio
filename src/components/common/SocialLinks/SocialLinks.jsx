@@ -8,6 +8,7 @@ const SocialLinks = ({ color }) => (
     {SOCIAL_LINKS.map((link) => (
       <a
         href={link.url}
+        key={link.icon}
         target="_blank"
         rel="noopener noreferrer"
         style={{

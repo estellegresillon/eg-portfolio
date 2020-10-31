@@ -8,8 +8,7 @@
   justify-content: space-around;
   color: #2a2b56;
   width: 100%;
-  overflow: hidden;
-  margin-bottom: 150px;
+  min-height: 100vh;
 
   .big-stripes {
     position: absolute;
@@ -32,15 +31,17 @@
   .robot-wrapper {
     position: relative;
     @include flex;
-    height: 60vh;
-    width: 40%;
+    height: 200vh;
+    margin-bottom: 10vh;
 
-    .robot {
-      position: absolute;
-      height: 100%;
-      animation: 10s floatingRobot infinite;
-      transition: 1s all ease;
-    }
+    // .robot {
+    //   position: absolute;
+    //   //height: 100%;
+    //   width: 30vw;
+    //   top: 20vh;
+    //   animation: 5s floatingRobot infinite;
+    //   transition: 1s all ease;
+    // }
   }
 
   .about-section {
@@ -152,13 +153,13 @@
 
   @keyframes floatingRobot {
     from {
-      top: -10%;
+      top: 15%;
     }
     50% {
-      top: 0%;
+      top: 20%;
     }
     to {
-      top: -10%;
+      top: 15%;
     }
   }
 
