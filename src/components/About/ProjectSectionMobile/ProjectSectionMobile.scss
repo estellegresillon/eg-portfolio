@@ -1,6 +1,9 @@
 @import "mixins";
 
 #Project-Section-Mobile {
+  background-image: url("/mesh-about-small.jpg");
+  background-size: 105% 105%;
+  background-position: center;
   width: 100%;
 
   section.project-item {
