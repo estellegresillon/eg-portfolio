@@ -4,11 +4,12 @@ import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
-  //Marker,
+  Marker,
 } from "react-google-maps";
 
 import "./Map.scss";
 import { SKIN } from "./skin";
+import iconMarker from "./iconMarker.png";
 
 const MapContainer = () => (
   <div className="google-map">
@@ -27,11 +28,11 @@ const MapView = compose(
 )(() => {
   return (
     <GoogleMap
-      defaultZoom={13}
+      defaultZoom={12}
       defaultOptions={{ styles: SKIN }}
-      center={{ lat: 48.855, lng: 2.35 }}
+      center={{ lat: 48.86, lng: 2.38 }}
     >
-      {/* <Marker position={{ lat: 51.52, lng: -0.128 }} /> */}
+      <Marker icon={iconMarker} position={{ lat: 48.86, lng: 2.38 }} />
     </GoogleMap>
   );
 });

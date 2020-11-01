@@ -128,6 +128,11 @@
       position: absolute;
       height: 100%;
       animation: 10s imgFloat infinite;
+
+      &.kardinal {
+        height: 60%;
+        animation: 10s imgFloatWide infinite;
+      }
     }
   }
 
@@ -142,6 +147,21 @@
     }
     to {
       top: 0%;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @keyframes imgFloatWide {
+    from {
+      top: 20%;
+      transform: rotate(-5deg);
+    }
+    50% {
+      top: 25%;
+      transform: rotate(5deg);
+    }
+    to {
+      top: 20%;
       transform: rotate(-5deg);
     }
   }
