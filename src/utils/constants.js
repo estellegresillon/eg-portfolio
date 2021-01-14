@@ -26,10 +26,6 @@ export const SOCIAL_LINKS = [
     icon: "fab fa-linkedin",
   },
   {
-    url: "https://blog.estellegresillon.fr/",
-    icon: "fas fa-rss",
-  },
-  {
     url: "https://dribbble.com/estellegresillon",
     icon: "fab fa-dribbble",
   },

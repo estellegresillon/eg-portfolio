@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./Footer.scss";
-import { PAGES, BLOG_URL } from "utils/constants";
+import { PAGES } from "utils/constants";
 import SocialLinks from "components/common/SocialLinks";
 
 const Footer = () => (
@@ -25,10 +25,10 @@ const Footer = () => (
             </Link>
           );
         })}
-        <a target="_blank" rel="noopener noreferrer" href={BLOG_URL}>
+        {/* <a target="_blank" rel="noopener noreferrer" href={BLOG_URL}>
           Blog
         </a>
-        <p className="language-select">EN / FR</p>
+        <p className="language-select">EN / FR</p> */}
       </div>
     </div>
     <div className="terms">
