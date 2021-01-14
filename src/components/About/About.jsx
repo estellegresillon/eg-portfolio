@@ -49,14 +49,14 @@ const About = () => {
           <Link to="/contact">
             <Button label="contact me" />
           </Link>{" "}
-          <a
+          {/* <a
             target="_blank"
             rel="noopener noreferrer"
             href={BLOG_URL}
             className="visit-blog"
           >
             <Button label="visit my blog" />
-          </a>
+          </a> */}
         </div>
         <SocialLinks color="#4447b3" />
       </section>
