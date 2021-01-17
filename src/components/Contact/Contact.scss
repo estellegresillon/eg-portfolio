@@ -28,7 +28,7 @@
   .mailbox {
     position: absolute;
     z-index: -1;
-    bottom: 37%;
+    bottom: 30%;
     right: 7%;
     height: 45%;
     animation: 10s floatingMailbox ease infinite;
@@ -125,13 +125,13 @@
 
   @keyframes floatingMailbox {
     from {
-      bottom: 35%;
+      bottom: 30%;
     }
     50% {
-      bottom: 40%;
+      bottom: 35%;
     }
     to {
-      bottom: 35%;
+      bottom: 30%;
     }
   }
 

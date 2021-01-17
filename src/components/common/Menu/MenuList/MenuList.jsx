@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { PAGES } from "utils/constants";
-import "./MenuList.scss";
 
 const MenuList = ({ onClick }) => (
   <>

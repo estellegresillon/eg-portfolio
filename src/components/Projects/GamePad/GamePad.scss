@@ -1,0 +1,146 @@
+@import "mixins";
+
+#GamePad {
+  display: flex;
+  height: 100vh;
+  background-color: #f6f6f6;
+  font-size: 24px;
+
+  * {
+    outline: 0;
+  }
+
+  .page-container {
+    width: calc(100% - 60px);
+    @include flex;
+    position: relative;
+
+    .gamepad {
+      height: 60%;
+    }
+
+    .logout-button {
+      @include flex;
+      position: absolute;
+      text-decoration: none;
+      border: 2px solid #ff1919;
+      color: #ff1919;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 10px 20px;
+      bottom: 50px;
+
+      &:hover {
+        background-color: #ff1919;
+        color: white;
+      }
+    }
+  }
+
+  .menu {
+    background-color: #ff1919;
+    height: 100vh;
+    width: 60px;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08);
+    position: relative;
+    border-radius: 0px 20px 20px 0;
+
+    .logo-wrapper {
+      width: 100%;
+      @include flex;
+      font-size: 24px;
+      margin-top: 20px;
+      color: white;
+      transform: rotate(-20deg);
+    }
+
+    .logout-wrapper {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      font-size: 18px;
+      @include flex;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        .logout-tooltip {
+          display: block;
+        }
+      }
+
+      i {
+        padding: 10px;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: #fd7070;
+        }
+      }
+
+      .logout-tooltip {
+        @include flex;
+        position: absolute;
+        background-color: #ff1919;
+        padding: 5px 7px;
+        border-radius: 4px;
+        display: none;
+        z-index: 1;
+        color: white;
+        left: 70px;
+        white-space: nowrap;
+        font-size: 11px;
+        font-weight: 700;
+      }
+    }
+
+    nav {
+      @include flex;
+      width: 100%;
+      flex-direction: column;
+      color: white;
+      border: none;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .menu-item {
+        @include flex;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #fd7070;
+        }
+
+        .menu-item-tooltip {
+          display: none;
+          position: absolute;
+          color: white;
+          padding: 3px 7px;
+          border-radius: 4px;
+          font-size: 11px;
+          text-transform: uppercase;
+          background-color: #ff1919;
+          left: 70px;
+          line-height: 20px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+          font-weight: bolder;
+          white-space: nowrap;
+        }
+
+        &:hover {
+          .menu-item-tooltip {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

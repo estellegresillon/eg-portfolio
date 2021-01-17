@@ -1,0 +1,71 @@
+@import "mixins";
+
+.credit-card-front {
+  .cc-front-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    height: 50px;
+  }
+
+  .cc-front-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 10px;
+
+    &-name {
+      border: 1px solid transparent;
+      padding: 5px 10px;
+      width: 190px;
+      border-radius: 5px;
+
+      &.is-focused {
+        border-color: #dadada;
+      }
+    }
+
+    &-dates {
+      border: 1px solid transparent;
+      padding: 5px 10px;
+      width: 60px;
+      border-radius: 5px;
+
+      &.is-focused {
+        border-color: #dadada;
+      }
+    }
+
+    .footer-name-label,
+    .footer-dates-label {
+      text-transform: uppercase;
+      opacity: 0.7;
+      font-size: 11px;
+    }
+  }
+
+  .cc-front-dates {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .cc-front-number {
+    width: calc(100% - 40px);
+    margin: 0 10px;
+    font-size: 24px;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 5px;
+
+    &.is-focused {
+      border-color: #dadada;
+    }
+  }
+
+  .cc-front-name {
+    text-transform: uppercase;
+  }
+}

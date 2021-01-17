@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import "./Works.scss";
 import Button from "components/common/Button";
-//import { BLOG_URL } from "utils/constants";
 
 const Works = () => (
   <div id="Works">
@@ -27,9 +26,9 @@ const Works = () => (
           Code & UI Challenges, onepages, custom hooks, design & front-end
           resources...
         </p>
-        <div>
-          <Button label="incoming..." />
-        </div>
+        <Link to="/projects">
+          <Button label="check it out" />
+        </Link>
       </div>
     </div>
     <img

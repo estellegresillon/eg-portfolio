@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: calc(100% - 120px);
-  padding: 20px 60px;
+  padding: 50px 60px;
   color: white;
   z-index: 10;
 
@@ -32,13 +32,33 @@
     }
   }
 
+  &.projects-nav {
+    color: #110b44;
+
+    .separator,
+    .logo {
+      border-color: #110b44;
+    }
+
+    .logo,
+    .menu a,
+    .mobile-menu-wrapper .fa-hamburger {
+      color: #110b44;
+    }
+
+    .mobile-menu-content p,
+    i {
+      color: white;
+    }
+  }
+
   a {
     text-decoration: none;
   }
 
   .logo {
     border-left: 3px solid white;
-    padding-left: 4px;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     cursor: pointer;

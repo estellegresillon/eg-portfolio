@@ -14,7 +14,12 @@
     "react-i18next": "^11.3.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.4",
-    "react-waypoint": "^9.0.2"
+    "react-three-fiber": "^5.1.4",
+    "react-waypoint": "^9.0.3",
+    "simplex-noise": "^2.4.0",
+    "three": "^0.121.1",
+    "dat.gui": "^0.7.7",
+    "drei": "^1.5.7"
   },
   "scripts": {
     "dev": "react-scripts start",

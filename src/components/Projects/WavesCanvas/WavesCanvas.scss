@@ -1,0 +1,35 @@
+@import "mixins";
+
+#Waves-Canvas {
+  @include flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: rgb(238, 241, 255);
+
+  .waves-explanations {
+    position: absolute;
+    bottom: 15vh;
+    color: #ed77b2;
+  }
+
+  .button-goback {
+    position: absolute;
+    bottom: 5vh;
+    text-decoration: none;
+    color: white;
+    background-color: #ed77b2;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+
+    &:hover {
+      background-color: #ee4399;
+    }
+  }
+
+  canvas {
+    display: block;
+  }
+}

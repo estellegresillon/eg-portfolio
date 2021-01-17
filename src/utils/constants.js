@@ -1,12 +1,24 @@
 import Home from "components/Home";
 import About from "components/About";
 import Contact from "components/Contact";
+import Projects from "components/Projects";
+
+import StripeMenu from "components/Projects/StripeMenu";
+import PricingComparator from "components/Projects/PricingComparator";
+import GamePadWrapper from "components/Projects/GamePad";
+import CreditCardForm from "components/Projects/CreditCardForm";
+import WavesCanvas from "components/Projects/WavesCanvas";
 
 export const PAGES = [
   {
     name: "Home",
     url: "/",
     component: Home,
+  },
+  {
+    name: "Projects",
+    url: "/projects",
+    component: Projects,
   },
   {
     name: "About",
@@ -118,5 +130,71 @@ export const PROJECTS = [
       "Intégration responsive tout devices",
       "Design UI/UX",
     ],
+  },
+];
+
+export const WEBSITES = [
+  {
+    name: "Foodlab",
+    subtitle: "School Project",
+    link: "https://foodlab.estellegresillon.fr/",
+    component: null,
+  },
+  {
+    name: "Zest Neobank",
+    subtitle: "One Page Love",
+    link: "https://zest.estellegresillon.fr",
+    component: null,
+  },
+  {
+    name: "Otaku Market",
+    subtitle: "Shopify Site",
+    link: "https://www.otaku-market.com",
+    component: null,
+  },
+  {
+    name: "Love for Greece",
+    subtitle: "One Page Love",
+    link: "https://santorini.estellegresillon.fr",
+    component: null,
+  },
+  {
+    name: "That's My Rock",
+    subtitle: "School Project",
+    link: "http://thatsmyrock.com",
+    component: null,
+  },
+];
+
+export const FRONT_END_CHALLENGES = [
+  {
+    name: "Stripe Menu",
+    subtitle: "UI Challenge",
+    link: "/stripe-menu",
+    component: StripeMenu,
+  },
+  {
+    name: "Pricing Comparator",
+    subtitle: "UI Challenge",
+    link: "/pricing-comparator",
+    component: PricingComparator,
+  },
+  {
+    name: "3D Gamepad",
+    subtitle: "UI Challenge",
+    link: "/3d-gamepad",
+    component: GamePadWrapper,
+  },
+  {
+    name: "Credit Card Form",
+    subtitle: "UI Challenge",
+    link: "/credit-card-form",
+    component: CreditCardForm,
+  },
+  {
+    name: "Waves with Canvas",
+    subtitle: "UI Challenge",
+    link: "/waves-canvas",
+    component: WavesCanvas,
   },
 ];

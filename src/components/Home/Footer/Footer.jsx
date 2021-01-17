@@ -25,10 +25,6 @@ const Footer = () => (
             </Link>
           );
         })}
-        {/* <a target="_blank" rel="noopener noreferrer" href={BLOG_URL}>
-          Blog
-        </a>
-        <p className="language-select">EN / FR</p> */}
       </div>
     </div>
     <div className="terms">

@@ -5,7 +5,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import "assets/styles/base.scss";
 import i18n from "locales/i18n-config";
-import { PAGES } from "utils/constants";
+import { PAGES, FRONT_END_CHALLENGES } from "utils/constants";
 import Menu from "components/common/Menu";
 
 const App = () => (
@@ -20,6 +20,17 @@ const App = () => (
           component={page.component}
         />
       ))}
+      {FRONT_END_CHALLENGES.map(
+        (challenge) =>
+          challenge.component && (
+            <Route
+              exact
+              path={challenge.link}
+              component={challenge.component}
+              key={challenge.name}
+            />
+          )
+      )}
     </React.Fragment>
   </BrowserRouter>
 );

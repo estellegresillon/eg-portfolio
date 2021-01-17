@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import "./Contact.scss";
-import Map from "./Map";
 import SocialLinks from "components/common/SocialLinks";
 import { CONTACT_PAGE_WORDS } from "utils/constants";
 
@@ -41,7 +40,6 @@ const Contact = () => {
         <SocialLinks color="#4447b3" />
       </div>
 
-      <Map />
       <img src="mailboxblue-small.png" className="mailbox" alt="mailbox" />
       <div className="dot red-dot-top" />
       <div className="dot red-dot-bottom" />

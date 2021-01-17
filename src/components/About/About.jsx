@@ -7,7 +7,6 @@ import ProjectSection from "./ProjectSection";
 import ProjectSectionMobile from "./ProjectSectionMobile";
 import SocialLinks from "components/common/SocialLinks";
 import "./About.scss";
-import { BLOG_URL } from "utils/constants";
 import { useWindowSize } from "hooks/useWindowSize";
 
 const About = () => {
@@ -49,14 +48,6 @@ const About = () => {
           <Link to="/contact">
             <Button label="contact me" />
           </Link>{" "}
-          {/* <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={BLOG_URL}
-            className="visit-blog"
-          >
-            <Button label="visit my blog" />
-          </a> */}
         </div>
         <SocialLinks color="#4447b3" />
       </section>

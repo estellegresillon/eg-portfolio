@@ -1,0 +1,43 @@
+@import "mixins";
+
+#Pricing-Comparator .table-footer {
+  display: flex;
+  align-items: center;
+
+  &-data {
+    width: 110px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    position: relative;
+
+    .choose-button {
+      @include flex;
+      padding: 10px 15px;
+      background-color: #eb2e6d;
+      //background-color: #ff6297;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 11px;
+      border-radius: 50px;
+      white-space: nowrap;
+      box-shadow: 0 10px 20px rgba(34, 34, 206, 0.2);
+      transition: box-shadow 0.5s ease;
+      cursor: pointer;
+
+      &.popular {
+        margin-top: 15px;
+      }
+
+      &:hover {
+        background-color: #eb2e6d;
+        box-shadow: 0 10px 30px rgba(34, 34, 206, 0.5);
+      }
+    }
+  }
+
+  .empty {
+    width: 247px;
+  }
+}

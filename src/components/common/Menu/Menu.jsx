@@ -4,12 +4,31 @@ import { withRouter, Link } from "react-router-dom";
 import "./Menu.scss";
 import MenuList from "./MenuList";
 
+const NO_MENU = [
+  "/stripe-menu",
+  "/pricing-comparator",
+  "/3d-gamepad",
+  "/credit-card-form",
+  "/waves-canvas",
+];
+
 const Menu = ({ location }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  if (NO_MENU.includes(location.pathname)) {
+    return null;
+  }
+
+  const isProjects = location.pathname === "/projects";
   const isDark = location.pathname !== "/";
 
+  const navClassName = () => {
+    if (isProjects) return "projects-nav";
+    if (isDark) return "dark-nav";
+    return "";
+  };
+
   return (
-    <nav id="Nav" className={isDark ? "dark-nav" : ""}>
+    <nav id="Nav" className={navClassName()}>
       <Link to="/">
         <div className="logo">
           <div>ESTELLE</div>

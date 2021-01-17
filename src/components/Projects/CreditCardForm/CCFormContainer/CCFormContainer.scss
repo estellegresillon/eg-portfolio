@@ -1,0 +1,67 @@
+@import "mixins";
+
+.CCForm-container {
+  @include flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: calc(100% - 100px);
+  padding: 50px;
+
+  .full-name-input {
+    text-transform: capitalize;
+  }
+
+  .CCForm-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .Input-Container {
+      width: 30%;
+      margin-right: 22px;
+    }
+
+    .month-year {
+      width: 70%;
+      display: flex;
+      align-items: center;
+
+      .Select-Container {
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .disclaimer {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+
+  .cc-form-footer {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    a,
+    div {
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: black;
+      font-size: 11px;
+      cursor: pointer;
+      border-radius: 50px;
+      margin: 5px;
+
+      &:hover {
+        background-color: #656565;
+      }
+    }
+  }
+}

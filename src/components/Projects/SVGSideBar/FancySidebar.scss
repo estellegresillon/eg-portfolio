@@ -1,0 +1,163 @@
+@import "mixins";
+
+#Fancy-Sidebar {
+  display: flex;
+  height: 100vh;
+  background-color: #efefef;
+  font-size: 24px;
+
+  .container {
+    width: calc(100% - 85px);
+    @include flex;
+    position: relative;
+
+    h1 {
+      color: white;
+      font-size: 120px;
+      margin-top: 0px;
+      border-top: 15px solid white;
+      border-bottom: 15px solid white;
+    }
+
+    .logout-button {
+      position: absolute;
+      text-decoration: none;
+      border: 2px solid #fd0076;
+      color: #fd0076;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 10px 20px;
+      @include flex;
+      bottom: 50px;
+
+      &:hover {
+        background-color: #fd0076;
+        color: white;
+      }
+    }
+  }
+
+  .menu {
+    background-color: white;
+    height: 100vh;
+    width: 85px;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08);
+    position: relative;
+
+    .logo-wrapper {
+      width: 100%;
+      @include flex;
+      font-size: 42px;
+      margin-top: 20px;
+      color: #fd0076;
+    }
+
+    .logout-wrapper {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      font-size: 18px;
+      @include flex;
+      color: #ccc8c8;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        .logout-tooltip {
+          display: block;
+        }
+      }
+
+      .logout-tooltip {
+        @include flex;
+        position: absolute;
+        background-color: #ccc8c8;
+        padding: 5px 7px;
+        border-radius: 4px;
+        display: none;
+        z-index: 1;
+        color: white;
+        left: 70px;
+        white-space: nowrap;
+        font-size: 11px;
+        font-weight: 700;
+      }
+    }
+
+    nav {
+      color: black;
+      border: none;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .menu-item {
+        @include flex;
+        position: relative;
+        padding: 0 !important;
+        overflow: visible;
+        margin-left: 12px;
+        margin-bottom: 20px;
+        height: 65px;
+        width: 65px;
+        top: -16px;
+        cursor: pointer;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        &:after {
+          border: none;
+        }
+
+        .menu-item-tooltip {
+          display: none;
+          position: absolute;
+          color: white;
+          padding: 3px 7px;
+          border-radius: 4px;
+          font-size: 11px;
+          text-transform: uppercase;
+          background-color: #ff0076;
+          top: 18px;
+          left: 80px;
+          line-height: 20px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          font-weight: bolder;
+        }
+
+        &:hover {
+          .menu-item-tooltip {
+            display: block;
+          }
+        }
+
+        &.menu-item.is-selected {
+          @include flex;
+          background-color: #ff0076;
+          color: white;
+          border-radius: 50%;
+          overflow: visible;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 96px;
+            z-index: -1;
+            left: -8px;
+            top: -16px;
+            background-image: url("data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='120' height='96' viewBox='0 0 120 96' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='background: %23EFEFEF;'%3E %3C!-- Generator: Sketch 61 (89581) - https://sketch.com --%3E %3Ctitle%3ELeft Menu / Base / little / shadow@2x%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs%3E %3Cpath d='M79.9947769,0.413123779 C79.8870508,4.66892578 78.1196875,8.510625 75.32,11.32 C72.42,14.21 68.42,16 64,16 L64,16 L40,16 C31.16,16 23.16,19.58 17.37,25.37 C11.58,31.16 8,39.16 8,48 C8,65.67 22.33,80 40,80 L40,80 L64,80 C68.42,80 72.42,81.79 75.32,84.68 C78.21,87.58 80,91.58 80,96 L80,96 L0,96 L0,0 L80,0 Z' id='path-1'/%3E %3Cfilter x='-45.0%25' y='-37.5%25' width='190.0%25' height='175.0%25' filterUnits='objectBoundingBox' id='filter-2'%3E %3CfeOffset dx='0' dy='0' in='SourceAlpha' result='shadowOffsetOuter1'/%3E %3CfeGaussianBlur stdDeviation='12' in='shadowOffsetOuter1' result='shadowBlurOuter1'/%3E %3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.20 0' type='matrix' in='shadowBlurOuter1'/%3E %3C/filter%3E %3C/defs%3E %3Cg id='Left-Menu-/-Base-/-little-/-shadow' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Crect fill='%23EFEFEF' x='0' y='0' width='120' height='96'/%3E %3Cg id='Left-menu-/-Base-/-Order'%3E %3Cuse fill='black' fill-opacity='1' filter='url(%23filter-2)' xlink:href='%23path-1'/%3E %3Cuse fill='%23FFFFFF' fill-rule='evenodd' xlink:href='%23path-1'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+          }
+        }
+      }
+    }
+  }
+}

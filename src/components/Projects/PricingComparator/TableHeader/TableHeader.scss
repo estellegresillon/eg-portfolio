@@ -1,0 +1,65 @@
+@import "mixins";
+
+#Pricing-Comparator .table-header {
+  display: flex;
+  align-items: center;
+
+  &-data {
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 20px 15px 20px;
+
+    .solution-name {
+      margin-bottom: -5px;
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .solution-price {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    i {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 14px;
+      color: white;
+      z-index: 1;
+    }
+  }
+
+  .update-offer {
+    display: flex;
+    align-items: center;
+    width: 207px;
+    padding: 20px 20px 0 20px;
+
+    .switch-button-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+      background-color: #57e662;
+      border-radius: 50px;
+      width: 40px;
+      height: 20px;
+      padding: 2px 4px;
+      margin: 0 10px;
+      cursor: pointer;
+
+      .toggle-switch {
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 0px 2px 5px rgba(44, 44, 48, 0.4);
+        transition: all 0.5s ease;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+#Projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 60px 0;
+  width: 100vw;
+  background-image: url("/bg-projects.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #110b44;
+  margin: 0;
+
+  .Social-Icons {
+    margin-top: 60px;
+    margin-left: 80px;
+    margin-bottom: 0;
+
+    a i:hover {
+      color: #ed69d1;
+    }
+  }
+
+  h1 {
+    margin: 150px 0 40px 80px;
+  }
+
+  div.challenges-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    div.challenge-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 80px;
+      border-top: 1px solid #f2fbf8;
+      transition: 0.5s all ease;
+
+      &:last-child {
+        border-bottom: 1px solid #f2fbf8;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 100px rgba(20, 2, 61, 0.2);
+      }
+
+      .counter {
+        width: 30%;
+        font-size: 120px;
+        font-weight: 700;
+        font-family: "IBM Plex Sans";
+      }
+
+      .content {
+        width: 55%;
+
+        .title {
+          font-size: 64px;
+        }
+
+        .subtitle {
+          font-size: 18px;
+          font-weight: 300;
+          font-family: "IBM Plex Sans";
+        }
+      }
+
+      .see-more {
+        display: flex;
+        font-size: 14px;
+        white-space: nowrap;
+        width: 15%;
+
+        a {
+          color: #110b44;
+          text-decoration: none;
+
+          &:hover {
+            color: white;
+          }
+        }
+
+        .button {
+          padding: 15px 25px;
+          border-radius: 25px;
+          border: 1px solid #110b44;
+
+          &:hover {
+            border-color: #ed69d1;
+            background-color: #ed69d1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "mixins";
+
+#Pricing-Comparator .table-body {
+  background: linear-gradient(-10deg, #1e76fa, #033a8b);
+  color: white;
+  border-radius: 10px;
+  padding: 7px;
+
+  .table-row {
+    display: flex;
+    align-items: center;
+
+    i {
+      color: #57e662;
+      font-size: 16px;
+    }
+
+    &:hover {
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 10px 30px rgba(34, 34, 206, 0.2);
+      background-color: white;
+      color: #0066ff;
+      border-radius: 6px;
+
+      .table-data {
+        background-color: white !important;
+        color: #0066ff !important;
+
+        i.fa-times-circle {
+          color: #cacdd0 !important;
+        }
+      }
+    }
+
+    .table-header-row {
+      display: flex;
+      font-size: 12px;
+      width: 220px;
+      height: 70px;
+      font-weight: 700;
+      padding-left: 20px;
+      align-items: center;
+    }
+
+    .table-data {
+      width: 150px;
+      height: 70px;
+      @include flex;
+    }
+  }
+}
