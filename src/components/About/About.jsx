@@ -45,9 +45,12 @@ const About = () => {
 
       <section className="conclusion">
         <div className="conclusion-links">
+          <Link to="/projects">
+            <Button label="see my work" />
+          </Link>
           <Link to="/contact">
             <Button label="contact me" />
-          </Link>{" "}
+          </Link>
         </div>
         <SocialLinks color="#4447b3" />
       </section>

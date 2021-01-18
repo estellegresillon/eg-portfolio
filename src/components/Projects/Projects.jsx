@@ -12,6 +12,13 @@ const Projects = () => {
 
   return (
     <div id="Projects">
+      <div className="Projects-intro">
+        <p>Here are my personal projects and collaborations.</p>
+        <p>
+          You can find my clients, missions and skills right{" "}
+          <Link to="/about">here.</Link>
+        </p>
+      </div>
       <h1>Websites</h1>
       <div className="challenges-list">
         {WEBSITES.map((challenge, i) => (
@@ -42,7 +49,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <h1>Front-End Challenges</h1>
+      <h1 className="front-end">Front-End Challenges</h1>
       <div className="challenges-list">
         {FRONT_END_CHALLENGES.map((challenge, i) => (
           <div key={i} className="challenge-item">

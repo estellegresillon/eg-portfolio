@@ -59,9 +59,13 @@
       flex-direction: column;
       height: 50vh;
 
+      .Social-Icons {
+        margin-bottom: 0px;
+      }
+
       .conclusion-links {
         display: flex;
-        margin-bottom: 10px;
+        margin-bottom: 80px;
 
         a {
           text-decoration: none;
