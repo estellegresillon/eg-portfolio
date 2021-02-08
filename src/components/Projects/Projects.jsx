@@ -49,7 +49,12 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <h1 className="front-end">Front-End Challenges</h1>
+      <h1 className="front-end">
+        <div>Front-End Challenges</div>
+        <p className="front-end-note">
+          Note : Some of the challenges below are not responsive.
+        </p>
+      </h1>
       <div className="challenges-list">
         {FRONT_END_CHALLENGES.map((challenge, i) => (
           <div key={i} className="challenge-item">

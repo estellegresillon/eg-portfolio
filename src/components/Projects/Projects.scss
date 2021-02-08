@@ -12,6 +12,12 @@
   color: #110b44;
   margin: 0;
 
+  .front-end-note {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "IBM Plex Sans";
+  }
+
   .Social-Icons {
     margin-top: 60px;
     margin-left: 80px;
@@ -42,12 +48,12 @@
     }
   }
 
-  div.challenges-list {
+  .challenges-list {
     display: flex;
     flex-direction: column;
     width: 100%;
 
-    div.challenge-item {
+    .challenge-item {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -110,6 +116,52 @@
           }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .Projects-intro {
+      margin: 50px;
+    }
+
+    h1 {
+      margin: 50px;
+      font-size: 48px;
+
+      &.front-end {
+        margin-top: 150px;
+      }
+    }
+
+    .challenges-list .challenge-item {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px;
+
+      .content {
+        width: auto;
+
+        .title {
+          font-size: 32px;
+        }
+      }
+
+      .see-more {
+        margin-top: 20px;
+        width: auto;
+      }
+
+      .counter {
+        font-size: 48px;
+        width: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .challenges-list .challenge-item .counter,
+    h1 {
+      font-size: 42px;
     }
   }
 }
