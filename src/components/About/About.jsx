@@ -46,7 +46,7 @@ const About = () => {
       <section className="conclusion">
         <div className="conclusion-links">
           <Link to="/projects">
-            <Button label="see my work" />
+            <Button label="see my personal work" />
           </Link>
           <Link to="/contact">
             <Button label="contact me" />

@@ -13,7 +13,7 @@ const Works = () => (
         <p>
           Take a look at my CV and a detailed timeline of my former missions
         </p>
-        <Link to="/about">
+        <Link to="/career">
           <Button label="check it out" />
         </Link>
       </div>

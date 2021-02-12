@@ -1,0 +1,85 @@
+@import "mixins";
+
+#Stacked-Menu {
+  @include flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  font-family: "Montserrat";
+  background: #fff8f9;
+  color: #fd4670;
+
+  #stack {
+    position: absolute;
+    bottom: 30%;
+    left: calc(50% - 175px);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  h3 {
+    margin-top: -150px;
+    font-weight: 400;
+  }
+
+  .single-block {
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 0 0 10px #ffe1e1;
+    border-radius: 10px;
+    transition: ease-in-out 0.2s;
+    width: 350px;
+
+    .content {
+      display: flex;
+      align-items: center;
+      padding: 11px 20px 9px;
+
+      i {
+        font-size: 38px;
+        margin-right: 5px;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bolder;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #561919;
+      }
+
+      p {
+        color: #f5b0b0;
+        margin: 0;
+        font-size: 12px;
+      }
+
+      > div {
+        text-align: left;
+        margin-left: 10px;
+        width: 180px;
+      }
+    }
+  }
+
+  .button-goback {
+    position: absolute;
+    bottom: 13vh;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(304deg, #ff006a 0%, #ecff81 100%);
+    box-shadow: 5px 5px 10px #f5b0b0;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      box-shadow: 2px 5px 20px #f5b0b0;
+    }
+  }
+}

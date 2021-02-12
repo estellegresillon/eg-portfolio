@@ -10,6 +10,8 @@ const NO_MENU = [
   "/3d-gamepad",
   "/credit-card-form",
   "/waves-canvas",
+  "/stacked-menu",
+  "/virtual-ticket",
 ];
 
 const Menu = ({ location }) => {

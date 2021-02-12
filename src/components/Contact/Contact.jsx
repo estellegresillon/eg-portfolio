@@ -28,6 +28,11 @@ const Contact = () => {
           alt="stripe"
           aria-hidden="true"
         />
+        <img
+          src="profile-pic.jpg"
+          alt="estelle gresillon"
+          className="profile-picture"
+        />
         <div className="contact-intro">
           For <span className="project-type">{projectType}</span>
         </div>

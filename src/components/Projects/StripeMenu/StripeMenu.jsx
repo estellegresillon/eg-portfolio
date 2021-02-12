@@ -29,7 +29,7 @@ const StripeMenu = () => {
       </nav>
       <div className="left-column">
         <h1>Responsive menu</h1>
-        <h2>Made with ReactJs and inspired by Stripe</h2>
+        <h2>inspired by Stripe</h2>
         <Link className="go-back-button" to="/projects">
           GO BACK
         </Link>

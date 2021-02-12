@@ -9,6 +9,13 @@
   width: 100vw;
   overflow: hidden;
 
+  .profile-picture {
+    border-radius: 50%;
+    height: 100px;
+    width: auto;
+    margin-bottom: 40px;
+  }
+
   .dot {
     position: absolute;
     height: 14px;
@@ -48,7 +55,7 @@
     .small-stripes {
       position: absolute;
       width: 110px;
-      z-index: 0;
+      z-index: -1;
       top: 33%;
       left: -5%;
       opacity: 0.7;
@@ -64,11 +71,13 @@
     .contact-intro {
       font-family: "IBM Plex Sans";
       max-width: 70%;
-      margin: 20px 0;
+      margin: 10px 0;
       white-space: nowrap;
     }
 
     .mail {
+      margin-bottom: 50px;
+
       i {
         margin-right: 10px;
       }
@@ -136,13 +145,23 @@
   }
 
   @media screen and (max-width: 768px) {
+    .profile-picture {
+      display: none;
+    }
+
+    .container .mail {
+      margin-bottom: 0;
+    }
+
     .container .mail a {
       font-size: 24px;
     }
   }
 
   @media screen and (max-width: 420px) {
-    .blue-dot-medium {
+    .blue-dot-top,
+    .blue-dot-medium,
+    .dark-blue-dot-bottom {
       display: none;
     }
 
@@ -158,6 +177,18 @@
       font-size: 48px;
       margin: 0;
       margin-top: -70px;
+    }
+
+    @keyframes floatingMailbox {
+      from {
+        bottom: 20%;
+      }
+      50% {
+        bottom: 15%;
+      }
+      to {
+        bottom: 20%;
+      }
     }
   }
 

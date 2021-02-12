@@ -79,7 +79,7 @@ const HeroScene = () => {
       />
       <div className="availability hero-picture">
         <i className="far fa-clock" />
-        Available in February 2021
+        Available in March 2021
       </div>
       <img
         className="small-stripes"

@@ -39,7 +39,7 @@ const About = () => (
         aria-hidden="true"
       />
       <IntroductionText />
-      <Link to="/about">
+      <Link to="/career">
         <Button label="take a look at my cv" />
       </Link>
     </div>

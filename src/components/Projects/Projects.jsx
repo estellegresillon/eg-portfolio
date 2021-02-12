@@ -16,7 +16,7 @@ const Projects = () => {
         <p>Here are my personal projects and collaborations.</p>
         <p>
           You can find my clients, missions and skills right{" "}
-          <Link to="/about">here.</Link>
+          <Link to="/career">here.</Link>
         </p>
       </div>
       <h1>Websites</h1>
@@ -67,19 +67,9 @@ const Projects = () => {
               <div className="subtitle">{challenge.subtitle}</div>
             </div>
             <div className="see-more">
-              {challenge.component ? (
-                <Link to={challenge.link}>
-                  <div className="button">SEE PROJECT</div>
-                </Link>
-              ) : (
-                <a
-                  href={challenge.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="button">SEE PROJECT</div>
-                </a>
-              )}
+              <Link to={challenge.link}>
+                <div className="button">SEE CHALLENGE</div>
+              </Link>
             </div>
           </div>
         ))}
