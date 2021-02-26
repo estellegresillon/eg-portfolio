@@ -150,7 +150,7 @@ export const WEBSITES = [
   },
   {
     name: "Zest Neobank",
-    subtitle: "One Page Love",
+    subtitle: "One Page",
     link: "https://zest.estellegresillon.fr",
     component: null,
   },
@@ -162,7 +162,7 @@ export const WEBSITES = [
   },
   {
     name: "Love for Greece",
-    subtitle: "One Page Love",
+    subtitle: "One Page",
     link: "https://santorini.estellegresillon.fr",
     component: null,
   },

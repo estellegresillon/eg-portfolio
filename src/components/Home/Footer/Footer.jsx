@@ -9,8 +9,8 @@ const Footer = () => (
   <div id="Footer">
     <div className="container">
       <div className="localisation">
-        <p>Estelle Grésillon - ReactJs Developer & Designer</p>
-        <p>Located in Paris XI</p>
+        <p>Estelle Grésillon - ReactJs Front-end Developer</p>
+        <p>Located in Paris 11</p>
         <p>estelle.gresillon@gmail.com</p>
       </div>
       <SocialLinks color="white" />
