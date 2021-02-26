@@ -48,11 +48,9 @@ const HeroScene = () => {
   return (
     <div ref={heroScene} id="HeroScene">
       <h1>
-        <div>Front-end developer</div> <div>& designer</div>
+        <div>ReactJs</div> <div>Front-end developer</div>
       </h1>
-      <div className="subtitle">
-        ReactJs - Typescript - NextJs - Redux - Websockets
-      </div>
+      <div className="subtitle">Typescript - NextJs - Redux - Websockets</div>
       <img
         ref={gamepadRef}
         className="hero-gamepad hero-picture"

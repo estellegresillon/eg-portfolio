@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Skills.scss";
-import { CODE_SKILLS, DESIGN_SKILLS } from "./utils";
+import { CODE_SKILLS, INTERESTS } from "./utils";
 
 const Skills = () => (
   <div id="Skills">
@@ -32,10 +32,10 @@ const Skills = () => (
       </div>
     </div>
     <div className="design-right column">
-      <h3>_Design</h3>
+      <h3>_Interests</h3>
       <div className="design-skills-list">
         <img src="paint-small.png" className="paint" alt="paint" />
-        {DESIGN_SKILLS.map((skill) => (
+        {INTERESTS.map((skill) => (
           <div className="skill" key={skill.label}>
             <div className="icon-wrapper">
               <i className={skill.icon} />

@@ -2,7 +2,7 @@ import React from "react";
 
 const IntroductionText = () => (
   <div className="intro">
-    Hello, I am Estelle, a front-end developer and a designer. <br />
+    Hello, I am Estelle, a front-end developer specialized in ReactJs. <br />
     <br />
     With a passion for problem solving and design, my goal is to create websites
     and apps with{" "}
@@ -12,8 +12,8 @@ const IntroductionText = () => (
     .
     <br />
     <br />
-    Being both a coder and a designer, I can bring a comprehensive outlook to
-    your product. <strong>I code thinking about the design</strong>, and{" "}
+    With my designer background, I can bring a comprehensive outlook to your
+    product. <strong>I code thinking about the design</strong>, and{" "}
     <strong>
       I can provide in-depth design guidance, with an understanding of the
       feasibility of the tech side

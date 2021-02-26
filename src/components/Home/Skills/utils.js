@@ -41,25 +41,25 @@ export const CODE_SKILLS = [
   },
 ];
 
-export const DESIGN_SKILLS = [
+export const INTERESTS = [
   {
-    label: "Product Design / Rebranding",
-    icon: "fab fa-product-hunt",
-  },
-  {
-    label: "Web Design / UI-UX Design",
+    label: "Drawing on Adobe Illustrator",
     icon: "fas fa-palette",
   },
   {
-    label: "Adobe Creative Suite",
-    icon: "fas fa-file-pdf",
+    label: "Running & Weightlifting",
+    icon: "fas fa-dumbbell",
   },
   {
-    label: "Zeplin / InVision",
-    icon: "fab fa-invision",
+    label: "Reading (mostly sci-fi and fantasy)",
+    icon: "fas fa-book",
   },
   {
-    label: "Interaction design",
+    label: "Video games big enthusiast",
+    icon: "fas fa-gamepad",
+  },
+  {
+    label: "Travelling (USA, Japan, Sweden, ...)",
     icon: "fas fa-rocket",
   },
 ];
