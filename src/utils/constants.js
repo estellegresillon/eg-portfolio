@@ -124,7 +124,7 @@ export const PROJECTS = [
     name: "Wifirst",
     isFreelance: false,
     img: "wifirst",
-    date: "August '18 - December '19",
+    date: "July '17 - December '19",
     sector: "Telecommunications",
     description: [
       "Development of multiple internal applications",
