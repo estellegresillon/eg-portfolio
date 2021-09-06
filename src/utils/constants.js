@@ -5,7 +5,7 @@ import Projects from "components/Projects";
 
 import StripeMenu from "components/Projects/StripeMenu";
 import PricingComparator from "components/Projects/PricingComparator";
-import GamePadWrapper from "components/Projects/GamePad";
+// import GamePadWrapper from "components/Projects/GamePad";
 import CreditCardForm from "components/Projects/CreditCardForm";
 import WavesCanvas from "components/Projects/WavesCanvas";
 import StackedMenu from "components/Projects/StackedMenu";
@@ -206,17 +206,17 @@ export const FRONT_END_CHALLENGES = [
     component: PricingComparator,
   },
   {
-    name: "3D Gamepad",
-    subtitle: "3D",
-    link: "/3d-gamepad",
-    component: GamePadWrapper,
-  },
-  {
     name: "Stripe Menu",
     subtitle: "CSS - UI/UX",
     link: "/stripe-menu",
     component: StripeMenu,
   },
+  // {
+  //   name: "3D Gamepad",
+  //   subtitle: "3D",
+  //   link: "/3d-gamepad",
+  //   component: GamePadWrapper,
+  // },
 ];
 
 // export const PROJECTS = [
