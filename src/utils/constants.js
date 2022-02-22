@@ -64,14 +64,12 @@ export const CONTACT_PAGE_WORDS = [
   "a cool project ",
 ];
 
-export const BLOG_URL = "https://blog.estellegresillon.fr";
-
 export const PROJECTS = [
   {
     name: "Kardinal",
     isFreelance: true,
     img: "kardinal",
-    date: "May '20 - Now",
+    date: "May '20 - December '20",
     sector: "Logistic & Supply Chain",
     description: [
       "Development of a route optimization solution",
@@ -124,7 +122,7 @@ export const PROJECTS = [
     name: "Wifirst",
     isFreelance: false,
     img: "wifirst",
-    date: "July '18 - December '19",
+    date: "December '17 - December '19",
     sector: "Telecommunications",
     description: [
       "Development of multiple internal applications",
@@ -143,15 +141,21 @@ export const PROJECTS = [
 
 export const WEBSITES = [
   {
-    name: "Foodlab",
-    subtitle: "School Project",
-    link: "https://foodlab.estellegresillon.fr/",
+    name: "Wordle & Nerdle",
+    subtitle: "Games",
+    link: "https://motus.estellegresillon.fr",
     component: null,
   },
   {
     name: "Zest Neobank",
     subtitle: "One Page",
     link: "https://zest.estellegresillon.fr",
+    component: null,
+  },
+  {
+    name: "Foodlab",
+    subtitle: "School Project",
+    link: "https://foodlab.estellegresillon.fr/",
     component: null,
   },
   {
@@ -218,72 +222,3 @@ export const FRONT_END_CHALLENGES = [
   //   component: GamePadWrapper,
   // },
 ];
-
-// export const PROJECTS = [
-//   {
-//     name: "Kardinal",
-//     isFreelance: true,
-//     img: "kardinal",
-//     date: "May '20 - Now",
-//     sector: "Logistic & Supply Chain",
-//     description: [
-//       "Développement d'une application de tournées",
-//       "ReactJs / Hooks / NextJs / Typescript",
-//       "Redux : Selectors / Hooks Redux / Redux Saga",
-//       "Styled Components & Ant Design pour générer l'UI",
-//       "Conception de 2 maps interactives avec React MapGl",
-//       "Refactoring de code",
-//       "Amélioration des performances du front grâce aux hooks",
-//       "Intégration d'un service de Websockets",
-//       "Développement backend Node/NestJs (exposition d'endpoints / architecture CQRS)",
-//     ],
-//   },
-//   {
-//     name: "Osmo",
-//     isFreelance: true,
-//     img: "osmo",
-//     date: "April '20 - May '20",
-//     sector: "Education & E-Learning",
-//     description: [
-//       "Développement d'une virtual classroom",
-//       "Cours vidéo du professeur et échange avec ses élèves via chat",
-//       "Application ReactJs / Hooks",
-//       "Redux / Redux Saga",
-//       "Voxeet (video streaming)",
-//       "SendBird (chat)",
-//       "Développement d'un service de websockets",
-//       "Intégration responsive tout devices",
-//     ],
-//   },
-//   {
-//     name: "Apricity",
-//     isFreelance: true,
-//     img: "apricity",
-//     date: "January '20 - April '20",
-//     sector: "Health & Fertility",
-//     description: [
-//       "Développement d'une application d'accompagnement à la fertilité",
-//       "ReactJs / NextJs / Typescript",
-//       "Intégration responsive tout devices",
-//       "Intégration des nouvelles pages du site institutionnel avec Prismic",
-//       "Refactoring de code",
-//       "Collaboration avec le designer pour l'harmonisation de la charte graphique du site",
-//     ],
-//   },
-//   {
-//     name: "Wifirst",
-//     isFreelance: false,
-//     img: "wifirst",
-//     date: "August '18 - December '19",
-//     sector: "Télécommunications",
-//     description: [
-//       "Développement de plusieurs applications internes",
-//       "ReactJs / Hooks",
-//       "Redux / Context React",
-//       "Création d'un UI Kit type Storybook",
-//       "Tests unitaires avec Jest & Enzyme",
-//       "Intégration responsive tout devices",
-//       "Design UI/UX",
-//     ],
-//   },
-// ];
