@@ -147,6 +147,12 @@ export const WEBSITES = [
     component: null,
   },
   {
+    name: "Firebase Chat",
+    subtitle: "React chat hosted with Firebase",
+    link: "https://chat.estellegresillon.fr",
+    component: null,
+  },
+  {
     name: "Zest Neobank",
     subtitle: "One Page",
     link: "https://zest.estellegresillon.fr",
