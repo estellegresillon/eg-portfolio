@@ -141,8 +141,8 @@ export const PROJECTS = [
 
 export const WEBSITES = [
   {
-    name: "Wordle & Nerdle",
-    subtitle: "Games",
+    name: "Wordle",
+    subtitle: "Also includes Nerdle and Instant Nerdle",
     link: "https://motus.estellegresillon.fr",
     component: null,
   },
@@ -150,6 +150,12 @@ export const WEBSITES = [
     name: "Zest Neobank",
     subtitle: "One Page",
     link: "https://zest.estellegresillon.fr",
+    component: null,
+  },
+  {
+    name: "IP Tracker",
+    subtitle: "Detect user IP + Locate desired IP",
+    link: "http://iptracker.estellegresillon.fr",
     component: null,
   },
   {
