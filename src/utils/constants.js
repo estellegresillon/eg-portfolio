@@ -147,6 +147,12 @@ export const WEBSITES = [
     component: null,
   },
   {
+    name: "Jiro",
+    subtitle: "Ticketing app made react-beautiful-dnd",
+    link: "https://jiro.estellegresillon.fr",
+    component: null,
+  },
+  {
     name: "Firebase Chat",
     subtitle: "React chat hosted with Firebase",
     link: "https://chat.estellegresillon.fr",
