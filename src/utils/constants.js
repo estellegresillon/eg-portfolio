@@ -183,12 +183,6 @@ export const WEBSITES = [
     component: null,
   },
   {
-    name: "Love for Greece",
-    subtitle: "One Page",
-    link: "https://santorini.estellegresillon.fr",
-    component: null,
-  },
-  {
     name: "That's My Rock",
     subtitle: "School Project",
     link: "http://thatsmyrock.com",
