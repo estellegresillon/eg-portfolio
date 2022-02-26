@@ -141,15 +141,15 @@ export const PROJECTS = [
 
 export const WEBSITES = [
   {
-    name: "Wordle",
-    subtitle: "Also includes Nerdle and Instant Nerdle",
-    link: "https://motus.estellegresillon.fr",
+    name: "Jiro",
+    subtitle: "Ticketing app made with react-beautiful-dnd",
+    link: "https://jiro.estellegresillon.fr",
     component: null,
   },
   {
-    name: "Jiro",
-    subtitle: "Ticketing app made react-beautiful-dnd",
-    link: "https://jiro.estellegresillon.fr",
+    name: "Wordle",
+    subtitle: "Also includes Nerdle and Instant Nerdle",
+    link: "https://motus.estellegresillon.fr",
     component: null,
   },
   {
@@ -172,19 +172,19 @@ export const WEBSITES = [
   },
   {
     name: "Foodlab",
-    subtitle: "School Project",
+    subtitle: "School Project - Find the best restaurant in Paris",
     link: "https://foodlab.estellegresillon.fr/",
     component: null,
   },
   {
     name: "Otaku Market",
-    subtitle: "Shopify Site",
+    subtitle: "Shopify Site - Get geeky products",
     link: "https://www.otaku-market.com",
     component: null,
   },
   {
     name: "That's My Rock",
-    subtitle: "School Project",
+    subtitle: "School Project - The best albums ever made",
     link: "http://thatsmyrock.com",
     component: null,
   },
