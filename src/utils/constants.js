@@ -153,6 +153,12 @@ export const WEBSITES = [
     component: null,
   },
   {
+    name: "Flow",
+    subtitle: "Diagrams made with React Flow",
+    link: "https://flow.estellegresillon.fr",
+    component: null,
+  },
+  {
     name: "Wordle",
     subtitle: "Also includes Nerdle and Instant Nerdle",
     link: "https://motus.estellegresillon.fr",
