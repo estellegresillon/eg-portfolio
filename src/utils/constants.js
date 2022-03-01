@@ -159,9 +159,9 @@ export const WEBSITES = [
     component: null,
   },
   {
-    name: "Wordle",
-    subtitle: "Also includes Nerdle and Instant Nerdle",
-    link: "https://motus.estellegresillon.fr",
+    name: "Games Playground",
+    subtitle: "Including Worldle, Tetris, Rocker Paper Scissors and others",
+    link: "https://playground.estellegresillon.fr",
     component: null,
   },
   {
