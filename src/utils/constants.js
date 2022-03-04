@@ -141,6 +141,12 @@ export const PROJECTS = [
 
 export const WEBSITES = [
   {
+    name: "Page builder",
+    subtitle: "A demo page builder with custom components and dnd",
+    link: "https://builder.estellegresillon.fr",
+    component: null,
+  },
+  {
     name: "Jiro",
     subtitle: "Ticketing app made with react-beautiful-dnd",
     link: "https://jiro.estellegresillon.fr",
